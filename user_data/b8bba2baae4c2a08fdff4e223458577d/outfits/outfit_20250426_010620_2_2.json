@@ -1,0 +1,30 @@
+{
+  "outfit_id": "outfit_20250426_010620_2_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.375834",
+  "outfit_data": {
+    "top": "A fuchsia wool blouse with puffed sleeves and a mandarin collar.",
+    "bottom": "Electric blue gabardine trousers with a high waist and wide legs, featuring sharp creases and belt loops.",
+    "shoes": "Black leather oxfords with chunky heels.",
+    "extras": "A turquoise silk scarf tied in a loose knot at the neck and a pair of gold hoop earrings.",
+    "colors": [
+      "blue",
+      "black",
+      "gold"
+    ],
+    "materials": [
+      "wool",
+      "leather",
+      "silk"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010620_2_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:06:20.310431"
+  }
+}

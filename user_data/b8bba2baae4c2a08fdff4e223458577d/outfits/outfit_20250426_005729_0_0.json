@@ -1,0 +1,43 @@
+{
+  "outfit_id": "outfit_20250426_005729_0_0",
+  "event": "Summer Patio Drinks",
+  "created_at": "2025-04-26T00:59:44.588950",
+  "outfit_data": {
+    "top": "A vibrant emerald green silk blouse with a draped neckline and ruffled sleeves, fastened with delicate gold buttons. The fabric has a luxurious sheen and falls gracefully, emphasizing the feminine silhouette.",
+    "bottom": "A cobalt blue wool midi skirt with a flared shape that reaches just below the knee.  The skirt features subtle pleats for added texture and movement.",
+    "shoes": "Black leather platform heels with a pointed toe and delicate gold buckles adorning the ankle strap. The heels are slender yet substantial, adding height and a touch of luxury to the ensemble.",
+    "extras": "A statement piece of bold red cashmere jewelry, such as a chunky necklace or a set of earrings, complements the outfit's color palette. A small black velvet clutch bag with gold hardware completes the look.",
+    "colors": [
+      "gold",
+      "green",
+      "red",
+      "blue",
+      "black"
+    ],
+    "materials": [
+      "silk",
+      "wool",
+      "leather",
+      "velvet",
+      "lace",
+      "cashmere"
+    ],
+    "lengths": [
+      "full",
+      "mini",
+      "knee",
+      "midi",
+      "ankle"
+    ],
+    "textures": [
+      "hard"
+    ],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 7,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_005729_0_0",
+    "event": "Summer Patio Drinks",
+    "created_at": "2025-04-26T00:57:29.965729"
+  }
+}

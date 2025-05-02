@@ -1,0 +1,34 @@
+{
+  "outfit_id": "outfit_20250425_235558_0_0",
+  "event": "Polo Match",
+  "created_at": "2025-04-25T23:55:58.584799",
+  "outfit_data": {
+    "top": "A crisp white linen blouse with a relaxed fit and button-down front.",
+    "bottom": "Cream-colored wide-leg seersucker trousers, slightly cropped at the ankle.",
+    "shoes": "Tan leather espadrille wedges for a touch of summery flair.",
+    "extras": "A taupe woven straw tote bag for carrying essentials. A delicate gold chain necklace adds a subtle shimmer.",
+    "colors": [
+      "white",
+      "red",
+      "cream",
+      "gold"
+    ],
+    "materials": [
+      "linen",
+      "leather",
+      "lace"
+    ],
+    "lengths": [
+      "cropped",
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250425_235558_0_0",
+    "event": "Polo Match",
+    "created_at": "2025-04-25T23:55:58.584773"
+  }
+}

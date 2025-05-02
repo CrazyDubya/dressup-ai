@@ -1,0 +1,725 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Create Your Profile</h3>
+                <p class="text-center text-muted">Please fill in your measurements and preferences to help us generate perfect outfits for you.</p>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('save_profile') }}" id="profileForm">
+                    <input type="hidden" name="username" value="{{ username }}">
+                    
+                    <h4 class="mb-3">Measurements</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="height" class="form-label">Height <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="height" name="height" step="0.1" required>
+                                <select class="form-select flex-shrink-1" style="width: auto;" name="height_unit" id="height_unit" required>
+                                    <option value="inches">inches</option>
+                                    <option value="cm">cm</option>
+                                </select>
+                            </div>
+                            <select class="form-select mt-2" id="height_descriptor" name="height_descriptor">
+                                <option value="">Or select approximate height...</option>
+                                <option value="very_short">Very Short (under 5')</option>
+                                <option value="short">Short (5' - 5'3")</option>
+                                <option value="below_average">Below Average (5'3" - 5'5")</option>
+                                <option value="average">Average (5'5" - 5'7")</option>
+                                <option value="above_average">Above Average (5'7" - 5'9")</option>
+                                <option value="tall">Tall (5'9" - 6')</option>
+                                <option value="very_tall">Very Tall (over 6')</option>
+                            </select>
+                            <div class="form-text">Enter exact height or select approximate range</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="weight" class="form-label">Weight</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="weight" name="weight" step="0.1">
+                                <select class="form-select flex-shrink-1" style="width: auto;" name="weight_unit" id="weight_unit">
+                                    <option value="lbs">lbs</option>
+                                    <option value="kg">kg</option>
+                                    <option value="stone">stone</option>
+                                </select>
+                            </div>
+                            <select class="form-select mt-2" id="build_descriptor" name="build_descriptor">
+                                <option value="">Or select body build...</option>
+                                <option value="petite">Petite</option>
+                                <option value="slim">Slim</option>
+                                <option value="average">Average</option>
+                                <option value="athletic">Athletic</option>
+                                <option value="curvy">Curvy</option>
+                                <option value="full">Full</option>
+                            </select>
+                            <div class="form-text">Enter exact weight or select approximate build</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="bust" class="form-label">Bust <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="bust" name="bust" step="0.5" min="28" max="50">
+                                <span class="input-group-text">inches</span>
+                            </div>
+                            <div class="input-group mt-2">
+                                <span class="input-group-text">Cup Size</span>
+                                <select class="form-select" id="cup_size" name="cup_size">
+                                    <option value="">Select cup size...</option>
+                                    <option value="AA">AA</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="DD">DD/E</option>
+                                    <option value="DDD">DDD/F</option>
+                                    <option value="G">G</option>
+                                    <option value="H">H</option>
+                                    <option value="I">I</option>
+                                    <option value="J">J</option>
+                                </select>
+                            </div>
+                            <select class="form-select mt-2" id="bust_descriptor" name="bust_descriptor">
+                                <option value="">Or select approximate size...</option>
+                                <option value="small">Small (28-32)</option>
+                                <option value="medium">Medium (33-37)</option>
+                                <option value="large">Large (38-42)</option>
+                                <option value="extra_large">Extra Large (43+)</option>
+                            </select>
+                            <div class="form-text">Measure around the fullest part</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="waist" class="form-label">Waist <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="waist" name="waist" step="0.5" min="22" max="45">
+                                <span class="input-group-text">inches</span>
+                            </div>
+                            <select class="form-select mt-2" id="waist_descriptor" name="waist_descriptor">
+                                <option value="">Or select approximate size...</option>
+                                <option value="very_small">Very Small (22-25)</option>
+                                <option value="small">Small (26-29)</option>
+                                <option value="medium">Medium (30-33)</option>
+                                <option value="large">Large (34-37)</option>
+                                <option value="extra_large">Extra Large (38+)</option>
+                            </select>
+                            <div class="form-text">Measure at natural waist</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="hips" class="form-label">Hips</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="hips" name="hips" step="0.5" min="30" max="55">
+                                <span class="input-group-text">inches</span>
+                            </div>
+                            <select class="form-select mt-2" id="hips_descriptor" name="hips_descriptor">
+                                <option value="">Or select approximate size...</option>
+                                <option value="small">Small (30-35)</option>
+                                <option value="medium">Medium (36-41)</option>
+                                <option value="large">Large (42-47)</option>
+                                <option value="extra_large">Extra Large (48+)</option>
+                            </select>
+                            <div class="form-text">Measure at widest part</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="inseam" class="form-label">Inseam</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="inseam" name="inseam" step="0.5" min="24" max="36">
+                                <span class="input-group-text">inches</span>
+                            </div>
+                            <div class="form-text">Measure from crotch to desired length</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="shoulder_width" class="form-label">Shoulder Width</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="shoulder_width" name="shoulder_width" step="0.5" min="14" max="20">
+                                <span class="input-group-text">inches</span>
+                            </div>
+                            <div class="form-text">Measure across shoulders</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="arm_length" class="form-label">Arm Length</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="arm_length" name="arm_length" step="0.5" min="20" max="28">
+                                <span class="input-group-text">inches</span>
+                            </div>
+                            <div class="form-text">Measure from shoulder to wrist</div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mb-3 mt-4">Physical Features</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="eye_color" class="form-label">Eye Color</label>
+                            <select class="form-select" id="eye_color" name="eye_color" required>
+                                <option value="">Select eye color</option>
+                                <option value="brown">Brown</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="hazel">Hazel</option>
+                                <option value="gray">Gray</option>
+                                <option value="amber">Amber</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="hair_color" class="form-label">Hair Color</label>
+                            <select class="form-select" id="hair_color" name="hair_color" required>
+                                <option value="">Select hair color</option>
+                                <option value="black">Black</option>
+                                <option value="brown">Brown</option>
+                                <option value="blonde">Blonde</option>
+                                <option value="red">Red</option>
+                                <option value="auburn">Auburn</option>
+                                <option value="chestnut">Chestnut</option>
+                                <option value="gray">Gray</option>
+                                <option value="white">White</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="hair_length" class="form-label">Hair Length</label>
+                            <select class="form-select" id="hair_length" name="hair_length" required>
+                                <option value="">Select hair length</option>
+                                <option value="short">Short (above shoulders)</option>
+                                <option value="medium">Medium (shoulder length)</option>
+                                <option value="long">Long (below shoulders)</option>
+                                <option value="very_long">Very Long (below waist)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="skin_tone" class="form-label">Skin Tone</label>
+                            <select class="form-select" id="skin_tone" name="skin_tone" required>
+                                <option value="">Select skin tone</option>
+                                <option value="fair">Fair</option>
+                                <option value="light">Light</option>
+                                <option value="medium">Medium</option>
+                                <option value="olive">Olive</option>
+                                <option value="tan">Tan</option>
+                                <option value="brown">Brown</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="body_type" class="form-label">Body Type</label>
+                            <select class="form-select" id="body_type" name="body_type" required>
+                                <option value="">Select body type</option>
+                                <option value="hourglass">Hourglass</option>
+                                <option value="pear">Pear</option>
+                                <option value="apple">Apple</option>
+                                <option value="rectangle">Rectangle</option>
+                                <option value="inverted_triangle">Inverted Triangle</option>
+                                <option value="athletic">Athletic</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="face_shape" class="form-label">Face Shape</label>
+                            <select class="form-select" id="face_shape" name="face_shape">
+                                <option value="">Select face shape (optional)</option>
+                                <option value="oval">Oval</option>
+                                <option value="round">Round</option>
+                                <option value="square">Square</option>
+                                <option value="heart">Heart</option>
+                                <option value="diamond">Diamond</option>
+                                <option value="triangle">Triangle</option>
+                                <option value="oblong">Oblong</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="distinguishing_features" class="form-label">Distinguishing Features</label>
+                        <input type="text" class="form-control" id="distinguishing_features" name="distinguishing_features"
+                               placeholder="Enter features separated by commas (e.g., freckles, birthmark, scar)">
+                        <div class="form-text">Optional: List any notable physical features</div>
+                    </div>
+                    
+                    <h4 class="mb-3 mt-4">Style Preferences</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="primary_style" class="form-label">Primary Style</label>
+                            <select class="form-select" id="primary_style" name="primary_style" required>
+                                <option value="">Select primary style</option>
+                                <option value="classic">Classic</option>
+                                <option value="modern">Modern</option>
+                                <option value="bohemian">Bohemian</option>
+                                <option value="minimalist">Minimalist</option>
+                                <option value="edgy">Edgy</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="sporty">Sporty</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="casual">Casual</option>
+                                <option value="formal">Formal</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="secondary_styles" class="form-label">Secondary Styles</label>
+                            <select class="form-select" id="secondary_styles" name="secondary_styles" multiple required>
+                                <option value="classic">Classic</option>
+                                <option value="modern">Modern</option>
+                                <option value="bohemian">Bohemian</option>
+                                <option value="minimalist">Minimalist</option>
+                                <option value="edgy">Edgy</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="sporty">Sporty</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="casual">Casual</option>
+                                <option value="formal">Formal</option>
+                            </select>
+                            <div class="form-text">Hold Ctrl/Cmd to select multiple styles</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="favorite_colors" class="form-label">Favorite Colors</label>
+                            <select class="form-select" id="favorite_colors" name="favorite_colors" multiple required>
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="red">Red</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="purple">Purple</option>
+                                <option value="pink">Pink</option>
+                                <option value="orange">Orange</option>
+                                <option value="brown">Brown</option>
+                                <option value="gray">Gray</option>
+                                <option value="navy">Navy</option>
+                                <option value="burgundy">Burgundy</option>
+                                <option value="teal">Teal</option>
+                                <option value="mint">Mint</option>
+                                <option value="lavender">Lavender</option>
+                            </select>
+                            <div class="form-text">Hold Ctrl/Cmd to select multiple colors</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="favorite_materials" class="form-label">Favorite Materials</label>
+                            <select class="form-select" id="favorite_materials" name="favorite_materials" multiple required>
+                                <option value="cotton">Cotton</option>
+                                <option value="silk">Silk</option>
+                                <option value="wool">Wool</option>
+                                <option value="linen">Linen</option>
+                                <option value="denim">Denim</option>
+                                <option value="leather">Leather</option>
+                                <option value="suede">Suede</option>
+                                <option value="velvet">Velvet</option>
+                                <option value="lace">Lace</option>
+                                <option value="satin">Satin</option>
+                                <option value="cashmere">Cashmere</option>
+                                <option value="polyester">Polyester</option>
+                                <option value="spandex">Spandex</option>
+                                <option value="nylon">Nylon</option>
+                            </select>
+                            <div class="form-text">Hold Ctrl/Cmd to select multiple materials</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="preferred_silhouettes" class="form-label">Preferred Silhouettes</label>
+                        <select class="form-select" id="preferred_silhouettes" name="preferred_silhouettes" multiple required>
+                            <option value="fitted">Fitted</option>
+                            <option value="loose">Loose</option>
+                            <option value="oversized">Oversized</option>
+                            <option value="a_line">A-Line</option>
+                            <option value="empire">Empire</option>
+                            <option value="sheath">Sheath</option>
+                            <option value="mermaid">Mermaid</option>
+                            <option value="ball_gown">Ball Gown</option>
+                            <option value="column">Column</option>
+                            <option value="trapeze">Trapeze</option>
+                        </select>
+                        <div class="form-text">Hold Ctrl/Cmd to select multiple silhouettes</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="style_adaptability" class="form-label">Style Adaptability (1-10)</label>
+                            <input type="range" class="form-range" id="style_adaptability" name="style_adaptability" 
+                                   min="1" max="10" value="5" required>
+                            <div class="d-flex justify-content-between">
+                                <small>Traditional</small>
+                                <small>Adaptable</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="comfort_priority" class="form-label">Comfort Priority (1-10)</label>
+                            <input type="range" class="form-range" id="comfort_priority" name="comfort_priority" 
+                                   min="1" max="10" value="5" required>
+                            <div class="d-flex justify-content-between">
+                                <small>Style First</small>
+                                <small>Comfort First</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="modesty_level" class="form-label">Modesty Level (1-10)</label>
+                            <input type="range" class="form-range" id="modesty_level" name="modesty_level" 
+                                   min="1" max="10" value="5" required>
+                            <div class="d-flex justify-content-between">
+                                <small>More Revealing</small>
+                                <small>More Modest</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mb-3 mt-4">Shoe Preferences</h4>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="shoe_size" class="form-label">Shoe Size</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="shoe_size" name="shoe_size" step="0.5" min="4" max="14">
+                                <select class="form-select flex-shrink-1" style="width: auto;" name="shoe_size_unit">
+                                    <option value="us">US</option>
+                                    <option value="uk">UK</option>
+                                    <option value="eu">EU</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="preferred_heel_height" class="form-label">Preferred Heel Height</label>
+                            <select class="form-select" id="preferred_heel_height" name="preferred_heel_height" multiple>
+                                <option value="flat">Flat (0-0.5")</option>
+                                <option value="low">Low (0.5-1.5")</option>
+                                <option value="medium">Medium (1.5-2.5")</option>
+                                <option value="high">High (2.5-4")</option>
+                                <option value="very_high">Very High (4"+)</option>
+                            </select>
+                            <div class="form-text">Hold Ctrl/Cmd to select multiple options</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="shoe_styles" class="form-label">Preferred Shoe Styles</label>
+                            <select class="form-select" id="shoe_styles" name="shoe_styles" multiple>
+                                <option value="closed_toe">Closed Toe</option>
+                                <option value="open_toe">Open Toe</option>
+                                <option value="peep_toe">Peep Toe</option>
+                                <option value="sandals">Sandals</option>
+                                <option value="boots">Boots</option>
+                                <option value="ankle_boots">Ankle Boots</option>
+                                <option value="pumps">Pumps</option>
+                                <option value="flats">Flats</option>
+                                <option value="sneakers">Sneakers</option>
+                                <option value="platforms">Platforms</option>
+                                <option value="wedges">Wedges</option>
+                                <option value="mules">Mules</option>
+                                <option value="slingbacks">Slingbacks</option>
+                            </select>
+                            <div class="form-text">Hold Ctrl/Cmd to select multiple styles</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="max_heel_height" class="form-label">Maximum Comfortable Heel Height</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="max_heel_height" name="max_heel_height" step="0.5" min="0" max="6">
+                                <span class="input-group-text">inches</span>
+                            </div>
+                            <div class="form-text">Maximum heel height you're comfortable wearing</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="shoe_width" class="form-label">Shoe Width</label>
+                            <select class="form-select" id="shoe_width" name="shoe_width">
+                                <option value="">Select shoe width...</option>
+                                <option value="narrow">Narrow (AA/N)</option>
+                                <option value="medium">Medium (B/M)</option>
+                                <option value="wide">Wide (D/W)</option>
+                                <option value="extra_wide">Extra Wide (E/WW)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Create Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add validation for numeric inputs
+    const numericInputs = document.querySelectorAll('input[type="number"]');
+    numericInputs.forEach(input => {
+        // Allow typing any number
+        input.addEventListener('input', function(e) {
+            // Remove any non-numeric characters except decimal point
+            this.value = this.value.replace(/[^\d.-]/g, '');
+            
+            // Only validate on blur or when user stops typing
+            clearTimeout(this.timeout);
+            this.timeout = setTimeout(() => {
+                const value = parseFloat(this.value);
+                const min = parseFloat(this.min);
+                const max = parseFloat(this.max);
+                
+                if (!isNaN(value)) {
+                    if (value < min) {
+                        this.value = min;
+                        showValidationMessage(this, `Value must be at least ${min}`);
+                    } else if (value > max) {
+                        this.value = max;
+                        showValidationMessage(this, `Value must be at most ${max}`);
+                    } else {
+                        hideValidationMessage(this);
+                    }
+                }
+            }, 1000);
+        });
+
+        // Final validation on blur
+        input.addEventListener('blur', function() {
+            const value = parseFloat(this.value);
+            const min = parseFloat(this.min);
+            const max = parseFloat(this.max);
+            
+            if (isNaN(value) || value < min) {
+                this.value = min;
+            } else if (value > max) {
+                this.value = max;
+            }
+            hideValidationMessage(this);
+        });
+    });
+
+    function showValidationMessage(input, message) {
+        let msgElem = input.nextElementSibling;
+        if (!msgElem || !msgElem.classList.contains('validation-message')) {
+            msgElem = document.createElement('div');
+            msgElem.className = 'validation-message text-danger small';
+            input.parentNode.insertBefore(msgElem, input.nextSibling);
+        }
+        msgElem.textContent = message;
+    }
+
+    function hideValidationMessage(input) {
+        const msgElem = input.nextElementSibling;
+        if (msgElem && msgElem.classList.contains('validation-message')) {
+            msgElem.remove();
+        }
+    }
+
+    // Handle descriptive selections
+    function setupDescriptorPair(numericId, descriptorId, conversions) {
+        const numericInput = document.getElementById(numericId);
+        const descriptorSelect = document.getElementById(descriptorId);
+        
+        descriptorSelect.addEventListener('change', function() {
+            if (this.value && conversions[this.value]) {
+                const range = conversions[this.value];
+                numericInput.value = range.default;
+                numericInput.setAttribute('data-suggested', 'true');
+                hideValidationMessage(numericInput);
+            }
+        });
+        
+        numericInput.addEventListener('input', function() {
+            descriptorSelect.value = '';
+            this.removeAttribute('data-suggested');
+        });
+    }
+
+    const heightConversions = {
+        'very_short': { default: 58 },  // 4'10"
+        'short': { default: 62 },       // 5'2"
+        'below_average': { default: 64 }, // 5'4"
+        'average': { default: 66 },     // 5'6"
+        'above_average': { default: 68 }, // 5'8"
+        'tall': { default: 70 },        // 5'10"
+        'very_tall': { default: 74 }    // 6'2"
+    };
+
+    const buildConversions = {
+        'petite': { default: 100 },
+        'slim': { default: 120 },
+        'average': { default: 140 },
+        'athletic': { default: 150 },
+        'curvy': { default: 160 },
+        'full': { default: 180 }
+    };
+
+    const bustConversions = {
+        'small': { default: 32 },
+        'medium': { default: 36 },
+        'large': { default: 40 },
+        'extra_large': { default: 44 }
+    };
+
+    const waistConversions = {
+        'very_small': { default: 24 },
+        'small': { default: 28 },
+        'medium': { default: 32 },
+        'large': { default: 36 },
+        'extra_large': { default: 40 }
+    };
+
+    const hipsConversions = {
+        'small': { default: 34 },
+        'medium': { default: 38 },
+        'large': { default: 44 },
+        'extra_large': { default: 50 }
+    };
+
+    setupDescriptorPair('height', 'height_descriptor', heightConversions);
+    setupDescriptorPair('weight', 'build_descriptor', buildConversions);
+    setupDescriptorPair('bust', 'bust_descriptor', bustConversions);
+    setupDescriptorPair('waist', 'waist_descriptor', waistConversions);
+    setupDescriptorPair('hips', 'hips_descriptor', hipsConversions);
+
+    // Smart measurement suggestions
+    function suggestMeasurements() {
+        const heightInInches = convertToInches(parseFloat(height.value) || 0, heightUnit.value);
+        const weightInLbs = convertToLbs(parseFloat(weight.value) || 0, weightUnit.value);
+        
+        if (heightInInches < 48 || weightInLbs < 80) return;
+
+        // Only suggest measurements for empty fields that haven't been set by descriptors
+        const fieldsToSuggest = [
+            { elem: bust, attr: 'data-suggested', calc: () => Math.round((heightInInches * 0.52 + weightInLbs * 0.15) * 2) / 2 },
+            { elem: waist, attr: 'data-suggested', calc: () => Math.round((heightInInches * 0.45 + weightInLbs * 0.13) * 2) / 2 },
+            { elem: hips, attr: 'data-suggested', calc: () => Math.round((heightInInches * 0.55 + weightInLbs * 0.17) * 2) / 2 },
+            { elem: inseam, attr: 'data-suggested', calc: () => Math.round(heightInInches * 0.45 * 2) / 2 },
+            { elem: shoulderWidth, attr: 'data-suggested', calc: () => Math.round(heightInInches * 0.23 * 2) / 2 },
+            { elem: armLength, attr: 'data-suggested', calc: () => Math.round(heightInInches * 0.35 * 2) / 2 }
+        ];
+
+        fieldsToSuggest.forEach(field => {
+            if (!field.elem.value && !field.elem.hasAttribute(field.attr)) {
+                field.elem.placeholder = `Suggested: ${field.calc()} inches`;
+            }
+        });
+    }
+
+    // Add event listeners for height and weight changes
+    height.addEventListener('input', suggestMeasurements);
+    heightUnit.addEventListener('change', suggestMeasurements);
+    weight.addEventListener('input', suggestMeasurements);
+    weightUnit.addEventListener('change', suggestMeasurements);
+
+    // Unit conversion handlers
+    heightUnit.addEventListener('change', function() {
+        const value = parseFloat(height.value);
+        if (!value) return;
+        
+        if (this.value === 'cm' && height.value) {
+            height.value = (value * 2.54).toFixed(1);
+            height.min = '122';
+            height.max = '213';
+            updateHeightDescriptor(value * 2.54);
+        } else if (this.value === 'inches' && height.value) {
+            height.value = (value / 2.54).toFixed(1);
+            height.min = '48';
+            height.max = '84';
+            updateHeightDescriptor(value / 2.54);
+        }
+    });
+
+    weightUnit.addEventListener('change', function() {
+        const value = parseFloat(weight.value);
+        if (!value) return;
+        
+        if (this.value === 'kg' && weight.value) {
+            weight.value = (value / 2.20462).toFixed(1);
+            weight.min = '36';
+            weight.max = '181';
+            updateBuildDescriptor(value / 2.20462);
+        } else if (this.value === 'stone' && weight.value) {
+            weight.value = (value / 14).toFixed(1);
+            weight.min = '5.7';
+            weight.max = '28.5';
+            updateBuildDescriptor(value * 14);
+        } else if (this.value === 'lbs' && weight.value) {
+            weight.value = (value * 2.20462).toFixed(1);
+            weight.min = '80';
+            weight.max = '400';
+            updateBuildDescriptor(value);
+        }
+    });
+
+    function updateHeightDescriptor(heightValue) {
+        const heightInInches = heightUnit.value === 'cm' ? heightValue / 2.54 : heightValue;
+        const descriptor = document.getElementById('height_descriptor');
+        
+        if (heightInInches < 60) descriptor.value = 'very_short';
+        else if (heightInInches < 63) descriptor.value = 'short';
+        else if (heightInInches < 65) descriptor.value = 'below_average';
+        else if (heightInInches < 67) descriptor.value = 'average';
+        else if (heightInInches < 69) descriptor.value = 'above_average';
+        else if (heightInInches < 72) descriptor.value = 'tall';
+        else descriptor.value = 'very_tall';
+    }
+
+    function updateBuildDescriptor(weightValue) {
+        const weightInLbs = weightUnit.value === 'kg' ? weightValue * 2.20462 : 
+                           weightUnit.value === 'stone' ? weightValue * 14 : weightValue;
+        const heightInInches = convertToInches(parseFloat(height.value) || 0, heightUnit.value);
+        const descriptor = document.getElementById('build_descriptor');
+        
+        if (!heightInInches) return;
+        
+        // Calculate BMI to determine build
+        const bmi = (weightInLbs * 703) / (heightInInches * heightInInches);
+        
+        if (bmi < 18.5) descriptor.value = 'slim';
+        else if (bmi < 25) descriptor.value = 'average';
+        else if (bmi < 30) descriptor.value = 'athletic';
+        else descriptor.value = 'full';
+    }
+
+    // Add validation for range inputs
+    const rangeInputs = document.querySelectorAll('input[type="range"]');
+    rangeInputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const value = this.value;
+            const label = this.previousElementSibling;
+            label.textContent = `${label.textContent.split('(')[0]}(${value}/10)`;
+        });
+    });
+
+    // Initialize select2 for multiple select boxes
+    const multipleSelects = document.querySelectorAll('select[multiple]');
+    multipleSelects.forEach(select => {
+        select.addEventListener('change', function() {
+            const selectedOptions = Array.from(this.selectedOptions).map(option => option.value);
+            this.setAttribute('data-selected', selectedOptions.join(','));
+        });
+    });
+
+    // Helper functions
+    function convertToInches(value, unit) {
+        switch(unit) {
+            case 'cm':
+                return value / 2.54;
+            case 'inches':
+                return value;
+            default:
+                return value;
+        }
+    }
+
+    function convertToLbs(value, unit) {
+        switch(unit) {
+            case 'kg':
+                return value * 2.20462;
+            case 'stone':
+                return value * 14;
+            case 'lbs':
+                return value;
+            default:
+                return value;
+        }
+    }
+});
+</script>
+{% endblock %} 

@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250426_010537_1_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.368867",
+  "outfit_data": {
+    "top": "A crisp white silk blouse with a high collar and delicate ruffle detailing at the cuffs.",
+    "bottom": "A full-length navy corduroy skirt in an A-line silhouette, ending just above the ankle.",
+    "shoes": "Black leather ankle boots with a low heel and a subtle pointed toe.",
+    "extras": "A beige cashmere wrap with a fringed trim for added warmth and texture. Silver stud earrings complete the look.",
+    "colors": [
+      "white",
+      "navy",
+      "black",
+      "silver",
+      "beige"
+    ],
+    "materials": [
+      "silk",
+      "corduroy",
+      "leather",
+      "cashmere"
+    ],
+    "lengths": [
+      "ankle",
+      "full"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010537_1_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:05:37.051167"
+  }
+}

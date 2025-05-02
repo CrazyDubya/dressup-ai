@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_010738_5_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.390408",
+  "outfit_data": {
+    "top": "A fitted, bronze silk blouse with a high neckline and delicate gold button detailing.",
+    "bottom": "Slim-fitting, dark denim shorts, cuffed at the hem to showcase sleek silver ankle cuff bracelets.",
+    "shoes": "Platform wedges in aged copper leather, adding a touch of retro flair and height.",
+    "extras": "A vintage-style linen sunhat with a wide brim and an embroidered flower detail, adorned with a gold chain.",
+    "colors": [
+      "gold",
+      "bronze",
+      "silver",
+      "red"
+    ],
+    "materials": [
+      "silk",
+      "denim",
+      "leather",
+      "linen"
+    ],
+    "lengths": [
+      "ankle",
+      "short"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 6,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010738_5_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:07:38.783110"
+  }
+}

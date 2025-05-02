@@ -1,0 +1,29 @@
+{
+  "outfit_id": "outfit_20250426_010934_8_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.420823",
+  "outfit_data": {
+    "top": "A sleeveless, silver linen blouse with a relaxed fit and a boat neckline.",
+    "bottom": "Wide-leg, platinum seersucker pants with a straight leg and a high waist.",
+    "shoes": "Bronze leather sandals with thin straps and a low wedge heel.",
+    "extras": "A single gold bangle bracelet and a small, copper crossbody bag.",
+    "colors": [
+      "silver",
+      "bronze",
+      "gold"
+    ],
+    "materials": [
+      "linen",
+      "leather"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010934_8_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:09:34.571237"
+  }
+}

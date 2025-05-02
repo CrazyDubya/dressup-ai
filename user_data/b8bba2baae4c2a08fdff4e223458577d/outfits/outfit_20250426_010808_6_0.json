@@ -1,0 +1,34 @@
+{
+  "outfit_id": "outfit_20250426_010808_6_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.397802",
+  "outfit_data": {
+    "top": "A dusty rose cashmere sweater featuring a slightly oversized fit, dropped shoulders, and delicate ruffles along the neckline.",
+    "bottom": "Wide-leg, high-waisted trousers crafted from soft lavender tweed with a subtle herringbone pattern.",
+    "shoes": "White leather Chelsea boots with a block heel for added height and comfort.",
+    "extras": "A long, flowing scarf in a pale peach silk, draped casually around the neck. Thin gold hoop earrings complete the look.",
+    "colors": [
+      "white",
+      "gold"
+    ],
+    "materials": [
+      "cashmere",
+      "tweed",
+      "leather",
+      "silk"
+    ],
+    "lengths": [
+      "long"
+    ],
+    "textures": [
+      "soft"
+    ],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 8,
+    "outfit_id": "outfit_20250426_010808_6_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:08:08.611438"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "outfit_id": "outfit_20250426_010715_4_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.386077",
+  "outfit_data": {
+    "top": "A flowing, oversized linen blouse in a deep emerald green. The sleeves are wide and billowy, ending just past the elbow.",
+    "bottom": "Loose-fitting denim overalls in a faded indigo wash.  The straps are adjustable and the bib is adorned with delicate gold embroidery.",
+    "shoes": "Cobalt blue leather sandals with chunky platform heels and simple buckles.",
+    "extras": "A lightweight, knit cardigan in a rich burgundy shade, loosely draped over the shoulders for a touch of warmth if needed.",
+    "colors": [
+      "green",
+      "gold",
+      "blue",
+      "burgundy"
+    ],
+    "materials": [
+      "linen",
+      "denim",
+      "leather",
+      "knit"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010715_4_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:07:15.806507"
+  }
+}

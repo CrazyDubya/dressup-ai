@@ -1,0 +1,37 @@
+{
+  "outfit_id": "outfit_20250426_010612_2_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.374243",
+  "outfit_data": {
+    "top": "A cream silk blouse with exaggerated puff sleeves, featuring a dramatic high neckline and an asymmetric drape that falls to the hip.",
+    "bottom": "Camel wool wide-leg trousers with a sharp crease down the center, cinched at the waist with a statement belt in taupe leather. The pants have a flowing silhouette, pooling slightly at the ankles for a modern touch.",
+    "shoes": "Black suede stiletto heels, reaching mid-calf, with pointed toes and a subtly buckled strap around the ankle.",
+    "extras": "A chunky gold chain necklace layered with delicate silver pendants.",
+    "colors": [
+      "cream",
+      "black",
+      "silver",
+      "gold",
+      "red"
+    ],
+    "materials": [
+      "silk",
+      "leather",
+      "wool",
+      "suede",
+      "lace"
+    ],
+    "lengths": [
+      "ankle",
+      "calf"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 8,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010612_2_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:06:12.401429"
+  }
+}

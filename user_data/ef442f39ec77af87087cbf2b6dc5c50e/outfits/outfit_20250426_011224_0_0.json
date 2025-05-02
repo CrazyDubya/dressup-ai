@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250426_011224_0_0",
+  "event": "Pool party",
+  "created_at": "2025-04-26T01:12:24.808589",
+  "outfit_data": {
+    "top": "A deep crimson velvet blouse with long sleeves and a relaxed, straight cut.",
+    "bottom": "High-waisted corduroy pants in a rich emerald green with a slightly flared leg.",
+    "shoes": "Gold leather ankle boots with stacked heels.",
+    "extras": "A long, flowing silk scarf in cobalt blue with a paisley print, worn loosely around the neck. A delicate gold pendant necklace featuring a tiny amethyst stone completes the look.",
+    "colors": [
+      "red",
+      "green",
+      "gold",
+      "blue"
+    ],
+    "materials": [
+      "velvet",
+      "corduroy",
+      "leather",
+      "lace",
+      "silk"
+    ],
+    "lengths": [
+      "long",
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_011224_0_0",
+    "event": "Pool party",
+    "created_at": "2025-04-26T01:12:24.808481"
+  }
+}

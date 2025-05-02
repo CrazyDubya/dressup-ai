@@ -1,0 +1,38 @@
+{
+  "outfit_id": "outfit_20250426_010655_3_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.381749",
+  "outfit_data": {
+    "top": "A flowy white cotton blouse with intricate embroidery detailing along the neckline and cuffs. The sleeves are voluminous and slightly cropped, cinched at the wrist with delicate black ribbon ties.",
+    "bottom": "High-waisted, wide-leg linen pants in a deep navy blue. The fabric has a slight texture and drapes gracefully, creating a relaxed yet elegant silhouette.",
+    "shoes": "Flat leather sandals in beige with criss-crossing straps and metallic silver accents.",
+    "extras": "A long, chunky knit cardigan in grey draped casually over the shoulders.",
+    "colors": [
+      "black",
+      "white",
+      "navy",
+      "blue",
+      "silver",
+      "beige"
+    ],
+    "materials": [
+      "cotton",
+      "linen",
+      "leather",
+      "knit"
+    ],
+    "lengths": [
+      "cropped",
+      "long",
+      "full"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 8,
+    "comfort": 8,
+    "outfit_id": "outfit_20250426_010655_3_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:06:55.914928"
+  }
+}

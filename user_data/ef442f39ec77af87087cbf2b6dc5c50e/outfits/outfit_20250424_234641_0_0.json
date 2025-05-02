@@ -1,0 +1,39 @@
+{
+  "outfit_id": "outfit_20250424_234641_0_0",
+  "event": "Wedding",
+  "created_at": "2025-04-24T23:46:41.402224",
+  "outfit_data": {
+    "top": "A ruby red, sleeveless silk blouse with a relaxed fit and a bateau neckline.",
+    "bottom": "Emerald green linen wide-leg pants with a straight leg and a high waist.",
+    "shoes": "Sapphire blue leather sneakers with white accents.",
+    "extras": "A delicate amethyst gold necklace paired with a simple topaz ring. A lightweight, emerald green chiffon scarf can be worn loosely draped over the shoulders for added warmth.",
+    "colors": [
+      "red",
+      "green",
+      "white",
+      "blue",
+      "gold"
+    ],
+    "materials": [
+      "silk",
+      "linen",
+      "leather",
+      "lace"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250424_234641_0_0",
+    "event": "Wedding",
+    "created_at": "2025-04-24T23:46:41.402042",
+    "user_ratings": {
+      "style": 7,
+      "comfort": 6,
+      "overall": 6,
+      "rated_at": "2025-04-24T23:48:44.804238"
+    }
+  }
+}

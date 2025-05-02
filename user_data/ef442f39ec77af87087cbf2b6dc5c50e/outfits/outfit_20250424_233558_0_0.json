@@ -1,0 +1,41 @@
+{
+  "outfit_id": "outfit_20250424_233558_0_0",
+  "event": "Pool Party",
+  "created_at": "2025-04-24T23:40:46.476207",
+  "outfit_data": {
+    "top": "A loose-fitting mint green silk blouse with puffed sleeves and a high neckline.",
+    "bottom": "Wide-leg lavender wool trousers with a sharp crease down the center and a slightly cropped length.",
+    "shoes": "Sky blue suede platform sandals with chunky heels and buckled straps.",
+    "extras": "A peach tweed blazer with exaggerated shoulders, worn open over the blouse. Silver hoop earrings and a delicate chain necklace complete the look.",
+    "colors": [
+      "mint",
+      "green",
+      "blue",
+      "silver"
+    ],
+    "materials": [
+      "silk",
+      "wool",
+      "suede",
+      "lace",
+      "tweed"
+    ],
+    "lengths": [
+      "cropped"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250424_233558_0_0",
+    "event": "Pool Party",
+    "created_at": "2025-04-24T23:35:58.183920",
+    "user_ratings": {
+      "style": 6,
+      "comfort": 6,
+      "overall": 5,
+      "rated_at": "2025-04-24T23:40:46.473862"
+    }
+  }
+}

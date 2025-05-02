@@ -1,0 +1,37 @@
+{
+  "outfit_id": "outfit_20250426_005927_4_0",
+  "event": "Summer Patio Drinks",
+  "created_at": "2025-04-26T00:59:44.610070",
+  "outfit_data": {
+    "top": "A voluminous, black silk blouse with exaggerated puff sleeves and a dramatic off-the-shoulder neckline. The fabric drapes in soft folds and features delicate laser-cut lace detailing along the edges.",
+    "bottom": "High-waisted, charcoal gray linen pants with a wide leg that tapers dramatically towards the ankle. The pants feature subtle pleats running down the front for added volume and movement.",
+    "shoes": "Black satin platform pumps with a chunky heel and pointed toe.  The shoes are adorned with silver buckles and have an elongated, sculpted silhouette.",
+    "extras": "A long, ivory silk scarf with a geometric print in black and white is draped around the neck. Simple silver hoop earrings complete the look.",
+    "colors": [
+      "black",
+      "gray",
+      "silver",
+      "white"
+    ],
+    "materials": [
+      "silk",
+      "lace",
+      "linen",
+      "satin"
+    ],
+    "lengths": [
+      "long",
+      "ankle"
+    ],
+    "textures": [
+      "soft"
+    ],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_005927_4_0",
+    "event": "Summer Patio Drinks",
+    "created_at": "2025-04-26T00:59:27.398013"
+  }
+}

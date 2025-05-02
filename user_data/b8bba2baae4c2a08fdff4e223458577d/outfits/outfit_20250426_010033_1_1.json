@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250426_010033_1_1",
+  "event": "Summer Sidewalk Cafe ",
+  "created_at": "2025-04-26T01:01:34.284811",
+  "outfit_data": {
+    "top": "A charcoal gray cashmere blouse with oversized, ruffled sleeves adds a touch of romanticism to the otherwise minimalist ensemble. The blouse falls loosely around the body, creating a relaxed silhouette.",
+    "bottom": "High-waisted black wool trousers with wide legs provide structure and a sophisticated feel.  The crisp lines of the trousers complement the soft draping of the blouse.",
+    "shoes": "Black leather ballet flats in a pointed toe style add a touch of retro chic while remaining comfortable for walking.",
+    "extras": "A long, ivory wool coat with a belted waist adds warmth and visual interest. Opt for a classic trench coat silhouette or choose a more dramatic peacoat style.  Complete the look with a simple silver pendant necklace on a fine chain.",
+    "colors": [
+      "gray",
+      "black",
+      "silver"
+    ],
+    "materials": [
+      "cashmere",
+      "wool",
+      "leather",
+      "lace"
+    ],
+    "lengths": [
+      "mini",
+      "long"
+    ],
+    "textures": [
+      "soft"
+    ],
+    "styles": [],
+    "formality": 4,
+    "trendiness": 10,
+    "comfort": 9,
+    "outfit_id": "outfit_20250426_010033_1_1",
+    "event": "Summer Sidewalk Cafe ",
+    "created_at": "2025-04-26T01:00:33.582519"
+  }
+}

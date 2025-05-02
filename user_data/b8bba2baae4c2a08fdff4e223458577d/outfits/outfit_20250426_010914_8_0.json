@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250426_010914_8_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.414352",
+  "outfit_data": {
+    "top": "A chunky knit cream-colored turtleneck sweater crafted from wool and cashmere blend. The neckline is high and slightly oversized, offering a relaxed yet polished look.",
+    "bottom": "Wide-leg khaki flannel trousers with a sharp, angular cut. The fabric has a subtle plaid pattern in muted earth tones, adding visual interest without being overly bold.",
+    "shoes": "Black leather Chelsea boots with sturdy rubber soles. The ankle height and pointed toe offer a touch of formality while remaining practical for navigating sandy terrain.",
+    "extras": "A long, taupe-colored wool duster coat draped over the shoulders adds warmth and an air of effortless sophistication. Accessorize with simple gold hoop earrings and a brown leather belt cinched around the waist to accentuate the masculine silhouette.",
+    "colors": [
+      "red",
+      "cream",
+      "black",
+      "gold",
+      "brown"
+    ],
+    "materials": [
+      "knit",
+      "wool",
+      "cashmere",
+      "leather"
+    ],
+    "lengths": [
+      "ankle",
+      "long"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 6,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010914_8_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:09:14.598080"
+  }
+}

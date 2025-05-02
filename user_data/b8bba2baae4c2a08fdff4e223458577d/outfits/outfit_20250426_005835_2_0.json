@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250426_005835_2_0",
+  "event": "Summer Patio Drinks",
+  "created_at": "2025-04-26T00:59:44.600056",
+  "outfit_data": {
+    "top": "A crimson silk blouse with a fitted bodice, cinched waist, and flared sleeves ending in delicate cuffs.  The neckline features a modest high collar with delicate gold buttons fastening it at the back.",
+    "bottom": "Emerald wool gabardine trousers tailored for a bodycon fit. The pants feature a high waist and straight legs, culminating in slightly cropped hems that reveal a hint of ankle.",
+    "shoes": "Cobalt blue satin pumps with a pointed toe and a stiletto heel. They are adorned with gold buckles at the ankles for an extra touch of vintage glamour.",
+    "extras": "A single strand of pearl necklace adds a timeless elegance to the ensemble.  A small, structured handbag in black leather completes the look, offering a chic and practical complement.",
+    "colors": [
+      "red",
+      "gold",
+      "blue",
+      "black"
+    ],
+    "materials": [
+      "silk",
+      "wool",
+      "satin",
+      "lace",
+      "leather"
+    ],
+    "lengths": [
+      "ankle",
+      "cropped"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 7,
+    "trendiness": 8,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_005835_2_0",
+    "event": "Summer Patio Drinks",
+    "created_at": "2025-04-26T00:58:35.812211"
+  }
+}

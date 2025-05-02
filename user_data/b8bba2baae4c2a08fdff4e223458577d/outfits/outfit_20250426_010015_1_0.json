@@ -1,0 +1,33 @@
+{
+  "outfit_id": "outfit_20250426_010015_1_0",
+  "event": "Summer Sidewalk Cafe ",
+  "created_at": "2025-04-26T01:01:34.282898",
+  "outfit_data": {
+    "top": "A  pale lavender linen blouse with a relaxed, oversized fit and three-quarter sleeves.",
+    "bottom": "Mint green seersucker culottes with a wide leg and high waist.",
+    "shoes": "Light pink cotton canvas espadrille wedges.",
+    "extras": "A thin white voile scarf tied loosely around the neck and delicate silver hoop earrings.",
+    "colors": [
+      "mint",
+      "green",
+      "pink",
+      "silver",
+      "white"
+    ],
+    "materials": [
+      "linen",
+      "cotton"
+    ],
+    "lengths": [
+      "three-quarter"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010015_1_0",
+    "event": "Summer Sidewalk Cafe ",
+    "created_at": "2025-04-26T01:00:15.566036"
+  }
+}

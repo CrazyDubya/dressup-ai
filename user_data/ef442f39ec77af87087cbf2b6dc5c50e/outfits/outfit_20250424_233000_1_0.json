@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250424_233000_1_0",
+  "event": "Job Interview",
+  "created_at": "2025-04-24T23:31:12.650098",
+  "outfit_data": {
+    "top": "A sleeveless emerald green silk blouse with a draped neckline and an oversized, balloon-shaped sleeve.",
+    "bottom": "Wide-leg terracotta satin trousers with a high waist and a flowing, a-line silhouette.",
+    "shoes": "Black leather ankle boots with a stacked heel and silver buckles.",
+    "extras": "A long, sage green cashmere cardigan with fringe detailing worn loosely over the blouse, and a thin gold chain necklace.",
+    "colors": [
+      "green",
+      "black",
+      "silver",
+      "gold"
+    ],
+    "materials": [
+      "silk",
+      "satin",
+      "leather",
+      "lace",
+      "cashmere"
+    ],
+    "lengths": [
+      "ankle",
+      "long"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250424_233000_1_0",
+    "event": "Job Interview",
+    "created_at": "2025-04-24T23:30:00.885951"
+  }
+}

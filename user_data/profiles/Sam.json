@@ -1,0 +1,91 @@
+{
+  "name": "Sam",
+  "measurements": {
+    "height": 60.0,
+    "height_unit": "inches",
+    "weight": 160.0,
+    "weight_unit": "lbs",
+    "waist": 36.0,
+    "hips": 44.0,
+    "inseam": 25.0,
+    "shoulder_width": 14.0,
+    "arm_length": 20.0,
+    "bust": {
+      "band_size": 40.0,
+      "cup_size": "DD",
+      "unit": "inches"
+    }
+  },
+  "physical_features": {
+    "eye_color": "brown",
+    "hair_color": "brown",
+    "hair_length": "long",
+    "skin_tone": "fair",
+    "body_type": "pear",
+    "face_shape": "oblong",
+    "distinguishing_features": null
+  },
+  "style_preferences": {
+    "primary_style": "classic",
+    "secondary_styles": [
+      "sporty"
+    ],
+    "favorite_colors": [
+      "black"
+    ],
+    "favorite_materials": [
+      "spandex"
+    ],
+    "preferred_silhouettes": [
+      "loose",
+      "oversized"
+    ],
+    "style_adaptability": 3,
+    "comfort_priority": 8,
+    "modesty_level": 9,
+    "color_preferences": {},
+    "material_preferences": {},
+    "style_restrictions": null,
+    "seasonal_preferences": null
+  },
+  "created_at": "2025-04-26T01:20:35.750145",
+  "last_login": "2025-04-26T01:20:35.750156",
+  "outfit_count": 1,
+  "style_history": [
+    {
+      "outfit_id": "outfit_20250426_012113_0_0",
+      "event": "Dinner",
+      "created_at": "2025-04-26T01:21:13.388308",
+      "outfit_data": {
+        "top": "A black oversized linen blouse with a wide, scooped neckline and three-quarter length sleeves.",
+        "bottom": "Charcoal gray high-waisted, wide-leg denim trousers with a vintage wash and frayed hems.",
+        "shoes": "White canvas low-top sneakers with black rubber soles and laces.",
+        "extras": "A long, ivory knit cardigan draped over the shoulders and a delicate silver chain necklace with a small pendant.",
+        "colors": [
+          "black",
+          "gray",
+          "white",
+          "silver"
+        ],
+        "materials": [
+          "linen",
+          "denim",
+          "lace",
+          "knit"
+        ],
+        "lengths": [
+          "three-quarter",
+          "long"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_012113_0_0",
+        "event": "Dinner",
+        "created_at": "2025-04-26T01:21:13.388189"
+      }
+    }
+  ]
+}

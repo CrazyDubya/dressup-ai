@@ -1,0 +1,33 @@
+{
+  "outfit_id": "outfit_20250426_005745_0_1",
+  "event": "Summer Patio Drinks",
+  "created_at": "2025-04-26T00:59:44.591371",
+  "outfit_data": {
+    "top": "A crisp white silk blouse with a relaxed, oversized fit. The sleeves are slightly puffed and end in delicate cuffs.",
+    "bottom": "Tailored black linen pants with a wide leg silhouette. They fall just above the ankle, showcasing your shoes.",
+    "shoes": "Classic black pointed-toe heels crafted from luxurious satin.",
+    "extras": "A statement piece of bold red jewelry, such as chunky earrings or a necklace.",
+    "colors": [
+      "white",
+      "red",
+      "black"
+    ],
+    "materials": [
+      "silk",
+      "linen",
+      "satin",
+      "lace"
+    ],
+    "lengths": [
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 10,
+    "comfort": 8,
+    "outfit_id": "outfit_20250426_005745_0_1",
+    "event": "Summer Patio Drinks",
+    "created_at": "2025-04-26T00:57:45.596530"
+  }
+}

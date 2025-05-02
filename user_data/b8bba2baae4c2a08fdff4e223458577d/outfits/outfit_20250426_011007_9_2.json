@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_011007_9_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.428811",
+  "outfit_data": {
+    "top": "A crimson silk blouse with a flowing empire waist and delicate gold embroidery along the neckline.",
+    "bottom": "Emerald green wool trousers with a wide-leg silhouette that falls to the ankles, creating a sleek and modern look.",
+    "shoes": "Cobalt blue suede pointed-toe heels with a mid-height stiletto.",
+    "extras": "A rich purple tweed blazer draped over the shoulders for an added touch of sophistication when the sun sets.",
+    "colors": [
+      "gold",
+      "green",
+      "blue",
+      "purple"
+    ],
+    "materials": [
+      "silk",
+      "wool",
+      "suede",
+      "tweed"
+    ],
+    "lengths": [
+      "long",
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 7,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_011007_9_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:10:07.358554"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "outfit_id": "",
+  "event": "",
+  "created_at": "2025-04-24T22:53:10.407496",
+  "outfit_data": {
+    "top": "Please provide me with the outfit details! I need information about:\n\n* Formality: (You already gave me a 5/10)\n* Style:  (e.g., casual, bohemian, preppy, edgy, minimalist, etc.)\n* Colors: (What colors are in the outfit?)\n* Materials: (e.g., denim, silk, cotton, leather, etc.)\n\n\nOnce I have these details, I can suggest a matching top! \ud83d\ude0a",
+    "bottom": "Please provide the missing details about the top so I can suggest a matching bottom!  I need to know:\n\n* Style: (e.g., casual, bohemian, preppy, edgy, minimalist, etc.)\n* Colors: (What colors are in the outfit?)\n* Materials: (e.g., denim, silk, cotton, leather, etc.) \n\n\nOnce I have this information, I can give you a great suggestion for a matching bottom! \ud83d\ude0a",
+    "shoes": "Please provide me with the details of your outfit so I can suggest matching shoes!  I need to know:\n\n* Formality: (You already gave me a 5/10)\n* Style:  (e.g., casual, bohemian, preppy, edgy, minimalist, etc.)\n* Colors: (What colors are in the outfit?)\n* Materials: (e.g., denim, silk, cotton, leather, etc.) \n\n\n\nOnce I have this information, I can suggest the perfect shoes to complete your look! \ud83d\ude0a  \ud83d\udc60\ud83d\udc5f\ud83d\udc61\ud83d\udc62",
+    "extras": null,
+    "colors": [],
+    "materials": [],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5
+  }
+}

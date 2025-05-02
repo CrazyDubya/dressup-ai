@@ -1,0 +1,33 @@
+{
+  "outfit_id": "outfit_20250426_005915_3_1",
+  "event": "Summer Patio Drinks",
+  "created_at": "2025-04-26T00:59:44.608176",
+  "outfit_data": {
+    "top": "A ruby red silk blouse with a flowing empire waist and delicate lace trim at the neckline.",
+    "bottom": "Tailored black corduroy wide-leg pants with a high waist for a sophisticated yet sporty look.",
+    "shoes": "Emerald green satin pointed-toe heels, adding a touch of luxury and a vibrant pop of color.",
+    "extras": "A mint leather crossbody bag to complete the ensemble.",
+    "colors": [
+      "red",
+      "black",
+      "green",
+      "mint"
+    ],
+    "materials": [
+      "silk",
+      "lace",
+      "corduroy",
+      "satin",
+      "leather"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 8,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_005915_3_1",
+    "event": "Summer Patio Drinks",
+    "created_at": "2025-04-26T00:59:15.099087"
+  }
+}

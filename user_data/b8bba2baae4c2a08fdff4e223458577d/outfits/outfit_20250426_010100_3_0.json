@@ -1,0 +1,39 @@
+{
+  "outfit_id": "outfit_20250426_010100_3_0",
+  "event": "Summer Sidewalk Cafe ",
+  "created_at": "2025-04-26T01:01:34.289246",
+  "outfit_data": {
+    "top": "A mustard yellow oversized linen blouse with bell sleeves and intricate embroidered details in sage green and terracotta thread.",
+    "bottom": "Wide-leg corduroy pants in a deep olive hue, cinched at the waist with a brown leather belt featuring antique brass buckle detailing.",
+    "shoes": "Brown suede ankle boots with stacked heels and fringe detail along the shaft.",
+    "extras": "A terracotta wool scarf draped loosely around the neck with frayed edges and a vintage silver pendant necklace layered over a thin gold chain.",
+    "colors": [
+      "red",
+      "yellow",
+      "green",
+      "brown",
+      "silver",
+      "gold"
+    ],
+    "materials": [
+      "linen",
+      "corduroy",
+      "leather",
+      "suede",
+      "lace",
+      "wool"
+    ],
+    "lengths": [
+      "ankle",
+      "long"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 6,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010100_3_0",
+    "event": "Summer Sidewalk Cafe ",
+    "created_at": "2025-04-26T01:01:00.830915"
+  }
+}

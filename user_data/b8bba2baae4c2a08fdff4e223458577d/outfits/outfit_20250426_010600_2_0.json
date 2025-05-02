@@ -1,0 +1,34 @@
+{
+  "outfit_id": "outfit_20250426_010600_2_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.372672",
+  "outfit_data": {
+    "top": "A cream-colored linen blouse with delicate ruffles at the neckline and sleeves. The silhouette is loose-fitting and slightly draped for a romantic feel.",
+    "bottom": "Taupe wide-leg linen pants with a high waist and gentle pleats. They flow beautifully and complement the feminine top.",
+    "shoes": "Beige canvas espadrille wedges with natural jute trim. The platform adds height while maintaining a casual, beachy vibe.",
+    "extras": "A lightweight cream knit cardigan for cooler evenings.  A delicate gold necklace with a small seashell pendant completes the romantic look.",
+    "colors": [
+      "red",
+      "cream",
+      "beige",
+      "gold"
+    ],
+    "materials": [
+      "linen",
+      "knit",
+      "lace"
+    ],
+    "lengths": [
+      "mini",
+      "full"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 7,
+    "outfit_id": "outfit_20250426_010600_2_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:06:00.408440"
+  }
+}

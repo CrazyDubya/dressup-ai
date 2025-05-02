@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Welcome, {{ username }}!</h4>
+            </div>
+            <div class="card-body">
+                <p>You have generated {{ outfit_count }} outfits so far.</p>
+                <div class="d-grid">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#generateOutfitModal">
+                        <i class="fas fa-plus"></i> Generate New Outfit
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h4>Recent Outfits</h4>
+            </div>
+            <div class="card-body">
+                {% if style_history %}
+                    {% for outfit in style_history %}
+                    <div class="outfit-card mb-3">
+                        <h5>{{ outfit.event }}</h5>
+                        <p class="text-muted">{{ outfit.created_at }}</p>
+                        <div class="outfit-details">
+                            <p><strong>Top:</strong> {{ outfit.outfit_data.top }}</p>
+                            <p><strong>Bottom:</strong> {{ outfit.outfit_data.bottom }}</p>
+                            <p><strong>Shoes:</strong> {{ outfit.outfit_data.shoes }}</p>
+                            {% if outfit.outfit_data.extras %}
+                            <p><strong>Extras:</strong> {{ outfit.outfit_data.extras }}</p>
+                            {% endif %}
+                        </div>
+                        {% if outfit.outfit_data.user_ratings %}
+                        <div class="ratings mt-2">
+                            <span class="badge bg-primary">Style: {{ outfit.outfit_data.user_ratings.style }}/10</span>
+                            <span class="badge bg-success">Comfort: {{ outfit.outfit_data.user_ratings.comfort }}/10</span>
+                            <span class="badge bg-info">Overall: {{ outfit.outfit_data.user_ratings.overall }}/10</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No outfits generated yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4>Generated Outfits</h4>
+            </div>
+            <div class="card-body">
+                <div id="outfitsContainer">
+                    <!-- Outfits will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Generate Outfit Modal -->
+<div class="modal fade" id="generateOutfitModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Generate New Outfit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="generateOutfitForm">
+                    <div class="mb-3">
+                        <label for="event" class="form-label">Event Type</label>
+                        <input type="text" class="form-control" id="event" name="event" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="num_outfits" class="form-label">Number of Outfits</label>
+                            <input type="number" class="form-control" id="num_outfits" name="num_outfits" min="1" max="5" value="1" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="variations" class="form-label">Variations per Outfit</label>
+                            <input type="number" class="form-control" id="variations" name="variations" min="1" max="3" value="1" required>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <div class="generation-status">Initializing outfit generation...</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="generateButton">
+                    <span>Generate</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Rate Outfit Modal -->
+<div class="modal fade" id="rateOutfitModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Rate Outfit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="rateOutfitForm">
+                    <input type="hidden" id="outfit_id" name="outfit_id">
+                    <div class="mb-3">
+                        <label for="style_rating" class="form-label">Style Rating (1-10)</label>
+                        <input type="number" class="form-control" id="style_rating" name="style_rating" min="1" max="10" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comfort_rating" class="form-label">Comfort Rating (1-10)</label>
+                        <input type="number" class="form-control" id="comfort_rating" name="comfort_rating" min="1" max="10" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="overall_rating" class="form-label">Overall Rating (1-10)</label>
+                        <input type="number" class="form-control" id="overall_rating" name="overall_rating" min="1" max="10" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="submitRatingButton">Submit Rating</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generateButton');
+    const generateOutfitForm = document.getElementById('generateOutfitForm');
+    const outfitsContainer = document.getElementById('outfitsContainer');
+    const rateOutfitForm = document.getElementById('rateOutfitForm');
+    const submitRatingButton = document.getElementById('submitRatingButton');
+    const progressContainer = document.querySelector('.progress-container');
+    const progressBar = document.querySelector('.progress-bar');
+    const generationStatus = document.querySelector('.generation-status');
+    const generateOutfitModal = document.getElementById('generateOutfitModal');
+    
+    let isGenerating = false;
+    
+    function setLoadingState(isLoading) {
+        isGenerating = isLoading;
+        generateButton.disabled = isLoading;
+        generateOutfitModal.classList.toggle('modal-loading', isLoading);
+        progressContainer.classList.toggle('active', isLoading);
+        
+        if (isLoading) {
+            generateButton.classList.add('btn-loading');
+            generateButton.innerHTML = '<span>Generating</span><div class="spinner-border spinner-border-sm" role="status"></div>';
+        } else {
+            generateButton.classList.remove('btn-loading');
+            generateButton.innerHTML = '<span>Generate</span>';
+        }
+    }
+    
+    function updateProgress(percent, status) {
+        progressBar.style.width = `${percent}%`;
+        generationStatus.textContent = status;
+    }
+    
+    generateButton.addEventListener('click', function() {
+        if (isGenerating) return;
+        
+        const formData = new FormData(generateOutfitForm);
+        setLoadingState(true);
+        updateProgress(0, 'Initializing outfit generation...');
+        
+        fetch('/generate_outfit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error);
+                setLoadingState(false);
+                return;
+            }
+            
+            // Simulate progress updates
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 10;
+                if (progress <= 90) {
+                    updateProgress(progress, 'Generating outfits...');
+                }
+            }, 500);
+            
+            // Display generated outfits
+            outfitsContainer.innerHTML = '';
+            data.outfits.forEach((outfit, index) => {
+                const outfitCard = document.createElement('div');
+                outfitCard.className = 'card mb-3';
+                outfitCard.innerHTML = `
+                    <div class="card-header">
+                        <h5>Outfit ${index + 1}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Top:</strong> ${outfit.top}</p>
+                        <p><strong>Bottom:</strong> ${outfit.bottom}</p>
+                        <p><strong>Shoes:</strong> ${outfit.shoes}</p>
+                        ${outfit.extras ? `<p><strong>Extras:</strong> ${outfit.extras}</p>` : ''}
+                        <button class="btn btn-primary rate-button" data-outfit-id="${outfit.outfit_id}">
+                            Rate this Outfit
+                        </button>
+                    </div>
+                `;
+                outfitsContainer.appendChild(outfitCard);
+            });
+            
+            clearInterval(interval);
+            updateProgress(100, 'Outfits generated successfully!');
+            
+            // Close modal after a short delay
+            setTimeout(() => {
+                setLoadingState(false);
+                bootstrap.Modal.getInstance(generateOutfitModal).hide();
+            }, 1000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while generating outfits.');
+            setLoadingState(false);
+        });
+    });
+    
+    // Handle outfit rating
+    outfitsContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('rate-button')) {
+            const outfitId = e.target.dataset.outfitId;
+            document.getElementById('outfit_id').value = outfitId;
+            new bootstrap.Modal(document.getElementById('rateOutfitModal')).show();
+        }
+    });
+    
+    submitRatingButton.addEventListener('click', function() {
+        const formData = new FormData(rateOutfitForm);
+        fetch('/rate_outfit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                bootstrap.Modal.getInstance(document.getElementById('rateOutfitModal')).hide();
+                // Refresh the page to show updated ratings
+                location.reload();
+            } else {
+                alert('Error submitting rating.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the rating.');
+        });
+    });
+});
+</script>
+{% endblock %} 

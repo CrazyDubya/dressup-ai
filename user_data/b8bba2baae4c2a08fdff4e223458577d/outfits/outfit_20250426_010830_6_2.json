@@ -1,0 +1,40 @@
+{
+  "outfit_id": "outfit_20250426_010830_6_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.402357",
+  "outfit_data": {
+    "top": "A ruby red velvet blouse with voluminous sleeves and a relaxed fit. The fabric is soft and luxurious, featuring subtle sheen that catches the light.",
+    "bottom": "Emerald green corduroy wide-leg trousers. They have an elasticated waistband for comfort and a slightly cropped length, ending just above the ankle.",
+    "shoes": "Sapphire blue suede Chelsea boots with a stacked heel.  The leather lining ensures comfort while adding a touch of sophistication.",
+    "extras": "A chunky amethyst wool knit scarf draped loosely around the neck, paired with delicate gold hoop earrings.  A vintage-inspired tweed crossbody bag in topaz adds a touch of old-world glamour.",
+    "colors": [
+      "red",
+      "green",
+      "blue",
+      "gold"
+    ],
+    "materials": [
+      "velvet",
+      "corduroy",
+      "leather",
+      "suede",
+      "tweed",
+      "knit",
+      "wool"
+    ],
+    "lengths": [
+      "ankle",
+      "cropped"
+    ],
+    "textures": [
+      "soft"
+    ],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 6,
+    "comfort": 7,
+    "outfit_id": "outfit_20250426_010830_6_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:08:30.971820"
+  }
+}

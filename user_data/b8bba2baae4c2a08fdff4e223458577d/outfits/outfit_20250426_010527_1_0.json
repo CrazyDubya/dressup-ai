@@ -1,0 +1,37 @@
+{
+  "outfit_id": "outfit_20250426_010527_1_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.367064",
+  "outfit_data": {
+    "top": "A soft pastel pink velvet blouse with delicate lace trim at the neckline and cuffs. The blouse has a fitted, bodycon silhouette with long sleeves.",
+    "bottom": "High-waisted, wide-leg corduroy pants in a muted lavender hue. The pants have a tailored fit and are finished with a slight flare at the ankles.",
+    "shoes": "Sky blue suede ankle boots with a low block heel.",
+    "extras": "A chunky gold necklace with turquoise accents to add a pop of bohemian flair.",
+    "colors": [
+      "pink",
+      "red",
+      "blue",
+      "gold"
+    ],
+    "materials": [
+      "lace",
+      "velvet",
+      "corduroy",
+      "suede"
+    ],
+    "lengths": [
+      "long",
+      "ankle"
+    ],
+    "textures": [
+      "soft"
+    ],
+    "styles": [],
+    "formality": 6,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010527_1_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:05:27.686887"
+  }
+}

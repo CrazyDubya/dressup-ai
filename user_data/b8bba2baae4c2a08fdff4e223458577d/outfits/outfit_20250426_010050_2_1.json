@@ -1,0 +1,31 @@
+{
+  "outfit_id": "outfit_20250426_010050_2_1",
+  "event": "Summer Sidewalk Cafe ",
+  "created_at": "2025-04-26T01:01:34.288088",
+  "outfit_data": {
+    "top": "A  ruby red velvet blouse with a voluminous puffed sleeve and a deep V-neckline.",
+    "bottom": "Emerald green corduroy wide-leg trousers with a high waist and subtle pleats.",
+    "shoes": "Gold metallic pointed-toe heels.",
+    "extras": "A cobalt blue silk scarf tied loosely around the neck for a pop of color.",
+    "colors": [
+      "red",
+      "green",
+      "gold",
+      "blue"
+    ],
+    "materials": [
+      "velvet",
+      "corduroy",
+      "silk"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010050_2_1",
+    "event": "Summer Sidewalk Cafe ",
+    "created_at": "2025-04-26T01:00:50.960993"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "outfit_id": "outfit_20250426_010901_7_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.411382",
+  "outfit_data": {
+    "top": "A cream-colored silk blouse with a relaxed, empire waist silhouette. The blouse features delicate smocking details at the neckline and sleeves for a touch of elegance.",
+    "bottom": "Khaki linen pants in an A-line style. They are tailored for a flattering fit but retain a breezy, comfortable feel suitable for a beach setting.",
+    "shoes": "Nude suede heeled sandals with a thin strap that wraps around the ankle. The heel is mid-height for both comfort and style.",
+    "extras": "A woven straw tote bag in a natural color to carry essentials. A lightweight camel-colored wool cardigan can be draped over the shoulders for cooler evenings.",
+    "colors": [
+      "red",
+      "cream"
+    ],
+    "materials": [
+      "silk",
+      "linen",
+      "suede",
+      "wool"
+    ],
+    "lengths": [
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 8,
+    "outfit_id": "outfit_20250426_010901_7_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:09:01.079582"
+  }
+}

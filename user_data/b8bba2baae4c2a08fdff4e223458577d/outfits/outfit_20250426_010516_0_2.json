@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_010516_0_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.364802",
+  "outfit_data": {
+    "top": "A ruby red linen camisole with a plunging neckline and adjustable spaghetti straps. The bodice is fitted and features subtle draping along the sides for a touch of movement.",
+    "bottom": "Emerald green seersucker wide-leg pants with a high waist. The fabric has a crisp, textured feel and drapes elegantly to the ankles.",
+    "shoes": "Sapphire blue suede ankle boots with a chunky heel and silver buckles.",
+    "extras": "A long amethyst colored voile scarf draped asymmetrically around the neck and secured with a bold silver clasp.  A single silver cuff bracelet adorns the left wrist.",
+    "colors": [
+      "red",
+      "green",
+      "silver",
+      "blue"
+    ],
+    "materials": [
+      "linen",
+      "suede"
+    ],
+    "lengths": [
+      "long",
+      "ankle"
+    ],
+    "textures": [
+      "textured"
+    ],
+    "styles": [],
+    "formality": 7,
+    "trendiness": 6,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010516_0_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:05:16.946181"
+  }
+}

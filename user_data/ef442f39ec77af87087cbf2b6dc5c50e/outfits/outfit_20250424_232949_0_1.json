@@ -1,0 +1,32 @@
+{
+  "outfit_id": "outfit_20250424_232949_0_1",
+  "event": "Job Interview",
+  "created_at": "2025-04-24T23:31:01.443609",
+  "outfit_data": {
+    "top": "A silver metallic silk blouse with a relaxed fit and subtle draping details.",
+    "bottom": "Wide-leg linen pants in a warm copper tone, providing a comfortable yet sophisticated silhouette.",
+    "shoes": "Pointed-toe flats crafted from soft leather in a pale gold shade.",
+    "extras": "A simple platinum pendant necklace adds a touch of understated elegance.",
+    "colors": [
+      "silver",
+      "gold"
+    ],
+    "materials": [
+      "silk",
+      "linen",
+      "leather",
+      "lace"
+    ],
+    "lengths": [],
+    "textures": [
+      "soft"
+    ],
+    "styles": [],
+    "formality": 4,
+    "trendiness": 5,
+    "comfort": 9,
+    "outfit_id": "outfit_20250424_232949_0_1",
+    "event": "Job Interview",
+    "created_at": "2025-04-24T23:29:49.285628"
+  }
+}

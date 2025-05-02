@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_010548_1_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.370671",
+  "outfit_data": {
+    "top": "A dusty rose corduroy blouse with billowing sleeves, featuring delicate lace trim at the cuffs.",
+    "bottom": "Flowing sage green maxi skirt crafted from lightweight flannel, cinched at the waist with a wide velvet belt adorned with intricate embroidery.",
+    "shoes": "Brown suede ankle boots with stacked heels and tassels for a touch of rustic bohemian charm.",
+    "extras": "A mauve knit cardigan draped loosely over the shoulders adds warmth and layers to the look. Complete the ensemble with handcrafted silver jewelry featuring natural stones like turquoise and amber.",
+    "colors": [
+      "green",
+      "brown",
+      "silver"
+    ],
+    "materials": [
+      "lace",
+      "corduroy",
+      "velvet",
+      "suede",
+      "knit"
+    ],
+    "lengths": [
+      "maxi",
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010548_1_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:05:48.416459"
+  }
+}

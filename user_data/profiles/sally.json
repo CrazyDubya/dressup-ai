@@ -1,0 +1,1442 @@
+{
+  "name": "sally",
+  "measurements": {
+    "height": 62.0,
+    "height_unit": "inches",
+    "weight": 136.0,
+    "weight_unit": "lbs",
+    "waist": 30.0,
+    "hips": 36.0,
+    "inseam": 27.0,
+    "shoulder_width": 14.0,
+    "arm_length": 22.0,
+    "bust": 38.0
+  },
+  "physical_features": {
+    "eye_color": "brown",
+    "hair_color": "chestnut",
+    "hair_length": "long",
+    "skin_tone": "light",
+    "body_type": "hourglass",
+    "face_shape": "round",
+    "distinguishing_features": null
+  },
+  "style_preferences": {
+    "primary_style": "luxury",
+    "secondary_styles": [
+      "formal",
+      "casual",
+      "romantic",
+      "sporty"
+    ],
+    "favorite_colors": [
+      "mint",
+      "black",
+      "red"
+    ],
+    "favorite_materials": [
+      "lace",
+      "linen",
+      "silk",
+      "leather",
+      "denim",
+      "satin",
+      "spandex",
+      "velvet"
+    ],
+    "preferred_silhouettes": [
+      "fitted",
+      "mermaid",
+      "sheath",
+      "a_line",
+      "ball_gown"
+    ],
+    "style_adaptability": 9,
+    "comfort_priority": 2,
+    "modesty_level": 3,
+    "color_preferences": {},
+    "material_preferences": {},
+    "style_restrictions": null,
+    "seasonal_preferences": null
+  },
+  "created_at": "2025-04-26T00:54:54.924128",
+  "last_login": "2025-04-26T00:54:54.924143",
+  "outfit_count": 40,
+  "style_history": [
+    {
+      "outfit_id": "outfit_20250426_005954_0_0",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.278471",
+      "outfit_data": {
+        "top": "A crisp, white cotton poplin blouse with a tailored fit and long sleeves, accented by subtle black buttons.",
+        "bottom": "Tailored, black wool trousers with a high waist and straight leg, providing a sleek and structured silhouette.",
+        "shoes": "Classic black leather ankle boots with a low heel and pointed toe, offering both style and comfort.",
+        "extras": "A navy cashmere scarf draped loosely around the neck adds a touch of warmth and texture to the minimalist ensemble.",
+        "colors": [
+          "red",
+          "white",
+          "black",
+          "navy"
+        ],
+        "materials": [
+          "cotton",
+          "wool",
+          "leather",
+          "cashmere"
+        ],
+        "lengths": [
+          "long",
+          "ankle",
+          "mini"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 7,
+        "trendiness": 7,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_005954_0_0",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T00:59:54.582127"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010007_0_1",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.281328",
+      "outfit_data": {
+        "top": "A cropped lavender silk blouse with oversized puff sleeves and a subtle sheen. The neckline features a daringly asymmetrical cut, dipping lower on one side for a touch of unexpected flair.",
+        "bottom": "Wide-leg, mint green velvet trousers with a high waist and relaxed fit. The fabric drapes beautifully, creating an effortless flow that complements the airy blouse.",
+        "shoes": "Black satin platform heels with pointed toes and a chunky heel for added height and a touch of rebellious edge.",
+        "extras": "A pale pink cashmere cardigan draped loosely over the shoulders adds a touch of warmth and sophistication while maintaining the relaxed silhouette.",
+        "colors": [
+          "mint",
+          "green",
+          "black",
+          "pink"
+        ],
+        "materials": [
+          "silk",
+          "velvet",
+          "satin",
+          "cashmere"
+        ],
+        "lengths": [
+          "cropped",
+          "full"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010007_0_1",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:00:07.677222"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010015_1_0",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.282898",
+      "outfit_data": {
+        "top": "A  pale lavender linen blouse with a relaxed, oversized fit and three-quarter sleeves.",
+        "bottom": "Mint green seersucker culottes with a wide leg and high waist.",
+        "shoes": "Light pink cotton canvas espadrille wedges.",
+        "extras": "A thin white voile scarf tied loosely around the neck and delicate silver hoop earrings.",
+        "colors": [
+          "mint",
+          "green",
+          "pink",
+          "silver",
+          "white"
+        ],
+        "materials": [
+          "linen",
+          "cotton"
+        ],
+        "lengths": [
+          "three-quarter"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010015_1_0",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:00:15.566036"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010033_1_1",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.284811",
+      "outfit_data": {
+        "top": "A charcoal gray cashmere blouse with oversized, ruffled sleeves adds a touch of romanticism to the otherwise minimalist ensemble. The blouse falls loosely around the body, creating a relaxed silhouette.",
+        "bottom": "High-waisted black wool trousers with wide legs provide structure and a sophisticated feel.  The crisp lines of the trousers complement the soft draping of the blouse.",
+        "shoes": "Black leather ballet flats in a pointed toe style add a touch of retro chic while remaining comfortable for walking.",
+        "extras": "A long, ivory wool coat with a belted waist adds warmth and visual interest. Opt for a classic trench coat silhouette or choose a more dramatic peacoat style.  Complete the look with a simple silver pendant necklace on a fine chain.",
+        "colors": [
+          "gray",
+          "black",
+          "silver"
+        ],
+        "materials": [
+          "cashmere",
+          "wool",
+          "leather",
+          "lace"
+        ],
+        "lengths": [
+          "mini",
+          "long"
+        ],
+        "textures": [
+          "soft"
+        ],
+        "styles": [],
+        "formality": 4,
+        "trendiness": 10,
+        "comfort": 9,
+        "outfit_id": "outfit_20250426_010033_1_1",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:00:33.582519"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010042_2_0",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.286916",
+      "outfit_data": {
+        "top": "A dusty rose silk blouse with puffed sleeves and a dramatic ruched neckline.",
+        "bottom": "A sage green wool midi skirt with an A-line silhouette, featuring a deep side slit and intricate embroidered detailing.",
+        "shoes": "Slate gray tweed pumps with pointed toes and delicate ankle straps.",
+        "extras": "A mauve crepe shawl draped over the shoulders for added drama and warmth. A pair of silver statement earrings completes the look.",
+        "colors": [
+          "red",
+          "green",
+          "gray",
+          "silver"
+        ],
+        "materials": [
+          "silk",
+          "wool",
+          "tweed"
+        ],
+        "lengths": [
+          "midi",
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010042_2_0",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:00:42.855134"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010050_2_1",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.288088",
+      "outfit_data": {
+        "top": "A  ruby red velvet blouse with a voluminous puffed sleeve and a deep V-neckline.",
+        "bottom": "Emerald green corduroy wide-leg trousers with a high waist and subtle pleats.",
+        "shoes": "Gold metallic pointed-toe heels.",
+        "extras": "A cobalt blue silk scarf tied loosely around the neck for a pop of color.",
+        "colors": [
+          "red",
+          "green",
+          "gold",
+          "blue"
+        ],
+        "materials": [
+          "velvet",
+          "corduroy",
+          "silk"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010050_2_1",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:00:50.960993"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010100_3_0",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.289246",
+      "outfit_data": {
+        "top": "A mustard yellow oversized linen blouse with bell sleeves and intricate embroidered details in sage green and terracotta thread.",
+        "bottom": "Wide-leg corduroy pants in a deep olive hue, cinched at the waist with a brown leather belt featuring antique brass buckle detailing.",
+        "shoes": "Brown suede ankle boots with stacked heels and fringe detail along the shaft.",
+        "extras": "A terracotta wool scarf draped loosely around the neck with frayed edges and a vintage silver pendant necklace layered over a thin gold chain.",
+        "colors": [
+          "red",
+          "yellow",
+          "green",
+          "brown",
+          "silver",
+          "gold"
+        ],
+        "materials": [
+          "linen",
+          "corduroy",
+          "leather",
+          "suede",
+          "lace",
+          "wool"
+        ],
+        "lengths": [
+          "ankle",
+          "long"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010100_3_0",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:01:00.830915"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010113_3_1",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.290358",
+      "outfit_data": {
+        "top": "A cobalt blue silk blouse with clean lines and a slightly oversized fit.",
+        "bottom": "Emerald green wool wide-leg trousers, tailored for a minimalist silhouette.",
+        "shoes": "Gold metallic leather pointed-toe heels.",
+        "extras": "A chunky gold chain necklace adds a touch of contemporary edge.",
+        "colors": [
+          "blue",
+          "red",
+          "green",
+          "gold"
+        ],
+        "materials": [
+          "silk",
+          "wool",
+          "leather",
+          "lace"
+        ],
+        "lengths": [
+          "mini"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 6,
+        "trendiness": 10,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010113_3_1",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:01:13.182432"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010121_4_0",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.291521",
+      "outfit_data": {
+        "top": "A fuchsia silk cami blouse with a square neckline and loose, flowing sleeves.",
+        "bottom": "High-waisted, wide-leg linen trousers in a vibrant turquoise hue.",
+        "shoes": "Pale coral canvas slip-on espadrilles with a jute platform sole.",
+        "extras": "A statement necklace featuring a large, electric blue enamel pendant and small gold hoop earrings.",
+        "colors": [
+          "gold",
+          "blue"
+        ],
+        "materials": [
+          "silk",
+          "linen",
+          "lace"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010121_4_0",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:01:21.556041"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010134_4_1",
+      "event": "Summer Sidewalk Cafe ",
+      "created_at": "2025-04-26T01:01:34.292782",
+      "outfit_data": {
+        "top": "A fitted silk blouse in a rich terracotta hue, featuring delicate pleating along the neckline and sleeves.",
+        "bottom": "Tailored high-waisted trousers crafted from a luxurious sage green velvet, with sharp creases and a slightly cropped length to showcase a pair of sleek ankle boots.",
+        "shoes": "Pointed-toe leather pumps in a deep olive color,  rising to a modest heel for both style and comfort.",
+        "extras": "A thin, gold chain necklace adds a touch of elegance, while a small, structured clutch bag in mustard velvet complements the outfit's earthy palette.",
+        "colors": [
+          "red",
+          "green",
+          "gold"
+        ],
+        "materials": [
+          "silk",
+          "velvet",
+          "leather",
+          "lace"
+        ],
+        "lengths": [
+          "long",
+          "ankle",
+          "cropped"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 7,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010134_4_1",
+        "event": "Summer Sidewalk Cafe ",
+        "created_at": "2025-04-26T01:01:34.278382"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010448_0_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.358711",
+      "outfit_data": {
+        "top": "A dusty rose cotton tank top with a racerback style and a slightly cropped fit.",
+        "bottom": "Sage green linen wide-leg pants with a high waist and tapered leg, creating a streamlined silhouette.",
+        "shoes": "White canvas low-top sneakers with textured detailing.",
+        "extras": "A mauve knit cardigan layered over the tank top for cooler evenings, along with a slate blue crossbody bag made of denim.",
+        "colors": [
+          "red",
+          "green",
+          "white",
+          "blue"
+        ],
+        "materials": [
+          "cotton",
+          "linen",
+          "knit",
+          "denim"
+        ],
+        "lengths": [
+          "cropped",
+          "long"
+        ],
+        "textures": [
+          "textured"
+        ],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010448_0_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:04:48.738642"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010505_0_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.361634",
+      "outfit_data": {
+        "top": "A pristine white linen blouse with delicate puffed sleeves and a relaxed, empire waistline. The lightweight fabric drapes beautifully, creating a flowing silhouette that complements the breezy seaside setting.",
+        "bottom": "Charcoal gray seersucker wide-leg trousers offer both comfort and sophistication. Their slightly structured weave adds visual interest while remaining breathable for warm weather.",
+        "shoes": "Sleek black pointed-toe heels crafted from premium leather complete the look. The moderate heel height provides a touch of elegance without sacrificing practicality on sandy shores.",
+        "extras": "A large woven straw tote bag in natural hues carries all your essentials, adding a touch of casual refinement. A delicate gold chain necklace with a small pearl pendant adds a subtle sparkle to the monochrome palette.",
+        "colors": [
+          "white",
+          "red",
+          "gray",
+          "black",
+          "gold"
+        ],
+        "materials": [
+          "linen",
+          "leather",
+          "lace"
+        ],
+        "lengths": [
+          "full"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 2,
+        "trendiness": 7,
+        "comfort": 8,
+        "outfit_id": "outfit_20250426_010505_0_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:05:05.266432"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010516_0_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.364802",
+      "outfit_data": {
+        "top": "A ruby red linen camisole with a plunging neckline and adjustable spaghetti straps. The bodice is fitted and features subtle draping along the sides for a touch of movement.",
+        "bottom": "Emerald green seersucker wide-leg pants with a high waist. The fabric has a crisp, textured feel and drapes elegantly to the ankles.",
+        "shoes": "Sapphire blue suede ankle boots with a chunky heel and silver buckles.",
+        "extras": "A long amethyst colored voile scarf draped asymmetrically around the neck and secured with a bold silver clasp.  A single silver cuff bracelet adorns the left wrist.",
+        "colors": [
+          "red",
+          "green",
+          "silver",
+          "blue"
+        ],
+        "materials": [
+          "linen",
+          "suede"
+        ],
+        "lengths": [
+          "long",
+          "ankle"
+        ],
+        "textures": [
+          "textured"
+        ],
+        "styles": [],
+        "formality": 7,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010516_0_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:05:16.946181"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010527_1_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.367064",
+      "outfit_data": {
+        "top": "A soft pastel pink velvet blouse with delicate lace trim at the neckline and cuffs. The blouse has a fitted, bodycon silhouette with long sleeves.",
+        "bottom": "High-waisted, wide-leg corduroy pants in a muted lavender hue. The pants have a tailored fit and are finished with a slight flare at the ankles.",
+        "shoes": "Sky blue suede ankle boots with a low block heel.",
+        "extras": "A chunky gold necklace with turquoise accents to add a pop of bohemian flair.",
+        "colors": [
+          "pink",
+          "red",
+          "blue",
+          "gold"
+        ],
+        "materials": [
+          "lace",
+          "velvet",
+          "corduroy",
+          "suede"
+        ],
+        "lengths": [
+          "long",
+          "ankle"
+        ],
+        "textures": [
+          "soft"
+        ],
+        "styles": [],
+        "formality": 6,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010527_1_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:05:27.686887"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010537_1_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.368867",
+      "outfit_data": {
+        "top": "A crisp white silk blouse with a high collar and delicate ruffle detailing at the cuffs.",
+        "bottom": "A full-length navy corduroy skirt in an A-line silhouette, ending just above the ankle.",
+        "shoes": "Black leather ankle boots with a low heel and a subtle pointed toe.",
+        "extras": "A beige cashmere wrap with a fringed trim for added warmth and texture. Silver stud earrings complete the look.",
+        "colors": [
+          "white",
+          "navy",
+          "black",
+          "silver",
+          "beige"
+        ],
+        "materials": [
+          "silk",
+          "corduroy",
+          "leather",
+          "cashmere"
+        ],
+        "lengths": [
+          "ankle",
+          "full"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010537_1_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:05:37.051167"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010548_1_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.370671",
+      "outfit_data": {
+        "top": "A dusty rose corduroy blouse with billowing sleeves, featuring delicate lace trim at the cuffs.",
+        "bottom": "Flowing sage green maxi skirt crafted from lightweight flannel, cinched at the waist with a wide velvet belt adorned with intricate embroidery.",
+        "shoes": "Brown suede ankle boots with stacked heels and tassels for a touch of rustic bohemian charm.",
+        "extras": "A mauve knit cardigan draped loosely over the shoulders adds warmth and layers to the look. Complete the ensemble with handcrafted silver jewelry featuring natural stones like turquoise and amber.",
+        "colors": [
+          "green",
+          "brown",
+          "silver"
+        ],
+        "materials": [
+          "lace",
+          "corduroy",
+          "velvet",
+          "suede",
+          "knit"
+        ],
+        "lengths": [
+          "maxi",
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010548_1_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:05:48.416459"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010600_2_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.372672",
+      "outfit_data": {
+        "top": "A cream-colored linen blouse with delicate ruffles at the neckline and sleeves. The silhouette is loose-fitting and slightly draped for a romantic feel.",
+        "bottom": "Taupe wide-leg linen pants with a high waist and gentle pleats. They flow beautifully and complement the feminine top.",
+        "shoes": "Beige canvas espadrille wedges with natural jute trim. The platform adds height while maintaining a casual, beachy vibe.",
+        "extras": "A lightweight cream knit cardigan for cooler evenings.  A delicate gold necklace with a small seashell pendant completes the romantic look.",
+        "colors": [
+          "red",
+          "cream",
+          "beige",
+          "gold"
+        ],
+        "materials": [
+          "linen",
+          "knit",
+          "lace"
+        ],
+        "lengths": [
+          "mini",
+          "full"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 7,
+        "outfit_id": "outfit_20250426_010600_2_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:06:00.408440"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010612_2_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.374243",
+      "outfit_data": {
+        "top": "A cream silk blouse with exaggerated puff sleeves, featuring a dramatic high neckline and an asymmetric drape that falls to the hip.",
+        "bottom": "Camel wool wide-leg trousers with a sharp crease down the center, cinched at the waist with a statement belt in taupe leather. The pants have a flowing silhouette, pooling slightly at the ankles for a modern touch.",
+        "shoes": "Black suede stiletto heels, reaching mid-calf, with pointed toes and a subtly buckled strap around the ankle.",
+        "extras": "A chunky gold chain necklace layered with delicate silver pendants.",
+        "colors": [
+          "cream",
+          "black",
+          "silver",
+          "gold",
+          "red"
+        ],
+        "materials": [
+          "silk",
+          "leather",
+          "wool",
+          "suede",
+          "lace"
+        ],
+        "lengths": [
+          "ankle",
+          "calf"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 8,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010612_2_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:06:12.401429"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010620_2_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.375834",
+      "outfit_data": {
+        "top": "A fuchsia wool blouse with puffed sleeves and a mandarin collar.",
+        "bottom": "Electric blue gabardine trousers with a high waist and wide legs, featuring sharp creases and belt loops.",
+        "shoes": "Black leather oxfords with chunky heels.",
+        "extras": "A turquoise silk scarf tied in a loose knot at the neck and a pair of gold hoop earrings.",
+        "colors": [
+          "blue",
+          "black",
+          "gold"
+        ],
+        "materials": [
+          "wool",
+          "leather",
+          "silk"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010620_2_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:06:20.310431"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010632_3_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.378161",
+      "outfit_data": {
+        "top": "A sapphire silk blouse with a flowing empire waist and delicate ruffles along the sleeves. The fabric drapes elegantly, adding a touch of luxury to the sporty style.",
+        "bottom": "Emerald green satin wide-leg pants with a flattering high-waisted silhouette. The luxurious satin material adds a touch of glamour while remaining comfortable for a beach setting.",
+        "shoes": "Ruby red leather espadrille wedges. These offer both height and comfort, perfect for navigating the sand and mingling at the clam bake.",
+        "extras": "A soft amethyst cashmere shawl can be draped over the shoulders for cooler evenings by the ocean.",
+        "colors": [
+          "green",
+          "red"
+        ],
+        "materials": [
+          "silk",
+          "satin",
+          "leather",
+          "cashmere"
+        ],
+        "lengths": [
+          "long"
+        ],
+        "textures": [
+          "soft"
+        ],
+        "styles": [],
+        "formality": 6,
+        "trendiness": 5,
+        "comfort": 8,
+        "outfit_id": "outfit_20250426_010632_3_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:06:32.988996"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010641_3_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.379997",
+      "outfit_data": {
+        "top": "A fuchsia cashmere turtleneck sweater with an oversized, balloon silhouette.",
+        "bottom": "Wide-leg, wool trousers in a deep turquoise hue. The trousers feature a high waist and gently flow outwards towards the ankle.",
+        "shoes": "Electric blue suede Chelsea boots with chunky heels for added comfort.",
+        "extras": "A coral-colored wool felt beret perched atop the head. A simple silver chain necklace serves as a subtle accent.",
+        "colors": [
+          "blue",
+          "silver",
+          "red"
+        ],
+        "materials": [
+          "cashmere",
+          "wool",
+          "suede",
+          "lace"
+        ],
+        "lengths": [
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010641_3_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:06:41.868757"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010655_3_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.381749",
+      "outfit_data": {
+        "top": "A flowy white cotton blouse with intricate embroidery detailing along the neckline and cuffs. The sleeves are voluminous and slightly cropped, cinched at the wrist with delicate black ribbon ties.",
+        "bottom": "High-waisted, wide-leg linen pants in a deep navy blue. The fabric has a slight texture and drapes gracefully, creating a relaxed yet elegant silhouette.",
+        "shoes": "Flat leather sandals in beige with criss-crossing straps and metallic silver accents.",
+        "extras": "A long, chunky knit cardigan in grey draped casually over the shoulders.",
+        "colors": [
+          "black",
+          "white",
+          "navy",
+          "blue",
+          "silver",
+          "beige"
+        ],
+        "materials": [
+          "cotton",
+          "linen",
+          "leather",
+          "knit"
+        ],
+        "lengths": [
+          "cropped",
+          "long",
+          "full"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 8,
+        "comfort": 8,
+        "outfit_id": "outfit_20250426_010655_3_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:06:55.914928"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010705_4_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.384057",
+      "outfit_data": {
+        "top": "A ruby-colored silk blouse with a dramatic high collar and billowing, oversized sleeves.",
+        "bottom": "Emerald green tweed culottes with a wide leg silhouette and sharp pleats running down the front.",
+        "shoes": "Topaz suede ankle boots with a chunky heel and pointed toe.",
+        "extras": "A sapphire blue wool coat with exaggerated lapels and a slightly oversized fit. A simple, silver pendant necklace featuring an amethyst stone completes the look.",
+        "colors": [
+          "red",
+          "green",
+          "silver",
+          "blue"
+        ],
+        "materials": [
+          "silk",
+          "tweed",
+          "suede",
+          "lace",
+          "wool"
+        ],
+        "lengths": [
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010705_4_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:07:05.460273"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010715_4_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.386077",
+      "outfit_data": {
+        "top": "A flowing, oversized linen blouse in a deep emerald green. The sleeves are wide and billowy, ending just past the elbow.",
+        "bottom": "Loose-fitting denim overalls in a faded indigo wash.  The straps are adjustable and the bib is adorned with delicate gold embroidery.",
+        "shoes": "Cobalt blue leather sandals with chunky platform heels and simple buckles.",
+        "extras": "A lightweight, knit cardigan in a rich burgundy shade, loosely draped over the shoulders for a touch of warmth if needed.",
+        "colors": [
+          "green",
+          "gold",
+          "blue",
+          "burgundy"
+        ],
+        "materials": [
+          "linen",
+          "denim",
+          "leather",
+          "knit"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010715_4_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:07:15.806507"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010727_4_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.387945",
+      "outfit_data": {
+        "top": "A cream silk blouse with a dramatic puffed sleeve and plunging neckline, featuring intricate embroidered detailing in taupe thread.",
+        "bottom": "Wide-leg khaki velvet trousers with an exaggerated high waistline, cascading down to the floor in a voluminous drape.",
+        "shoes": "Black leather knee-high boots with a pointed toe and a chunky heel, accented by silver buckles.",
+        "extras": "A camel cashmere oversized coat draped loosely over the shoulders, fastening at the front with an antique gold clasp. Large statement earrings made of mushroom-colored satin and aged brass complete the look.",
+        "colors": [
+          "red",
+          "cream",
+          "silver",
+          "black",
+          "gold"
+        ],
+        "materials": [
+          "silk",
+          "velvet",
+          "leather",
+          "satin",
+          "cashmere"
+        ],
+        "lengths": [
+          "floor",
+          "knee"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010727_4_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:07:27.290708"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010738_5_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.390408",
+      "outfit_data": {
+        "top": "A fitted, bronze silk blouse with a high neckline and delicate gold button detailing.",
+        "bottom": "Slim-fitting, dark denim shorts, cuffed at the hem to showcase sleek silver ankle cuff bracelets.",
+        "shoes": "Platform wedges in aged copper leather, adding a touch of retro flair and height.",
+        "extras": "A vintage-style linen sunhat with a wide brim and an embroidered flower detail, adorned with a gold chain.",
+        "colors": [
+          "gold",
+          "bronze",
+          "silver",
+          "red"
+        ],
+        "materials": [
+          "silk",
+          "denim",
+          "leather",
+          "linen"
+        ],
+        "lengths": [
+          "ankle",
+          "short"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010738_5_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:07:38.783110"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010747_5_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.392931",
+      "outfit_data": {
+        "top": "A cream-colored, oversized silk blouse with a sharp, mandarin collar and subtly tapered sleeves.",
+        "bottom": "Charcoal grey wool gabardine trousers with a wide leg and straight, uncuffed hems.",
+        "shoes": "Camel leather loafers with a chunky square toe and a low heel.",
+        "extras": "A taupe tweed blazer with structured shoulders and flap pockets worn open over the blouse.  A fine gold chain necklace and small, rectangular earrings complete the look.",
+        "colors": [
+          "red",
+          "cream",
+          "gold"
+        ],
+        "materials": [
+          "silk",
+          "wool",
+          "leather",
+          "tweed",
+          "lace"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 6,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010747_5_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:07:47.785129"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010757_5_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.395546",
+      "outfit_data": {
+        "top": "A relaxed silk blouse in a muted olive green, featuring oversized sleeves and a slightly cropped length.",
+        "bottom": "Wide-leg linen pants in a warm terracotta hue, cinched at the waist with a thick brown leather belt.",
+        "shoes": "Comfortable yet chic, choose natural woven espadrille wedges in a rich rust color.",
+        "extras": "A lightweight cotton shawl in a sage green pattern, draped loosely over the shoulders for an added touch of elegance and warmth as the evening cools down.",
+        "colors": [
+          "green",
+          "brown"
+        ],
+        "materials": [
+          "silk",
+          "leather",
+          "linen",
+          "cotton"
+        ],
+        "lengths": [
+          "cropped"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 2,
+        "trendiness": 7,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010757_5_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:07:57.999878"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010808_6_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.397802",
+      "outfit_data": {
+        "top": "A dusty rose cashmere sweater featuring a slightly oversized fit, dropped shoulders, and delicate ruffles along the neckline.",
+        "bottom": "Wide-leg, high-waisted trousers crafted from soft lavender tweed with a subtle herringbone pattern.",
+        "shoes": "White leather Chelsea boots with a block heel for added height and comfort.",
+        "extras": "A long, flowing scarf in a pale peach silk, draped casually around the neck. Thin gold hoop earrings complete the look.",
+        "colors": [
+          "white",
+          "gold"
+        ],
+        "materials": [
+          "cashmere",
+          "tweed",
+          "leather",
+          "silk"
+        ],
+        "lengths": [
+          "long"
+        ],
+        "textures": [
+          "soft"
+        ],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 8,
+        "outfit_id": "outfit_20250426_010808_6_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:08:08.611438"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010820_6_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.400131",
+      "outfit_data": {
+        "top": "A flowing silk blouse in a champagne gold hue, featuring delicate embroidery around the neckline and cuffs. The silhouette is empire waist with subtle balloon sleeves for a touch of retro charm.",
+        "bottom": "Wide-legged satin pants in a deep bronze color that cascade gracefully to the floor.",
+        "shoes": "Strappy metallic silver heels with a low, kitten heel for comfort while maintaining elegance.",
+        "extras": "A vintage-inspired wide-brimmed hat adorned with a gold feather accents and a small, sleek clutch bag made of rich, dark brown leather.",
+        "colors": [
+          "gold",
+          "bronze",
+          "silver",
+          "red",
+          "brown"
+        ],
+        "materials": [
+          "silk",
+          "satin",
+          "leather"
+        ],
+        "lengths": [
+          "full",
+          "floor"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010820_6_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:08:20.014512"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010830_6_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.402357",
+      "outfit_data": {
+        "top": "A ruby red velvet blouse with voluminous sleeves and a relaxed fit. The fabric is soft and luxurious, featuring subtle sheen that catches the light.",
+        "bottom": "Emerald green corduroy wide-leg trousers. They have an elasticated waistband for comfort and a slightly cropped length, ending just above the ankle.",
+        "shoes": "Sapphire blue suede Chelsea boots with a stacked heel.  The leather lining ensures comfort while adding a touch of sophistication.",
+        "extras": "A chunky amethyst wool knit scarf draped loosely around the neck, paired with delicate gold hoop earrings.  A vintage-inspired tweed crossbody bag in topaz adds a touch of old-world glamour.",
+        "colors": [
+          "red",
+          "green",
+          "blue",
+          "gold"
+        ],
+        "materials": [
+          "velvet",
+          "corduroy",
+          "leather",
+          "suede",
+          "tweed",
+          "knit",
+          "wool"
+        ],
+        "lengths": [
+          "ankle",
+          "cropped"
+        ],
+        "textures": [
+          "soft"
+        ],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 6,
+        "comfort": 7,
+        "outfit_id": "outfit_20250426_010830_6_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:08:30.971820"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010841_7_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.404883",
+      "outfit_data": {
+        "top": "A tailored olive wool blouse with a boxy silhouette, featuring a mandarin collar and sharp, angular pleats at the back.",
+        "bottom": "Wide-leg trousers crafted from terracotta gabardine with an inverted pleat detail at the front and tapered legs that end just above the ankle.",
+        "shoes": "Black leather loafers with a chunky sole for added height and a modern edge.",
+        "extras": "A sage silk scarf tied loosely around the neck to add a touch of color and texture against the earthy tones.",
+        "colors": [
+          "red",
+          "black"
+        ],
+        "materials": [
+          "wool",
+          "leather",
+          "silk"
+        ],
+        "lengths": [
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 6,
+        "trendiness": 7,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010841_7_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:08:41.623299"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010849_7_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.407688",
+      "outfit_data": {
+        "top": "A sleeveless olive linen blouse with a voluminous, gathered bodice and an asymmetrical hemline that falls below the hip.",
+        "bottom": "Wide-leg terracotta seersucker trousers with a high waist and a relaxed, draped silhouette.",
+        "shoes": "Mustard suede platform espadrilles with jute accents.",
+        "extras": "A sage green linen bucket hat to complete the look.",
+        "colors": [
+          "red",
+          "green"
+        ],
+        "materials": [
+          "linen",
+          "suede"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010849_7_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:08:49.006844"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010901_7_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.411382",
+      "outfit_data": {
+        "top": "A cream-colored silk blouse with a relaxed, empire waist silhouette. The blouse features delicate smocking details at the neckline and sleeves for a touch of elegance.",
+        "bottom": "Khaki linen pants in an A-line style. They are tailored for a flattering fit but retain a breezy, comfortable feel suitable for a beach setting.",
+        "shoes": "Nude suede heeled sandals with a thin strap that wraps around the ankle. The heel is mid-height for both comfort and style.",
+        "extras": "A woven straw tote bag in a natural color to carry essentials. A lightweight camel-colored wool cardigan can be draped over the shoulders for cooler evenings.",
+        "colors": [
+          "red",
+          "cream"
+        ],
+        "materials": [
+          "silk",
+          "linen",
+          "suede",
+          "wool"
+        ],
+        "lengths": [
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 8,
+        "outfit_id": "outfit_20250426_010901_7_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:09:01.079582"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010914_8_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.414352",
+      "outfit_data": {
+        "top": "A chunky knit cream-colored turtleneck sweater crafted from wool and cashmere blend. The neckline is high and slightly oversized, offering a relaxed yet polished look.",
+        "bottom": "Wide-leg khaki flannel trousers with a sharp, angular cut. The fabric has a subtle plaid pattern in muted earth tones, adding visual interest without being overly bold.",
+        "shoes": "Black leather Chelsea boots with sturdy rubber soles. The ankle height and pointed toe offer a touch of formality while remaining practical for navigating sandy terrain.",
+        "extras": "A long, taupe-colored wool duster coat draped over the shoulders adds warmth and an air of effortless sophistication. Accessorize with simple gold hoop earrings and a brown leather belt cinched around the waist to accentuate the masculine silhouette.",
+        "colors": [
+          "red",
+          "cream",
+          "black",
+          "gold",
+          "brown"
+        ],
+        "materials": [
+          "knit",
+          "wool",
+          "cashmere",
+          "leather"
+        ],
+        "lengths": [
+          "ankle",
+          "long"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010914_8_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:09:14.598080"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010927_8_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.417961",
+      "outfit_data": {
+        "top": "A crisp white silk blouse with a ruffled neckline and three-quarter sleeves. The fabric drapes beautifully and has a subtle sheen for a touch of elegance.",
+        "bottom": "Navy blue wool cigarette pants with a slightly flared leg, tailored to flatter the feminine silhouette. They offer both style and comfort for an evening at the beach.",
+        "shoes": "Black patent leather pointed-toe heels with a comfortable mid-height.  The classic style adds a touch of sophistication without being too formal.",
+        "extras": "A beige wool trench coat cinched at the waist with a brown leather belt to ward off any cool breezes and add a vintage charm.",
+        "colors": [
+          "white",
+          "red",
+          "navy",
+          "blue",
+          "black",
+          "brown",
+          "beige"
+        ],
+        "materials": [
+          "silk",
+          "wool",
+          "leather"
+        ],
+        "lengths": [
+          "three-quarter",
+          "full",
+          "mini"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 7,
+        "trendiness": 6,
+        "comfort": 7,
+        "outfit_id": "outfit_20250426_010927_8_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:09:27.430953"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010934_8_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.420823",
+      "outfit_data": {
+        "top": "A sleeveless, silver linen blouse with a relaxed fit and a boat neckline.",
+        "bottom": "Wide-leg, platinum seersucker pants with a straight leg and a high waist.",
+        "shoes": "Bronze leather sandals with thin straps and a low wedge heel.",
+        "extras": "A single gold bangle bracelet and a small, copper crossbody bag.",
+        "colors": [
+          "silver",
+          "bronze",
+          "gold"
+        ],
+        "materials": [
+          "linen",
+          "leather"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010934_8_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:09:34.571237"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010945_9_0",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.423366",
+      "outfit_data": {
+        "top": "A cream-colored oversized corduroy shirt with a boxy silhouette. The collar is pointed and the sleeves are slightly cuffed, ending at the elbow.",
+        "bottom": "Charcoal grey tweed wide-leg pants with a high waist and sharp creases. They have a relaxed fit but maintain a masculine structure.",
+        "shoes": "Black velvet ankle boots with chunky heels and a pointed toe.",
+        "extras": "A vintage brown leather belt with a brass buckle cinched around the high waist of the trousers. A chunky silver necklace with an edgy pendant completes the look.",
+        "colors": [
+          "red",
+          "cream",
+          "black",
+          "silver",
+          "brown"
+        ],
+        "materials": [
+          "corduroy",
+          "tweed",
+          "velvet",
+          "lace",
+          "leather"
+        ],
+        "lengths": [
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 6,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_010945_9_0",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:09:45.661296"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_010956_9_1",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.426077",
+      "outfit_data": {
+        "top": "A vintage-inspired gold silk blouse with voluminous puffed sleeves, a sweetheart neckline, and delicate ruffles at the shoulders.",
+        "bottom": "A pair of flared bronze corduroy trousers with a high waist and wide leg that tapers slightly at the ankle.",
+        "shoes": "Brown leather Mary Jane shoes with a subtle platform heel and antique gold buckles.",
+        "extras": "A platinum wool beret perched atop her head, a silver chain belt cinched at the waist, and a vintage-inspired copper pendant necklace on a delicate silver chain.",
+        "colors": [
+          "gold",
+          "red",
+          "bronze",
+          "brown",
+          "silver"
+        ],
+        "materials": [
+          "silk",
+          "corduroy",
+          "leather",
+          "lace",
+          "wool"
+        ],
+        "lengths": [
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_010956_9_1",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:09:56.753865"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_011007_9_2",
+      "event": "Beach Clam bake",
+      "created_at": "2025-04-26T01:10:07.428811",
+      "outfit_data": {
+        "top": "A crimson silk blouse with a flowing empire waist and delicate gold embroidery along the neckline.",
+        "bottom": "Emerald green wool trousers with a wide-leg silhouette that falls to the ankles, creating a sleek and modern look.",
+        "shoes": "Cobalt blue suede pointed-toe heels with a mid-height stiletto.",
+        "extras": "A rich purple tweed blazer draped over the shoulders for an added touch of sophistication when the sun sets.",
+        "colors": [
+          "gold",
+          "green",
+          "blue",
+          "purple"
+        ],
+        "materials": [
+          "silk",
+          "wool",
+          "suede",
+          "tweed"
+        ],
+        "lengths": [
+          "long",
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 7,
+        "comfort": 5,
+        "outfit_id": "outfit_20250426_011007_9_2",
+        "event": "Beach Clam bake",
+        "created_at": "2025-04-26T01:10:07.358554"
+      }
+    }
+  ]
+}

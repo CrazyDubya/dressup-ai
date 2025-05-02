@@ -1,0 +1,34 @@
+{
+  "outfit_id": "outfit_20250426_010042_2_0",
+  "event": "Summer Sidewalk Cafe ",
+  "created_at": "2025-04-26T01:01:34.286916",
+  "outfit_data": {
+    "top": "A dusty rose silk blouse with puffed sleeves and a dramatic ruched neckline.",
+    "bottom": "A sage green wool midi skirt with an A-line silhouette, featuring a deep side slit and intricate embroidered detailing.",
+    "shoes": "Slate gray tweed pumps with pointed toes and delicate ankle straps.",
+    "extras": "A mauve crepe shawl draped over the shoulders for added drama and warmth. A pair of silver statement earrings completes the look.",
+    "colors": [
+      "red",
+      "green",
+      "gray",
+      "silver"
+    ],
+    "materials": [
+      "silk",
+      "wool",
+      "tweed"
+    ],
+    "lengths": [
+      "midi",
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 6,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010042_2_0",
+    "event": "Summer Sidewalk Cafe ",
+    "created_at": "2025-04-26T01:00:42.855134"
+  }
+}

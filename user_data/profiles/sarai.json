@@ -1,0 +1,783 @@
+{
+  "name": "Sarai",
+  "measurements": {
+    "height": 67.0,
+    "height_unit": "inches",
+    "weight": 130.0,
+    "weight_unit": "lbs",
+    "waist": 30.0,
+    "hips": 32.0,
+    "inseam": 30.0,
+    "shoulder_width": 14.0,
+    "arm_length": 23.0,
+    "bust": {
+      "band_size": 34.0,
+      "cup_size": "B",
+      "unit": "inches"
+    }
+  },
+  "physical_features": {
+    "eye_color": "brown",
+    "hair_color": "brown",
+    "hair_length": "shoulder length",
+    "skin_tone": "pale",
+    "body_type": "fit",
+    "face_shape": "oval",
+    "distinguishing_features": [
+      "soft freckles"
+    ]
+  },
+  "style_preferences": {
+    "primary_style": "romantic",
+    "secondary_styles": [
+      "bohemian",
+      "edgy"
+    ],
+    "favorite_colors": [
+      "pink",
+      "black"
+    ],
+    "favorite_materials": [
+      "silk"
+    ],
+    "preferred_silhouettes": [
+      "fitted"
+    ],
+    "style_adaptability": 7,
+    "comfort_priority": 2,
+    "modesty_level": 2,
+    "color_preferences": {},
+    "material_preferences": {},
+    "style_restrictions": null,
+    "seasonal_preferences": null
+  },
+  "created_at": "2025-04-24T20:39:15.465154",
+  "last_login": "2025-04-24T22:31:53.268582",
+  "outfit_count": 21,
+  "style_history": [
+    {
+      "outfit_id": "outfit_1",
+      "event": "casual",
+      "created_at": "2025-04-24T22:33:23.409561",
+      "outfit_data": {
+        "top": "A mustard yellow linen blouse with a relaxed fit, featuring delicate embroidery along the neckline and cuffs",
+        "bottom": "Tailored terracotta seersucker pants with a high waist and wide-leg silhouette, cinched at the ankle with a button closure",
+        "shoes": "Rust-colored leather block heel sandals with intricate woven straps and a comfortable platform sole",
+        "extras": "A sage green cotton shawl with fringe detailing draped loosely over one shoulder. Simple gold hoop earrings and a layered necklace with turquoise beads complete the look",
+        "colors": [
+          "sage",
+          "turquoise",
+          "rust",
+          "mustard",
+          "gold",
+          "terracotta"
+        ],
+        "materials": [
+          "seersucker",
+          "cotton",
+          "leather",
+          "linen"
+        ],
+        "lengths": [
+          "ankle"
+        ],
+        "textures": [
+          "woven"
+        ],
+        "styles": [
+          "bohemian",
+          "casual"
+        ]
+      }
+    },
+    {
+      "outfit_id": "",
+      "event": "",
+      "created_at": "2025-04-24T22:53:10.282600",
+      "outfit_data": {
+        "top": "A fitted olive silk blouse with a subtle sheen and a rounded neckline.",
+        "bottom": "Wide-leg terracotta linen trousers with a slightly cropped length.",
+        "shoes": "Tan leather sandals with a low wedge heel and delicate straps.",
+        "extras": "A sage green cotton scarf tied loosely around the neck, and gold hoop earrings. A small rust-colored leather clutch completes the look.",
+        "colors": [
+          "green",
+          "gold",
+          "red"
+        ],
+        "materials": [
+          "silk",
+          "cotton",
+          "leather",
+          "linen"
+        ],
+        "lengths": [
+          "cropped"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5
+      }
+    },
+    {
+      "outfit_id": "",
+      "event": "",
+      "created_at": "2025-04-24T22:53:10.338659",
+      "outfit_data": {
+        "top": "A ruby-red corduroy blouse with a relaxed oversized fit and dramatic bell sleeves.",
+        "bottom": "Emerald green velvet wide-leg trousers, slightly cropped at the ankle to showcase a pair of statement heels.",
+        "shoes": "Sapphire blue suede platform heels with a pointed toe.",
+        "extras": "A chunky silver chain necklace draped over the blouse collar.",
+        "colors": [
+          "green",
+          "red",
+          "silver",
+          "blue"
+        ],
+        "materials": [
+          "corduroy",
+          "lace",
+          "velvet",
+          "suede"
+        ],
+        "lengths": [
+          "ankle",
+          "cropped"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 6,
+        "comfort": 6
+      }
+    },
+    {
+      "outfit_id": "",
+      "event": "",
+      "created_at": "2025-04-24T22:53:10.375487",
+      "outfit_data": {
+        "top": "A flowing, off-the-shoulder silk blouse in deep bronze, adorned with intricate embroidery featuring silver thread details.",
+        "bottom": "Wide-leg trousers crafted from a rich, copper-colored tweed, cinched at the waist with a thick, woven belt of platinum leather.",
+        "shoes": "Pointed-toe heels made from smooth, black gabardine with an exaggerated platform and a stiletto heel capped in gleaming gold.",
+        "extras": "A long, flowing silver scarf featuring a paisley print drapes effortlessly around the shoulders. A statement cuff bracelet crafted from oxidized silver completes the look.",
+        "colors": [
+          "red",
+          "black",
+          "silver",
+          "bronze",
+          "gold"
+        ],
+        "materials": [
+          "silk",
+          "leather",
+          "tweed"
+        ],
+        "lengths": [
+          "long"
+        ],
+        "textures": [
+          "smooth"
+        ],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5
+      }
+    },
+    {
+      "outfit_id": "",
+      "event": "",
+      "created_at": "2025-04-24T22:53:10.407496",
+      "outfit_data": {
+        "top": "Please provide me with the outfit details! I need information about:\n\n* Formality: (You already gave me a 5/10)\n* Style: (e.g., casual, bohemian, preppy, edgy, minimalist, etc.)\n* Colors: (What colors are in the outfit?)\n* Materials: (e.g., denim, silk, cotton, leather, etc.)\n\n\nOnce I have these details, I can suggest a matching top! \ud83d\ude0a",
+        "bottom": "Please provide the missing details about the top so I can suggest a matching bottom! I need to know:\n\n* Style: (e.g., casual, bohemian, preppy, edgy, minimalist, etc.)\n* Colors: (What colors are in the outfit?)\n* Materials: (e.g., denim, silk, cotton, leather, etc.) \n\n\nOnce I have this information, I can give you a great suggestion for a matching bottom! \ud83d\ude0a",
+        "shoes": "Please provide me with the details of your outfit so I can suggest matching shoes! I need to know:\n\n* Formality: (You already gave me a 5/10)\n* Style: (e.g., casual, bohemian, preppy, edgy, minimalist, etc.)\n* Colors: (What colors are in the outfit?)\n* Materials: (e.g., denim, silk, cotton, leather, etc.) \n\n\n\nOnce I have this information, I can suggest the perfect shoes to complete your look! \ud83d\ude0a \ud83d\udc60\ud83d\udc5f\ud83d\udc61\ud83d\udc62",
+        "extras": null,
+        "colors": [],
+        "materials": [],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_231946_0_0",
+      "event": "Cocktail party",
+      "created_at": "2025-04-24T23:23:05.804670",
+      "outfit_data": {
+        "top": "A crisp white cotton voile blouse with a relaxed, empire waist silhouette and three-quarter length sleeves.",
+        "bottom": "Charcoal gray linen wide-leg trousers with a high waist and pleats at the front for added movement.",
+        "shoes": "Simple black leather ballet flats with a pointed toe.",
+        "extras": "A delicate silver chain necklace and small ivory clutch bag.",
+        "colors": [
+          "black",
+          "silver",
+          "gray",
+          "white"
+        ],
+        "materials": [
+          "cotton",
+          "lace",
+          "leather",
+          "linen"
+        ],
+        "lengths": [
+          "three-quarter"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250424_231946_0_0",
+        "event": "Cocktail party",
+        "created_at": "2025-04-24T23:19:46.447491"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_231957_0_1",
+      "event": "Cocktail party",
+      "created_at": "2025-04-24T23:23:18.210516",
+      "outfit_data": {
+        "top": "A chunky olive green wool turtleneck blouse with a boxy silhouette and exaggerated, pointed collar.",
+        "bottom": "Rust-colored wide-leg tweed trousers with a high waist and sharply pressed creases.",
+        "shoes": "Black leather Chelsea boots with stacked heels.",
+        "extras": "A long, flowing sage green cashmere scarf draped loosely around the neck.",
+        "colors": [
+          "black",
+          "red",
+          "green"
+        ],
+        "materials": [
+          "cashmere",
+          "leather",
+          "tweed",
+          "wool"
+        ],
+        "lengths": [
+          "long"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250424_231957_0_1",
+        "event": "Cocktail party",
+        "created_at": "2025-04-24T23:19:57.483422"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_232010_1_0",
+      "event": "Cocktail party",
+      "created_at": "2025-04-24T23:23:29.793111",
+      "outfit_data": {
+        "top": "A blush pink silk blouse with delicate ruffle detailing at the neckline and long, billowing sleeves that gracefully drape to the elbows.",
+        "bottom": "Flowing lavender chiffon midi skirt with a subtle A-line silhouette and an asymmetrical hem that falls slightly longer in the back.",
+        "shoes": "Strappy silver satin heels with a pointed toe and a stiletto heel.",
+        "extras": "Delicate pearl earrings, a matching lavender silk clutch bag, and a light mint linen blazer for a touch of sophistication when entering cooler environments.",
+        "colors": [
+          "pink",
+          "silver",
+          "mint"
+        ],
+        "materials": [
+          "silk",
+          "satin",
+          "linen"
+        ],
+        "lengths": [
+          "midi",
+          "long",
+          "full"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250424_232010_1_0",
+        "event": "Cocktail party",
+        "created_at": "2025-04-24T23:20:10.720339"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_232305_1_1",
+      "event": "Cocktail party",
+      "created_at": "2025-04-24T23:23:41.272638",
+      "outfit_data": {
+        "top": "A flowing, ivory silk blouse with delicate gold embroidery along the neckline and cuffs. The blouse features billowing sleeves that cascade gracefully to the elbows.",
+        "bottom": "Bronze sequined culottes crafted from a lightweight linen blend. The wide legs are gently flared, creating a romantic and whimsical silhouette.",
+        "shoes": "Silver metallic strappy heels with an ankle strap for a touch of glamor. The heels taper to a pointed toe and have a comfortable block heel height.",
+        "extras": "A layered necklace featuring turquoise stones and hammered silver pendants adds a bohemian touch.",
+        "colors": [
+          "gold",
+          "red",
+          "silver",
+          "bronze"
+        ],
+        "materials": [
+          "silk",
+          "lace",
+          "linen"
+        ],
+        "lengths": [
+          "full",
+          "long",
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 4,
+        "trendiness": 5,
+        "comfort": 7,
+        "outfit_id": "outfit_20250424_232305_1_1",
+        "event": "Cocktail party",
+        "created_at": "2025-04-24T23:23:05.789997"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_232930_0_0",
+      "event": "Job Interview",
+      "created_at": "2025-04-24T23:30:49.758452",
+      "outfit_data": {
+        "top": "A cobalt blue cashmere turtleneck sweater with a high neckline and an oversized fit.",
+        "bottom": "Black wool-blend wide-leg trousers with sharp pleats and a slightly cropped length, hitting just above the ankle.",
+        "shoes": "Black leather platform Chelsea boots with gold hardware accents.",
+        "extras": "A long, emerald green tweed coat with a dramatic collar and a single large button closure. Gold statement earrings and a thin chain necklace in silver complete the look.",
+        "colors": [
+          "blue",
+          "green",
+          "black",
+          "silver",
+          "gold"
+        ],
+        "materials": [
+          "leather",
+          "tweed",
+          "wool",
+          "cashmere",
+          "lace"
+        ],
+        "lengths": [
+          "long",
+          "ankle",
+          "cropped"
+        ],
+        "textures": [
+          "hard"
+        ],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 6,
+        "comfort": 5,
+        "outfit_id": "outfit_20250424_232930_0_0",
+        "event": "Job Interview",
+        "created_at": "2025-04-24T23:29:30.665157"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_232949_0_1",
+      "event": "Job Interview",
+      "created_at": "2025-04-24T23:31:01.443609",
+      "outfit_data": {
+        "top": "A silver metallic silk blouse with a relaxed fit and subtle draping details.",
+        "bottom": "Wide-leg linen pants in a warm copper tone, providing a comfortable yet sophisticated silhouette.",
+        "shoes": "Pointed-toe flats crafted from soft leather in a pale gold shade.",
+        "extras": "A simple platinum pendant necklace adds a touch of understated elegance.",
+        "colors": [
+          "gold",
+          "silver"
+        ],
+        "materials": [
+          "silk",
+          "lace",
+          "leather",
+          "linen"
+        ],
+        "lengths": [],
+        "textures": [
+          "soft"
+        ],
+        "styles": [],
+        "formality": 4,
+        "trendiness": 5,
+        "comfort": 9,
+        "outfit_id": "outfit_20250424_232949_0_1",
+        "event": "Job Interview",
+        "created_at": "2025-04-24T23:29:49.285628"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_233000_1_0",
+      "event": "Job Interview",
+      "created_at": "2025-04-24T23:31:12.650098",
+      "outfit_data": {
+        "top": "A sleeveless emerald green silk blouse with a draped neckline and an oversized, balloon-shaped sleeve.",
+        "bottom": "Wide-leg terracotta satin trousers with a high waist and a flowing, a-line silhouette.",
+        "shoes": "Black leather ankle boots with a stacked heel and silver buckles.",
+        "extras": "A long, sage green cashmere cardigan with fringe detailing worn loosely over the blouse, and a thin gold chain necklace.",
+        "colors": [
+          "green",
+          "gold",
+          "silver",
+          "black"
+        ],
+        "materials": [
+          "satin",
+          "leather",
+          "silk",
+          "cashmere",
+          "lace"
+        ],
+        "lengths": [
+          "long",
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250424_233000_1_0",
+        "event": "Job Interview",
+        "created_at": "2025-04-24T23:30:00.885951"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_233049_1_1",
+      "event": "Job Interview",
+      "created_at": "2025-04-24T23:31:25.501886",
+      "outfit_data": {
+        "top": "A mint green silk blouse with an oversized, slightly cropped fit and a rounded neckline.",
+        "bottom": "Lavender cashmere wide-leg trousers with a high waist and crease detail running down the leg.",
+        "shoes": "Pale peach satin loafers with a chunky, rubber sole.",
+        "extras": "A delicate gold chain necklace with a small pendant, and a soft pink velvet blazer worn open over the blouse.",
+        "colors": [
+          "pink",
+          "gold",
+          "mint",
+          "green"
+        ],
+        "materials": [
+          "satin",
+          "silk",
+          "velvet",
+          "cashmere",
+          "lace"
+        ],
+        "lengths": [
+          "cropped"
+        ],
+        "textures": [
+          "soft"
+        ],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250424_233049_1_1",
+        "event": "Job Interview",
+        "created_at": "2025-04-24T23:30:49.756935"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_233558_0_0",
+      "event": "Pool Party",
+      "created_at": "2025-04-24T23:40:46.476207",
+      "outfit_data": {
+        "top": "A loose-fitting mint green silk blouse with puffed sleeves and a high neckline.",
+        "bottom": "Wide-leg lavender wool trousers with a sharp crease down the center and a slightly cropped length.",
+        "shoes": "Sky blue suede platform sandals with chunky heels and buckled straps.",
+        "extras": "A peach tweed blazer with exaggerated shoulders, worn open over the blouse. Silver hoop earrings and a delicate chain necklace complete the look.",
+        "colors": [
+          "green",
+          "silver",
+          "blue",
+          "mint"
+        ],
+        "materials": [
+          "suede",
+          "silk",
+          "tweed",
+          "wool",
+          "lace"
+        ],
+        "lengths": [
+          "cropped"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250424_233558_0_0",
+        "event": "Pool Party",
+        "created_at": "2025-04-24T23:35:58.183920",
+        "user_ratings": {
+          "style": 6,
+          "comfort": 6,
+          "overall": 5,
+          "rated_at": "2025-04-24T23:40:46.473862"
+        }
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_233709_0_1",
+      "event": "Pool Party",
+      "created_at": "2025-04-24T23:40:52.237277",
+      "outfit_data": {
+        "top": "A fuchsia linen blouse with a relaxed fit and a tie neckline. The sleeves are slightly puffed and end just above the elbow.",
+        "bottom": "White denim shorts cut in a straight leg silhouette, with frayed edges for a touch of casualness.",
+        "shoes": "Turquoise espadrille wedges with a thick jute sole and a comfortable heel height.",
+        "extras": "A coral woven straw tote bag for carrying essentials.",
+        "colors": [
+          "white"
+        ],
+        "materials": [
+          "linen",
+          "denim"
+        ],
+        "lengths": [
+          "short"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 0,
+        "trendiness": 5,
+        "comfort": 10,
+        "outfit_id": "outfit_20250424_233709_0_1",
+        "event": "Pool Party",
+        "created_at": "2025-04-24T23:37:09.245834",
+        "user_ratings": {
+          "style": 7,
+          "comfort": 7,
+          "overall": 6,
+          "rated_at": "2025-04-24T23:40:52.236987"
+        }
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_233744_1_0",
+      "event": "Pool Party",
+      "created_at": "2025-04-24T23:41:02.945206",
+      "outfit_data": {
+        "top": "A dusty rose silk blouse with long sleeves and puffed shoulders, featuring delicate lace detailing along the neckline and cuffs.",
+        "bottom": "A voluminous sage green wool skirt that falls below the knee in a dramatic A-line silhouette, cinched at the waist with a thick moss green velvet belt.",
+        "shoes": "Pointed-toe slate grey suede heels with a chunky block heel.",
+        "extras": "A mauve cashmere wrap fastened at the neck, adding warmth and a touch of elegance. A simple gold pendant necklace completes the look.",
+        "colors": [
+          "green",
+          "gold"
+        ],
+        "materials": [
+          "suede",
+          "silk",
+          "velvet",
+          "wool",
+          "cashmere",
+          "lace"
+        ],
+        "lengths": [
+          "knee",
+          "long"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 5,
+        "trendiness": 5,
+        "comfort": 5,
+        "outfit_id": "outfit_20250424_233744_1_0",
+        "event": "Pool Party",
+        "created_at": "2025-04-24T23:37:44.938052",
+        "user_ratings": {
+          "style": 4,
+          "comfort": 5,
+          "overall": 6,
+          "rated_at": "2025-04-24T23:41:02.945004"
+        }
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_233834_1_1",
+      "event": "Pool Party",
+      "created_at": "2025-04-24T23:41:19.988182",
+      "outfit_data": {
+        "top": "A crisp white linen blouse with a relaxed fit and sharp collar.",
+        "bottom": "Khaki seersucker wide-leg pants with a high waist and cuffed hems.",
+        "shoes": "Cream leather espadrille wedges with a thick platform sole.",
+        "extras": "A taupe straw fedora for sun protection.",
+        "colors": [
+          "cream",
+          "white"
+        ],
+        "materials": [
+          "leather",
+          "linen"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250424_233834_1_1",
+        "event": "Pool Party",
+        "created_at": "2025-04-24T23:38:34.843180",
+        "user_ratings": {
+          "style": 6,
+          "comfort": 7,
+          "overall": 7,
+          "rated_at": "2025-04-24T23:41:19.987962"
+        }
+      }
+    },
+    {
+      "outfit_id": "outfit_20250424_234641_0_0",
+      "event": "Wedding",
+      "created_at": "2025-04-24T23:46:41.402224",
+      "outfit_data": {
+        "top": "A ruby red, sleeveless silk blouse with a relaxed fit and a bateau neckline.",
+        "bottom": "Emerald green linen wide-leg pants with a straight leg and a high waist.",
+        "shoes": "Sapphire blue leather sneakers with white accents.",
+        "extras": "A delicate amethyst gold necklace paired with a simple topaz ring. A lightweight, emerald green chiffon scarf can be worn loosely draped over the shoulders for added warmth.",
+        "colors": [
+          "red",
+          "gold",
+          "blue",
+          "white",
+          "green"
+        ],
+        "materials": [
+          "leather",
+          "lace",
+          "silk",
+          "linen"
+        ],
+        "lengths": [],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250424_234641_0_0",
+        "event": "Wedding",
+        "created_at": "2025-04-24T23:46:41.402042",
+        "user_ratings": {
+          "style": 7,
+          "comfort": 6,
+          "overall": 6,
+          "rated_at": "2025-04-24T23:48:44.804238"
+        }
+      }
+    },
+    {
+      "outfit_id": "outfit_20250425_235547_0_0",
+      "event": "Polo Match",
+      "created_at": "2025-04-25T23:55:47.414717",
+      "outfit_data": {
+        "top": "A  fitted lavender silk blouse with a classic point collar and long sleeves, finished with subtle mother-of-pearl buttons.",
+        "bottom": "Tailored mint wool trousers with a high waist and straight leg, cut for a streamlined silhouette.",
+        "shoes": "White leather pointed-toe pumps with a stiletto heel.",
+        "extras": "A delicate peach silk scarf with a modern geometric print, tied loosely around the neck.   A structured sky blue tweed blazer, belted at the waist to accentuate the fitted silhouette.",
+        "colors": [
+          "red",
+          "mint",
+          "white",
+          "blue"
+        ],
+        "materials": [
+          "silk",
+          "wool",
+          "leather",
+          "tweed"
+        ],
+        "lengths": [
+          "long"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 7,
+        "trendiness": 7,
+        "comfort": 5,
+        "outfit_id": "outfit_20250425_235547_0_0",
+        "event": "Polo Match",
+        "created_at": "2025-04-25T23:55:47.414662"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250425_235558_0_0",
+      "event": "Polo Match",
+      "created_at": "2025-04-25T23:55:58.584799",
+      "outfit_data": {
+        "top": "A crisp white linen blouse with a relaxed fit and button-down front.",
+        "bottom": "Cream-colored wide-leg seersucker trousers, slightly cropped at the ankle.",
+        "shoes": "Tan leather espadrille wedges for a touch of summery flair.",
+        "extras": "A taupe woven straw tote bag for carrying essentials. A delicate gold chain necklace adds a subtle shimmer.",
+        "colors": [
+          "white",
+          "red",
+          "cream",
+          "gold"
+        ],
+        "materials": [
+          "linen",
+          "leather",
+          "lace"
+        ],
+        "lengths": [
+          "cropped",
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250425_235558_0_0",
+        "event": "Polo Match",
+        "created_at": "2025-04-25T23:55:58.584773"
+      }
+    },
+    {
+      "outfit_id": "outfit_20250426_011224_0_0",
+      "event": "Pool party",
+      "created_at": "2025-04-26T01:12:24.808589",
+      "outfit_data": {
+        "top": "A deep crimson velvet blouse with long sleeves and a relaxed, straight cut.",
+        "bottom": "High-waisted corduroy pants in a rich emerald green with a slightly flared leg.",
+        "shoes": "Gold leather ankle boots with stacked heels.",
+        "extras": "A long, flowing silk scarf in cobalt blue with a paisley print, worn loosely around the neck. A delicate gold pendant necklace featuring a tiny amethyst stone completes the look.",
+        "colors": [
+          "red",
+          "green",
+          "gold",
+          "blue"
+        ],
+        "materials": [
+          "velvet",
+          "corduroy",
+          "leather",
+          "lace",
+          "silk"
+        ],
+        "lengths": [
+          "long",
+          "ankle"
+        ],
+        "textures": [],
+        "styles": [],
+        "formality": 3,
+        "trendiness": 5,
+        "comfort": 6,
+        "outfit_id": "outfit_20250426_011224_0_0",
+        "event": "Pool party",
+        "created_at": "2025-04-26T01:12:24.808481"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "outfit_id": "outfit_20250426_010927_8_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.417961",
+  "outfit_data": {
+    "top": "A crisp white silk blouse with a ruffled neckline and three-quarter sleeves. The fabric drapes beautifully and has a subtle sheen for a touch of elegance.",
+    "bottom": "Navy blue wool cigarette pants with a slightly flared leg, tailored to flatter the feminine silhouette. They offer both style and comfort for an evening at the beach.",
+    "shoes": "Black patent leather pointed-toe heels with a comfortable mid-height.  The classic style adds a touch of sophistication without being too formal.",
+    "extras": "A beige wool trench coat cinched at the waist with a brown leather belt to ward off any cool breezes and add a vintage charm.",
+    "colors": [
+      "white",
+      "red",
+      "navy",
+      "blue",
+      "black",
+      "brown",
+      "beige"
+    ],
+    "materials": [
+      "silk",
+      "wool",
+      "leather"
+    ],
+    "lengths": [
+      "three-quarter",
+      "full",
+      "mini"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 7,
+    "trendiness": 6,
+    "comfort": 7,
+    "outfit_id": "outfit_20250426_010927_8_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:09:27.430953"
+  }
+}

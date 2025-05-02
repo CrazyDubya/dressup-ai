@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_010007_0_1",
+  "event": "Summer Sidewalk Cafe ",
+  "created_at": "2025-04-26T01:01:34.281328",
+  "outfit_data": {
+    "top": "A cropped lavender silk blouse with oversized puff sleeves and a subtle sheen. The neckline features a daringly asymmetrical cut, dipping lower on one side for a touch of unexpected flair.",
+    "bottom": "Wide-leg, mint green velvet trousers with a high waist and relaxed fit. The fabric drapes beautifully, creating an effortless flow that complements the airy blouse.",
+    "shoes": "Black satin platform heels with pointed toes and a chunky heel for added height and a touch of rebellious edge.",
+    "extras": "A pale pink cashmere cardigan draped loosely over the shoulders adds a touch of warmth and sophistication while maintaining the relaxed silhouette.",
+    "colors": [
+      "mint",
+      "green",
+      "black",
+      "pink"
+    ],
+    "materials": [
+      "silk",
+      "velvet",
+      "satin",
+      "cashmere"
+    ],
+    "lengths": [
+      "cropped",
+      "full"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010007_0_1",
+    "event": "Summer Sidewalk Cafe ",
+    "created_at": "2025-04-26T01:00:07.677222"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "outfit_id": "outfit_20250426_010641_3_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.379997",
+  "outfit_data": {
+    "top": "A fuchsia cashmere turtleneck sweater with an oversized, balloon silhouette.",
+    "bottom": "Wide-leg, wool trousers in a deep turquoise hue. The trousers feature a high waist and gently flow outwards towards the ankle.",
+    "shoes": "Electric blue suede Chelsea boots with chunky heels for added comfort.",
+    "extras": "A coral-colored wool felt beret perched atop the head. A simple silver chain necklace serves as a subtle accent.",
+    "colors": [
+      "blue",
+      "silver",
+      "red"
+    ],
+    "materials": [
+      "cashmere",
+      "wool",
+      "suede",
+      "lace"
+    ],
+    "lengths": [
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010641_3_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:06:41.868757"
+  }
+}

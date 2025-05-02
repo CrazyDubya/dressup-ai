@@ -1,0 +1,34 @@
+{
+  "outfit_id": "outfit_20250426_005944_4_1",
+  "event": "Summer Patio Drinks",
+  "created_at": "2025-04-26T00:59:44.612698",
+  "outfit_data": {
+    "top": "A crisp white oversized linen shirt, featuring exaggerated sleeves gathered at the wrists and a sharp, angular collar that stands tall. The shirt is left partially unbuttoned to reveal a sliver of black lace camisole underneath, adding a touch of sensuality and texture.",
+    "bottom": "Tailored black denim wide-leg pants with a high-rise waist and a slightly cropped length. The straight, boxy silhouette adds to the avant-garde feel, while the denim provides a casual yet sophisticated base.",
+    "shoes": "Sleek black leather platform sandals with chunky heels. The sharp lines of the platforms echo the angularity of the top and pants, creating a cohesive and impactful look.",
+    "extras": "A bold red silk scarf is tied around the neck, adding a splash of color and personality to the monochrome palette.",
+    "colors": [
+      "red",
+      "white",
+      "black"
+    ],
+    "materials": [
+      "linen",
+      "lace",
+      "denim",
+      "leather",
+      "silk"
+    ],
+    "lengths": [
+      "cropped"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 6,
+    "trendiness": 8,
+    "comfort": 7,
+    "outfit_id": "outfit_20250426_005944_4_1",
+    "event": "Summer Patio Drinks",
+    "created_at": "2025-04-26T00:59:44.588888"
+  }
+}

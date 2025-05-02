@@ -1,0 +1,31 @@
+{
+  "outfit_id": "outfit_20250426_010841_7_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.404883",
+  "outfit_data": {
+    "top": "A tailored olive wool blouse with a boxy silhouette, featuring a mandarin collar and sharp, angular pleats at the back.",
+    "bottom": "Wide-leg trousers crafted from terracotta gabardine with an inverted pleat detail at the front and tapered legs that end just above the ankle.",
+    "shoes": "Black leather loafers with a chunky sole for added height and a modern edge.",
+    "extras": "A sage silk scarf tied loosely around the neck to add a touch of color and texture against the earthy tones.",
+    "colors": [
+      "red",
+      "black"
+    ],
+    "materials": [
+      "wool",
+      "leather",
+      "silk"
+    ],
+    "lengths": [
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 6,
+    "trendiness": 7,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010841_7_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:08:41.623299"
+  }
+}

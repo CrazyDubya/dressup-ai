@@ -1,0 +1,28 @@
+{
+  "outfit_id": "outfit_20250426_010849_7_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.407688",
+  "outfit_data": {
+    "top": "A sleeveless olive linen blouse with a voluminous, gathered bodice and an asymmetrical hemline that falls below the hip.",
+    "bottom": "Wide-leg terracotta seersucker trousers with a high waist and a relaxed, draped silhouette.",
+    "shoes": "Mustard suede platform espadrilles with jute accents.",
+    "extras": "A sage green linen bucket hat to complete the look.",
+    "colors": [
+      "red",
+      "green"
+    ],
+    "materials": [
+      "linen",
+      "suede"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010849_7_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:08:49.006844"
+  }
+}

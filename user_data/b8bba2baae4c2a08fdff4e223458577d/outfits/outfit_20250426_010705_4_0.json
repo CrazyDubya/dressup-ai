@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_010705_4_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.384057",
+  "outfit_data": {
+    "top": "A ruby-colored silk blouse with a dramatic high collar and billowing, oversized sleeves.",
+    "bottom": "Emerald green tweed culottes with a wide leg silhouette and sharp pleats running down the front.",
+    "shoes": "Topaz suede ankle boots with a chunky heel and pointed toe.",
+    "extras": "A sapphire blue wool coat with exaggerated lapels and a slightly oversized fit. A simple, silver pendant necklace featuring an amethyst stone completes the look.",
+    "colors": [
+      "red",
+      "green",
+      "silver",
+      "blue"
+    ],
+    "materials": [
+      "silk",
+      "tweed",
+      "suede",
+      "lace",
+      "wool"
+    ],
+    "lengths": [
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010705_4_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:07:05.460273"
+  }
+}

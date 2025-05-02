@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_010134_4_1",
+  "event": "Summer Sidewalk Cafe ",
+  "created_at": "2025-04-26T01:01:34.292782",
+  "outfit_data": {
+    "top": "A fitted silk blouse in a rich terracotta hue, featuring delicate pleating along the neckline and sleeves.",
+    "bottom": "Tailored high-waisted trousers crafted from a luxurious sage green velvet, with sharp creases and a slightly cropped length to showcase a pair of sleek ankle boots.",
+    "shoes": "Pointed-toe leather pumps in a deep olive color,  rising to a modest heel for both style and comfort.",
+    "extras": "A thin, gold chain necklace adds a touch of elegance, while a small, structured clutch bag in mustard velvet complements the outfit's earthy palette.",
+    "colors": [
+      "red",
+      "green",
+      "gold"
+    ],
+    "materials": [
+      "silk",
+      "velvet",
+      "leather",
+      "lace"
+    ],
+    "lengths": [
+      "long",
+      "ankle",
+      "cropped"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 7,
+    "trendiness": 5,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010134_4_1",
+    "event": "Summer Sidewalk Cafe ",
+    "created_at": "2025-04-26T01:01:34.278382"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "outfit_id": "outfit_20250426_010505_0_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.361634",
+  "outfit_data": {
+    "top": "A pristine white linen blouse with delicate puffed sleeves and a relaxed, empire waistline. The lightweight fabric drapes beautifully, creating a flowing silhouette that complements the breezy seaside setting.",
+    "bottom": "Charcoal gray seersucker wide-leg trousers offer both comfort and sophistication. Their slightly structured weave adds visual interest while remaining breathable for warm weather.",
+    "shoes": "Sleek black pointed-toe heels crafted from premium leather complete the look. The moderate heel height provides a touch of elegance without sacrificing practicality on sandy shores.",
+    "extras": "A large woven straw tote bag in natural hues carries all your essentials, adding a touch of casual refinement. A delicate gold chain necklace with a small pearl pendant adds a subtle sparkle to the monochrome palette.",
+    "colors": [
+      "white",
+      "red",
+      "gray",
+      "black",
+      "gold"
+    ],
+    "materials": [
+      "linen",
+      "leather",
+      "lace"
+    ],
+    "lengths": [
+      "full"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 2,
+    "trendiness": 7,
+    "comfort": 8,
+    "outfit_id": "outfit_20250426_010505_0_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:05:05.266432"
+  }
+}

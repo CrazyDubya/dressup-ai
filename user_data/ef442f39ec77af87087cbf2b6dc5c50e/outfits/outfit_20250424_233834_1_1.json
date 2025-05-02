@@ -1,0 +1,34 @@
+{
+  "outfit_id": "outfit_20250424_233834_1_1",
+  "event": "Pool Party",
+  "created_at": "2025-04-24T23:41:19.988182",
+  "outfit_data": {
+    "top": "A crisp white linen blouse with a relaxed fit and sharp collar.",
+    "bottom": "Khaki seersucker wide-leg pants with a high waist and cuffed hems.",
+    "shoes": "Cream leather espadrille wedges with a thick platform sole.",
+    "extras": "A taupe straw fedora for sun protection.",
+    "colors": [
+      "white",
+      "cream"
+    ],
+    "materials": [
+      "linen",
+      "leather"
+    ],
+    "lengths": [],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 5,
+    "comfort": 6,
+    "outfit_id": "outfit_20250424_233834_1_1",
+    "event": "Pool Party",
+    "created_at": "2025-04-24T23:38:34.843180",
+    "user_ratings": {
+      "style": 6,
+      "comfort": 7,
+      "overall": 7,
+      "rated_at": "2025-04-24T23:41:19.987962"
+    }
+  }
+}

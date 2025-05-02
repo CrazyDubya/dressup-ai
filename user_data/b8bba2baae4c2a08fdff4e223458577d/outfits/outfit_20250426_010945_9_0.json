@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250426_010945_9_0",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.423366",
+  "outfit_data": {
+    "top": "A cream-colored oversized corduroy shirt with a boxy silhouette. The collar is pointed and the sleeves are slightly cuffed, ending at the elbow.",
+    "bottom": "Charcoal grey tweed wide-leg pants with a high waist and sharp creases. They have a relaxed fit but maintain a masculine structure.",
+    "shoes": "Black velvet ankle boots with chunky heels and a pointed toe.",
+    "extras": "A vintage brown leather belt with a brass buckle cinched around the high waist of the trousers. A chunky silver necklace with an edgy pendant completes the look.",
+    "colors": [
+      "red",
+      "cream",
+      "black",
+      "silver",
+      "brown"
+    ],
+    "materials": [
+      "corduroy",
+      "tweed",
+      "velvet",
+      "lace",
+      "leather"
+    ],
+    "lengths": [
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 3,
+    "trendiness": 6,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010945_9_0",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:09:45.661296"
+  }
+}

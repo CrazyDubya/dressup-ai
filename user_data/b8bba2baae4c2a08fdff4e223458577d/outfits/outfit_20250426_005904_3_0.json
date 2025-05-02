@@ -1,0 +1,35 @@
+{
+  "outfit_id": "outfit_20250426_005904_3_0",
+  "event": "Summer Patio Drinks",
+  "created_at": "2025-04-26T00:59:44.605354",
+  "outfit_data": {
+    "top": "A tailored silk blouse in sage green with a pointed collar and button-down front.",
+    "bottom": "High-waisted, wide-leg trousers crafted from black wool crepe with a slightly flared leg.",
+    "shoes": "Black leather ankle boots featuring a stiletto heel and almond toe.",
+    "extras": "A thin gold chain necklace with a small pendant and a matching gold ring on the index finger. A structured black leather handbag with a minimalist design.",
+    "colors": [
+      "red",
+      "green",
+      "black",
+      "gold"
+    ],
+    "materials": [
+      "silk",
+      "wool",
+      "leather",
+      "lace"
+    ],
+    "lengths": [
+      "ankle",
+      "mini"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 7,
+    "trendiness": 7,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_005904_3_0",
+    "event": "Summer Patio Drinks",
+    "created_at": "2025-04-26T00:59:04.822243"
+  }
+}

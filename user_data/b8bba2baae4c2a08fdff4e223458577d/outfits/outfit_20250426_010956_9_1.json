@@ -1,0 +1,36 @@
+{
+  "outfit_id": "outfit_20250426_010956_9_1",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.426077",
+  "outfit_data": {
+    "top": "A vintage-inspired gold silk blouse with voluminous puffed sleeves, a sweetheart neckline, and delicate ruffles at the shoulders.",
+    "bottom": "A pair of flared bronze corduroy trousers with a high waist and wide leg that tapers slightly at the ankle.",
+    "shoes": "Brown leather Mary Jane shoes with a subtle platform heel and antique gold buckles.",
+    "extras": "A platinum wool beret perched atop her head, a silver chain belt cinched at the waist, and a vintage-inspired copper pendant necklace on a delicate silver chain.",
+    "colors": [
+      "gold",
+      "red",
+      "bronze",
+      "brown",
+      "silver"
+    ],
+    "materials": [
+      "silk",
+      "corduroy",
+      "leather",
+      "lace",
+      "wool"
+    ],
+    "lengths": [
+      "ankle"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 6,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010956_9_1",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:09:56.753865"
+  }
+}

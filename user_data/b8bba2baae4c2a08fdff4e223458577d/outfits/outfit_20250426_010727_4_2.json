@@ -1,0 +1,37 @@
+{
+  "outfit_id": "outfit_20250426_010727_4_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.387945",
+  "outfit_data": {
+    "top": "A cream silk blouse with a dramatic puffed sleeve and plunging neckline, featuring intricate embroidered detailing in taupe thread.",
+    "bottom": "Wide-leg khaki velvet trousers with an exaggerated high waistline, cascading down to the floor in a voluminous drape.",
+    "shoes": "Black leather knee-high boots with a pointed toe and a chunky heel, accented by silver buckles.",
+    "extras": "A camel cashmere oversized coat draped loosely over the shoulders, fastening at the front with an antique gold clasp. Large statement earrings made of mushroom-colored satin and aged brass complete the look.",
+    "colors": [
+      "red",
+      "cream",
+      "silver",
+      "black",
+      "gold"
+    ],
+    "materials": [
+      "silk",
+      "velvet",
+      "leather",
+      "satin",
+      "cashmere"
+    ],
+    "lengths": [
+      "floor",
+      "knee"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 5,
+    "trendiness": 6,
+    "comfort": 5,
+    "outfit_id": "outfit_20250426_010727_4_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:07:27.290708"
+  }
+}

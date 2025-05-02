@@ -1,0 +1,32 @@
+{
+  "outfit_id": "outfit_20250426_010757_5_2",
+  "event": "Beach Clam bake",
+  "created_at": "2025-04-26T01:10:07.395546",
+  "outfit_data": {
+    "top": "A relaxed silk blouse in a muted olive green, featuring oversized sleeves and a slightly cropped length.",
+    "bottom": "Wide-leg linen pants in a warm terracotta hue, cinched at the waist with a thick brown leather belt.",
+    "shoes": "Comfortable yet chic, choose natural woven espadrille wedges in a rich rust color.",
+    "extras": "A lightweight cotton shawl in a sage green pattern, draped loosely over the shoulders for an added touch of elegance and warmth as the evening cools down.",
+    "colors": [
+      "green",
+      "brown"
+    ],
+    "materials": [
+      "silk",
+      "leather",
+      "linen",
+      "cotton"
+    ],
+    "lengths": [
+      "cropped"
+    ],
+    "textures": [],
+    "styles": [],
+    "formality": 2,
+    "trendiness": 7,
+    "comfort": 6,
+    "outfit_id": "outfit_20250426_010757_5_2",
+    "event": "Beach Clam bake",
+    "created_at": "2025-04-26T01:07:57.999878"
+  }
+}
