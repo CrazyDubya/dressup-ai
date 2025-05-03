@@ -1,0 +1,25 @@
+{
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": ["casual", "comfortable"],
+    "color_preferences": ["pastel_blue", "mint_green", "lavender"],
+    "fit_preferences": ["relaxed", "breathable"]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": ["mild", "rainy"],
+    "time_of_day": "day",
+    "season": "spring",
+    "location": "outdoor",
+    "duration": 3,
+    "activity_level": 2
+  }
+} 

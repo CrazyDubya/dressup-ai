@@ -1,0 +1,43 @@
+{
+  "errors": [
+    {
+      "code": "INVALID_MEASUREMENTS",
+      "message": "Invalid measurement values provided",
+      "details": {
+        "invalid_fields": ["height", "weight"],
+        "reason": "Values must be positive numbers",
+        "provided_values": {
+          "height": -170,
+          "weight": 0
+        }
+      },
+      "timestamp": "2025-05-02T19:00:00.000Z",
+      "request_id": "20250502_190000_000001"
+    },
+    {
+      "code": "UNSUPPORTED_SEASON",
+      "message": "Season not supported",
+      "details": {
+        "provided_season": "monsoon",
+        "supported_seasons": ["spring", "summer", "fall", "winter"],
+        "suggested_season": "fall"
+      },
+      "timestamp": "2025-05-02T19:00:01.000Z",
+      "request_id": "20250502_190001_000002"
+    },
+    {
+      "code": "INCOMPATIBLE_STYLES",
+      "message": "Style preferences conflict with formality level",
+      "details": {
+        "style_preferences": ["casual", "beach"],
+        "formality_level": 5,
+        "suggested_adjustments": {
+          "style_preferences": ["elegant", "sophisticated"],
+          "formality_level": 2
+        }
+      },
+      "timestamp": "2025-05-02T19:00:02.000Z",
+      "request_id": "20250502_190002_000003"
+    }
+  ]
+} 

@@ -2,6 +2,7 @@ from typing import List, Optional, Dict
 import logging
 import random
 from pydantic import BaseModel
+from material_specs import MaterialSpecifications
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +19,9 @@ class OutfitComponent(BaseModel):
     waist_fit: Optional[str] = None
     hip_fit: Optional[str] = None
     length: Optional[str] = None
+    surface_characteristics: List[str] = []
+    draping: str = ""
+    care_instructions: str = ""
 
 class OutfitData(BaseModel):
     top: OutfitComponent
@@ -101,26 +105,23 @@ class DressMaker:
         # Get user preferences from real_world_context if available
         user_profile = real_world_context.get('user_profile', {}) if real_world_context else {}
 
-        # Normalize list preferences
-        user_profile.setdefault('favorite_colors', [])
-        user_profile.setdefault('preferred_materials', [])
-        # Normalize bottom and coverage preferences
-        user_profile.setdefault('bottom_preference', {})
-        user_profile.setdefault('coverage_interplay', None)
-
-        # Define allowed materials for components
-        allowed_outfit_materials = {'cotton', 'silk', 'wool', 'denim', 'linen'}
-        allowed_shoe_materials = {s['material'] for s in self.style_variations[style]['shoes']}
+        # Initialize material specifications
+        specs = MaterialSpecifications()
+        
+        # Get appropriate materials based on season and formality
+        season = real_world_context.get('season', 'all') if real_world_context else 'all'
+        formality = 'formal' if style == 'formal' else 'casual'
+        allowed_outfit_materials = specs.recommend_materials(season, formality)
 
         # Restrict user material prefs to outfit materials
-        outfit_material_prefs = [m for m in user_profile['preferred_materials'] if m in allowed_outfit_materials]
+        outfit_material_prefs = [m for m in user_profile.get('preferred_materials', []) if m in allowed_outfit_materials]
         user_profile['preferred_materials'] = outfit_material_prefs
 
         # Get random variations for each component
         top_data = random.choice(self.style_variations[style]['tops'])
         bottom_data = random.choice(self.style_variations[style]['bottoms'])
 
-        # Create OutfitComponent instances
+        # Create OutfitComponent instances with material details
         top = OutfitComponent(
             type=top_data['type'],
             color=top_data['color'],
@@ -128,6 +129,12 @@ class DressMaker:
             fit='comfortable',
             style=style
         )
+
+        # Add material details
+        top_material_details = specs.get_material_properties(top.material)
+        top.surface_characteristics = top_material_details.get('surface_characteristics', [])
+        top.draping = top_material_details.get('draping', '')
+        top.care_instructions = top_material_details.get('care_instructions', '')
 
         bottom = OutfitComponent(
             type=bottom_data['type'],
@@ -137,21 +144,27 @@ class DressMaker:
             style=style
         )
 
+        # Add material details
+        bottom_material_details = specs.get_material_properties(bottom.material)
+        bottom.surface_characteristics = bottom_material_details.get('surface_characteristics', [])
+        bottom.draping = bottom_material_details.get('draping', '')
+        bottom.care_instructions = bottom_material_details.get('care_instructions', '')
+
         # Enforce user color/material preferences
-        if user_profile['favorite_colors']:
+        if user_profile.get('favorite_colors'):
             if top.color not in user_profile['favorite_colors']:
                 top.color = random.choice(user_profile['favorite_colors'])
             if bottom.color not in user_profile['favorite_colors']:
                 bottom.color = random.choice(user_profile['favorite_colors'])
 
-        if user_profile['preferred_materials']:
+        if user_profile.get('preferred_materials'):
             if top.material not in user_profile['preferred_materials']:
                 top.material = random.choice(user_profile['preferred_materials'])
             if bottom.material not in user_profile['preferred_materials']:
                 bottom.material = random.choice(user_profile['preferred_materials'])
 
         # Handle coverage interplay
-        interplay = user_profile['coverage_interplay']
+        interplay = user_profile.get('coverage_interplay')
         if interplay == 'cropped':
             top.hem = 'cropped at waist'
         elif interplay == 'flare':
@@ -168,7 +181,7 @@ class DressMaker:
         bottom.hip_fit = 'comfortable'
         bottom.length = 'knee'
 
-        # Generate shoes
+        # Generate shoes with material details
         shoes_data = random.choice(self.style_variations[style]['shoes'])
         shoes = OutfitComponent(
             type=shoes_data['type'],
@@ -177,6 +190,12 @@ class DressMaker:
             fit='comfortable',
             style=style
         )
+
+        # Add material details for shoes
+        shoes_material_details = specs.get_material_properties(shoes.material)
+        shoes.surface_characteristics = shoes_material_details.get('surface_characteristics', [])
+        shoes.draping = shoes_material_details.get('draping', '')
+        shoes.care_instructions = shoes_material_details.get('care_instructions', '')
 
         # Generate accessories based on style
         extras = []

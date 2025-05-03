@@ -1,0 +1,13 @@
+{
+  "measurements": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38
+  },
+  "measurement_system": "metric",
+  "special_requirements": null
+} 

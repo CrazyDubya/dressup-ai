@@ -1,0 +1,19 @@
+{
+  "bottom": {
+    "type": "pants",
+    "color": "gray",
+    "material": "wool",
+    "fit": "comfortable",
+    "style": "casual",
+    "waist_style": "mid-rise",
+    "leg_style": "straight",
+    "length": "full",
+    "closure": "button_and_zipper",
+    "pockets": {
+      "front": 2,
+      "back": 2,
+      "style": "slanted"
+    },
+    "insulation": "medium"
+  }
+} 

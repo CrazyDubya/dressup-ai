@@ -57,6 +57,110 @@ class MaterialSpecifications:
                 'surface_characteristics': ['delicate', 'ornate', 'translucent'],
                 'construction_notes': 'requires careful handling',
                 'care_instructions': 'hand wash or dry clean'
+            },
+            'denim': {
+                'properties': ['durable', 'structured', 'casual'],
+                'light_behavior': 'matte with subtle highlights',
+                'draping': 'structured, holds shape',
+                'surface_characteristics': ['textured', 'sturdy', 'casual'],
+                'construction_notes': 'requires strong needles, seams',
+                'care_instructions': 'machine wash cold, tumble dry low'
+            },
+            'linen': {
+                'properties': ['breathable', 'lightweight', 'natural'],
+                'light_behavior': 'matte, crisp highlights',
+                'draping': 'crisp, natural drape',
+                'surface_characteristics': ['slightly textured', 'cool', 'natural'],
+                'construction_notes': 'frays easily, pre-wash recommended',
+                'care_instructions': 'machine wash gentle, iron while damp'
+            },
+            'cashmere': {
+                'properties': ['soft', 'luxurious', 'warm'],
+                'light_behavior': 'soft matte with subtle sheen',
+                'draping': 'fluid, soft drape',
+                'surface_characteristics': ['plush', 'fine', 'warm'],
+                'construction_notes': 'delicate, requires gentle handling',
+                'care_instructions': 'hand wash cold or dry clean'
+            },
+            'synthetic': {
+                'properties': ['versatile', 'durable', 'affordable'],
+                'light_behavior': 'varies, often matte or semi-shiny',
+                'draping': 'varies by blend',
+                'surface_characteristics': ['smooth', 'varied', 'resilient'],
+                'construction_notes': 'easy to sew, resists wrinkles',
+                'care_instructions': 'machine wash, tumble dry low'
+            },
+            'modal': {
+                'properties': ['soft', 'breathable', 'drapey'],
+                'light_behavior': 'soft matte',
+                'draping': 'fluid, excellent drape',
+                'surface_characteristics': ['smooth', 'cool', 'soft'],
+                'construction_notes': 'easy to sew, blends well',
+                'care_instructions': 'machine wash cold, gentle cycle'
+            },
+            'bamboo': {
+                'properties': ['eco-friendly', 'soft', 'breathable'],
+                'light_behavior': 'soft matte',
+                'draping': 'fluid, soft drape',
+                'surface_characteristics': ['smooth', 'cool', 'natural'],
+                'construction_notes': 'easy to sew, sustainable',
+                'care_instructions': 'machine wash cold, gentle cycle'
+            },
+            'sequin': {
+                'properties': ['shiny', 'decorative', 'party'],
+                'light_behavior': 'highly reflective, sparkly',
+                'draping': 'stiff, holds shape',
+                'surface_characteristics': ['textured', 'shiny', 'eye-catching'],
+                'construction_notes': 'requires careful stitching, can snag',
+                'care_instructions': 'hand wash, avoid wringing'
+            },
+            'satin': {
+                'properties': ['shiny', 'smooth', 'elegant'],
+                'light_behavior': 'high sheen, reflective',
+                'draping': 'fluid, elegant drape',
+                'surface_characteristics': ['smooth', 'shiny', 'luxurious'],
+                'construction_notes': 'slippery, pins recommended',
+                'care_instructions': 'dry clean or gentle hand wash'
+            },
+            'suede': {
+                'properties': ['soft', 'matte', 'luxurious'],
+                'light_behavior': 'matte, absorbs light',
+                'draping': 'structured, soft hand',
+                'surface_characteristics': ['napped', 'soft', 'rich'],
+                'construction_notes': 'requires special needles, avoid water',
+                'care_instructions': 'brush clean, avoid water'
+            },
+            'mesh': {
+                'properties': ['breathable', 'lightweight', 'see-through'],
+                'light_behavior': 'translucent, diffuses light',
+                'draping': 'fluid, flexible',
+                'surface_characteristics': ['open weave', 'light', 'airy'],
+                'construction_notes': 'can stretch, use stabilizer',
+                'care_instructions': 'hand wash, air dry'
+            },
+            'fleece': {
+                'properties': ['warm', 'soft', 'insulating'],
+                'light_behavior': 'matte, absorbs light',
+                'draping': 'structured, soft',
+                'surface_characteristics': ['plush', 'soft', 'thick'],
+                'construction_notes': 'easy to sew, edges do not fray',
+                'care_instructions': 'machine wash cold, tumble dry low'
+            },
+            'brocade': {
+                'properties': ['ornate', 'structured', 'luxurious'],
+                'light_behavior': 'textured with pattern highlights',
+                'draping': 'structured with pattern definition',
+                'surface_characteristics': ['ornate', 'textured', 'rich'],
+                'construction_notes': 'requires pattern matching',
+                'care_instructions': 'dry clean only'
+            },
+            'jacquard': {
+                'properties': ['patterned', 'structured', 'elegant'],
+                'light_behavior': 'varies with pattern',
+                'draping': 'structured with pattern definition',
+                'surface_characteristics': ['patterned', 'textured', 'rich'],
+                'construction_notes': 'requires pattern matching',
+                'care_instructions': 'dry clean recommended'
             }
         }
         
@@ -88,6 +192,41 @@ class MaterialSpecifications:
                 'movement_characteristics': 'flexible with good drape',
                 'construction_notes': 'requires specialized equipment',
                 'care_instructions': 'hand wash or gentle machine wash'
+            },
+            'ribbed': {
+                'visual_properties': ['vertical lines', 'stretchy'],
+                'light_interaction': 'creates subtle shadow lines',
+                'movement_characteristics': 'flexible, hugs body',
+                'construction_notes': 'requires rib knit technique',
+                'care_instructions': 'machine wash gentle'
+            },
+            'seersucker': {
+                'visual_properties': ['puckered texture', 'striped'],
+                'light_interaction': 'diffuses light, matte',
+                'movement_characteristics': 'light, airy',
+                'construction_notes': 'woven for puckered effect',
+                'care_instructions': 'machine wash cold'
+            },
+            'brocade': {
+                'visual_properties': ['raised pattern', 'ornate'],
+                'light_interaction': 'reflective highlights on pattern',
+                'movement_characteristics': 'structured, holds shape',
+                'construction_notes': 'requires careful pattern matching',
+                'care_instructions': 'dry clean only'
+            },
+            'jacquard': {
+                'visual_properties': ['woven pattern', 'complex'],
+                'light_interaction': 'patterned light reflection',
+                'movement_characteristics': 'varies, often structured',
+                'construction_notes': 'complex weaving, frays easily',
+                'care_instructions': 'dry clean or gentle wash'
+            },
+            'sequin': {
+                'visual_properties': ['shiny discs', 'reflective'],
+                'light_interaction': 'sparkles, high reflection',
+                'movement_characteristics': 'stiff, holds shape',
+                'construction_notes': 'hand sew sequins, can snag',
+                'care_instructions': 'hand wash, avoid wringing'
             }
         }
         
@@ -147,4 +286,78 @@ class MaterialSpecifications:
     def get_care_instructions(self, material: str) -> str:
         """Get care instructions for a material."""
         props = self.get_material_properties(material)
-        return props.get('care_instructions', 'standard care') 
+        return props.get('care_instructions', 'standard care')
+
+    def get_materials_for_season(self, season: str) -> List[str]:
+        """Return materials suitable for a given season."""
+        season = season.lower()
+        season_map = {
+            'summer': ['cotton', 'linen', 'silk', 'bamboo', 'modal', 'mesh'],
+            'winter': ['wool', 'cashmere', 'fleece', 'velvet', 'leather', 'suede'],
+            'spring': ['cotton', 'linen', 'silk', 'bamboo', 'modal', 'denim'],
+            'fall': ['wool', 'cotton', 'denim', 'leather', 'suede', 'velvet']
+        }
+        return [m for m in season_map.get(season, []) if m in self.material_properties]
+
+    def get_materials_for_formality(self, formality: str) -> List[str]:
+        """Return materials suitable for a given formality level."""
+        formality = formality.lower()
+        if formality in ['formal', 'black tie']:
+            return ['silk', 'satin', 'velvet', 'lace', 'brocade', 'jacquard']
+        elif formality in ['business', 'semi-formal']:
+            return ['wool', 'cotton', 'linen', 'silk', 'denim']
+        else:
+            return ['cotton', 'denim', 'linen', 'synthetic', 'mesh']
+
+    def get_textures_for_material(self, material: str) -> List[str]:
+        """Return textures commonly used with a material."""
+        material_texture_map = {
+            'cotton': ['ribbed', 'pleated', 'quilted', 'seersucker'],
+            'silk': ['pleated', 'satin', 'jacquard'],
+            'wool': ['knit', 'ribbed'],
+            'denim': ['quilted', 'ribbed'],
+            'leather': ['embossed'],
+            'velvet': ['pleated'],
+            'lace': ['brocade'],
+            'linen': ['seersucker'],
+            'satin': ['pleated'],
+            'suede': ['embossed'],
+            'mesh': ['mesh', 'sequin'],
+            'fleece': ['quilted'],
+        }
+        return [t for t in material_texture_map.get(material, []) if t in self.texture_properties]
+
+    def recommend_materials(self, season: str, formality: str) -> List[str]:
+        """Recommend materials based on season and formality."""
+        season = season.lower()
+        formality = formality.lower()
+        
+        # Get materials for season and formality
+        season_materials = set(self.get_materials_for_season(season))
+        formality_materials = set(self.get_materials_for_formality(formality))
+        
+        # First try to get materials that work for both season and formality
+        recommended = list(season_materials & formality_materials)
+        
+        # If no overlap, prioritize seasonal materials for casual outfits
+        if not recommended and formality in ['casual']:
+            recommended = list(season_materials)
+        
+        # If still no materials, use formality-based materials
+        if not recommended:
+            recommended = list(formality_materials)
+        
+        # If still no materials, use safe defaults based on season
+        if not recommended:
+            if season == 'winter':
+                recommended = ['wool', 'cashmere', 'fleece']
+            elif season == 'summer':
+                recommended = ['cotton', 'linen', 'silk']
+            elif season == 'spring':
+                recommended = ['cotton', 'linen', 'silk']
+            elif season == 'fall':
+                recommended = ['wool', 'cotton', 'denim']
+            else:
+                recommended = ['cotton', 'synthetic']
+        
+        return recommended 

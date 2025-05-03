@@ -1,0 +1,44 @@
+{
+  "outfit": {
+    "top": {
+      "type": "shirt",
+      "color": "light_blue",
+      "material": "cotton",
+      "fit": "relaxed",
+      "style": "casual",
+      "sleeve_length": "short",
+      "neckline": "crew",
+      "features": {
+        "breathability": "high",
+        "uv_protection": true,
+        "moisture_wicking": true
+      }
+    },
+    "bottom": {
+      "type": "shorts",
+      "color": "beige",
+      "material": "linen",
+      "fit": "comfortable",
+      "style": "casual",
+      "length": "above_knee",
+      "closure": "button_and_zipper",
+      "pockets": {
+        "front": 2,
+        "back": 2,
+        "style": "slanted"
+      }
+    },
+    "shoes": {
+      "type": "sandals",
+      "color": "beige",
+      "material": "leather",
+      "style": "casual",
+      "closure": "strappy",
+      "features": {
+        "waterproof": false,
+        "arch_support": "medium",
+        "cushioning": "high"
+      }
+    }
+  }
+} 

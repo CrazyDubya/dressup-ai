@@ -1,0 +1,44 @@
+{
+  "outfit": {
+    "top": {
+      "type": "blouse",
+      "color": "burgundy",
+      "material": "silk",
+      "fit": "tailored",
+      "style": "business_casual",
+      "sleeve_length": "long",
+      "neckline": "v-neck",
+      "features": {
+        "wrinkle_resistant": true,
+        "breathability": "medium",
+        "care_level": "delicate"
+      }
+    },
+    "bottom": {
+      "type": "pants",
+      "color": "navy",
+      "material": "wool_blend",
+      "fit": "tailored",
+      "style": "business_casual",
+      "waist_style": "mid-rise",
+      "leg_style": "straight",
+      "features": {
+        "wrinkle_resistant": true,
+        "stretch": "light",
+        "lining": "partial"
+      }
+    },
+    "shoes": {
+      "type": "loafers",
+      "color": "burgundy",
+      "material": "leather",
+      "style": "business_casual",
+      "closure": "slip-on",
+      "features": {
+        "cushioning": "medium",
+        "arch_support": "medium",
+        "sole": "leather"
+      }
+    }
+  }
+} 

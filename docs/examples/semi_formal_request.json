@@ -1,0 +1,25 @@
+{
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 7,
+    "style_preferences": ["elegant", "modern"],
+    "color_preferences": ["navy", "burgundy", "gray"],
+    "fit_preferences": ["tailored", "fitted"]
+  },
+  "event_context": {
+    "event_type": "semi_formal",
+    "formality_level": 4,
+    "weather_conditions": ["mild"],
+    "time_of_day": "evening",
+    "season": "fall",
+    "location": "indoor",
+    "duration": 3,
+    "activity_level": 2
+  }
+} 

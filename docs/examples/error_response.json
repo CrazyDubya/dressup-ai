@@ -1,0 +1,14 @@
+{
+  "error": {
+    "code": "MATERIAL_SELECTION_ERROR",
+    "message": "No materials available for winter season",
+    "details": {
+      "season": "winter",
+      "formality_level": 2,
+      "available_materials": [],
+      "suggested_fallback": ["wool", "cashmere", "fleece"]
+    },
+    "timestamp": "2025-05-02T18:57:12.626Z",
+    "request_id": "20250502_185712_626303"
+  }
+} 

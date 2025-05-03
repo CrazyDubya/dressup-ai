@@ -1,0 +1,44 @@
+{
+  "outfit": {
+    "top": {
+      "type": "dress_shirt",
+      "color": "white",
+      "material": "cotton",
+      "fit": "tailored",
+      "style": "semi_formal",
+      "sleeve_length": "long",
+      "neckline": "spread_collar",
+      "features": {
+        "cuff_style": "french",
+        "placket": "hidden",
+        "buttons": "mother_of_pearl"
+      }
+    },
+    "bottom": {
+      "type": "pants",
+      "color": "navy",
+      "material": "wool",
+      "fit": "tailored",
+      "style": "semi_formal",
+      "waist_style": "high",
+      "leg_style": "straight",
+      "features": {
+        "pleats": "single",
+        "cuffs": true,
+        "lining": "silk"
+      }
+    },
+    "shoes": {
+      "type": "derby",
+      "color": "burgundy",
+      "material": "leather",
+      "style": "semi_formal",
+      "closure": "lace-up",
+      "features": {
+        "sole": "leather",
+        "heel": "low",
+        "toe": "cap"
+      }
+    }
+  }
+} 

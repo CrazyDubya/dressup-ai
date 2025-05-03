@@ -1,0 +1,74 @@
+{
+  "materials": {
+    "winter": [
+      {
+        "name": "wool",
+        "properties": {
+          "warmth": "high",
+          "breathability": "medium",
+          "durability": "high",
+          "care_level": "medium"
+        },
+        "common_uses": ["sweaters", "coats", "suits"],
+        "seasonal_suitability": ["winter", "fall"]
+      },
+      {
+        "name": "cashmere",
+        "properties": {
+          "warmth": "very_high",
+          "breathability": "high",
+          "durability": "medium",
+          "care_level": "high"
+        },
+        "common_uses": ["sweaters", "scarves", "coats"],
+        "seasonal_suitability": ["winter"]
+      },
+      {
+        "name": "fleece",
+        "properties": {
+          "warmth": "high",
+          "breathability": "high",
+          "durability": "high",
+          "care_level": "low"
+        },
+        "common_uses": ["jackets", "sweaters", "activewear"],
+        "seasonal_suitability": ["winter", "fall"]
+      }
+    ],
+    "summer": [
+      {
+        "name": "cotton",
+        "properties": {
+          "warmth": "low",
+          "breathability": "high",
+          "durability": "medium",
+          "care_level": "low"
+        },
+        "common_uses": ["t-shirts", "dresses", "shirts"],
+        "seasonal_suitability": ["summer", "spring"]
+      },
+      {
+        "name": "linen",
+        "properties": {
+          "warmth": "very_low",
+          "breathability": "very_high",
+          "durability": "medium",
+          "care_level": "high"
+        },
+        "common_uses": ["shirts", "dresses", "pants"],
+        "seasonal_suitability": ["summer"]
+      }
+    ]
+  },
+  "material_combinations": {
+    "winter": [
+      ["wool", "cashmere"],
+      ["wool", "fleece"],
+      ["cashmere", "fleece"]
+    ],
+    "summer": [
+      ["cotton", "linen"],
+      ["cotton", "silk"]
+    ]
+  }
+} 

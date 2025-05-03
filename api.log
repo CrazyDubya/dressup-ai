@@ -1,0 +1,551 @@
+2025-05-02 18:52:42,063 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-02 18:52:46,121 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-02 18:52:51,331 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-02 18:53:28,740 - __main__ - INFO - Request 20250502_185328_740488 started: GET http://localhost:5001/api/materials
+2025-05-02 18:53:28,741 - __main__ - INFO - Request 20250502_185328_740488 completed in 0.00s with status 200
+2025-05-02 18:53:32,419 - __main__ - INFO - Request 20250502_185332_419365 started: GET http://localhost:5001/api/textures
+2025-05-02 18:53:32,420 - __main__ - INFO - Request 20250502_185332_419365 completed in 0.00s with status 200
+2025-05-02 18:53:36,039 - __main__ - INFO - Request 20250502_185336_039951 started: GET http://localhost:5001/api/material-combinations
+2025-05-02 18:53:36,040 - __main__ - INFO - Request 20250502_185336_039951 completed in 0.00s with status 200
+2025-05-02 18:53:47,736 - __main__ - INFO - Request 20250502_185347_736783 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:53:47,737 - __main__ - DEBUG - Request 20250502_185347_736783 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 7,
+    "style_preferences": [
+      "elegant",
+      "classic"
+    ],
+    "color_preferences": [
+      "black",
+      "white",
+      "navy"
+    ],
+    "fit_preferences": [
+      "fitted",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "formal",
+    "formality_level": 8,
+    "weather_conditions": [
+      "sunny"
+    ],
+    "time_of_day": "evening",
+    "season": "summer",
+    "location": "indoor",
+    "duration": 4,
+    "activity_level": 2
+  }
+}
+2025-05-02 18:53:47,737 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185347_737559)
+2025-05-02 18:53:47,737 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185347_737559): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 7, 'style_preferences': ['elegant', 'classic'], 'color_preferences': ['black', 'white', 'navy'], 'fit_preferences': ['fitted', 'comfortable']}, 'event_context': {'event_type': 'formal', 'formality_level': 8, 'weather_conditions': ['sunny'], 'time_of_day': 'evening', 'season': 'summer', 'location': 'indoor', 'duration': 4, 'activity_level': 2}}
+2025-05-02 18:53:47,737 - __main__ - DEBUG - Available materials (Request ID: 20250502_185347_737559): ['silk']
+2025-05-02 18:53:47,737 - __main__ - DEBUG - Generating dress (Request ID: 20250502_185347_737559)...
+2025-05-02 18:53:47,737 - __main__ - DEBUG - Generated dress (Request ID: 20250502_185347_737559): {'type': 'dress', 'color': 'navy', 'material': 'silk', 'fit': 'fitted', 'style': 'formal', 'length': 'maxi', 'neckline': 'sweetheart', 'sleeve_type': 'short-sleeve'}
+2025-05-02 18:53:47,737 - __main__ - DEBUG - Generating legwear (Request ID: 20250502_185347_737559)...
+2025-05-02 18:53:47,737 - __main__ - DEBUG - Generated legwear (Request ID: 20250502_185347_737559): None
+2025-05-02 18:53:47,738 - __main__ - DEBUG - Generating shoes (Request ID: 20250502_185347_737559)...
+2025-05-02 18:53:47,738 - __main__ - DEBUG - Generated shoes (Request ID: 20250502_185347_737559): {'type': 'platform sandals', 'heel_height': 'low', 'closure': 'slip-on', 'toe': 'open', 'style': 'formal', 'material': 'synthetic'}
+2025-05-02 18:53:47,738 - __main__ - INFO - Successfully generated complete outfit (Request ID: 20250502_185347_737559)
+2025-05-02 18:53:47,738 - __main__ - INFO - Request 20250502_185347_736783 completed in 0.00s with status 200
+2025-05-02 18:53:52,570 - __main__ - INFO - Request 20250502_185352_569999 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:53:52,570 - __main__ - DEBUG - Request 20250502_185352_569999 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:53:52,570 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185352_570842)
+2025-05-02 18:53:52,570 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185352_570842): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:53:52,571 - __main__ - DEBUG - Available materials (Request ID: 20250502_185352_570842): []
+2025-05-02 18:53:52,571 - __main__ - DEBUG - Generating top (Request ID: 20250502_185352_570842)...
+2025-05-02 18:53:52,571 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185352_570842): No materials available for winter season
+2025-05-02 18:53:52,571 - __main__ - INFO - Request 20250502_185352_569999 completed in 0.00s with status 500
+2025-05-02 18:54:22,913 - __main__ - INFO - Request 20250502_185422_913029 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:54:22,913 - __main__ - DEBUG - Request 20250502_185422_913029 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:54:22,913 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185422_913776)
+2025-05-02 18:54:22,913 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185422_913776): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:54:22,914 - __main__ - DEBUG - Available materials (Request ID: 20250502_185422_913776): []
+2025-05-02 18:54:22,914 - __main__ - DEBUG - Generating top (Request ID: 20250502_185422_913776)...
+2025-05-02 18:54:22,914 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185422_913776): No materials available for winter season
+2025-05-02 18:54:22,914 - __main__ - INFO - Request 20250502_185422_913029 completed in 0.00s with status 500
+2025-05-02 18:54:47,656 - __main__ - INFO - Request 20250502_185447_656666 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:54:47,656 - __main__ - DEBUG - Request 20250502_185447_656666 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:54:47,657 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185447_657259)
+2025-05-02 18:54:47,657 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185447_657259): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:54:47,657 - __main__ - DEBUG - Available materials (Request ID: 20250502_185447_657259): []
+2025-05-02 18:54:47,657 - __main__ - DEBUG - Generating top (Request ID: 20250502_185447_657259)...
+2025-05-02 18:54:47,657 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185447_657259): No materials available for winter season
+2025-05-02 18:54:47,657 - __main__ - INFO - Request 20250502_185447_656666 completed in 0.00s with status 500
+2025-05-02 18:55:27,747 - __main__ - INFO - Request 20250502_185527_747136 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:55:27,747 - __main__ - DEBUG - Request 20250502_185527_747136 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:55:27,747 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185527_747870)
+2025-05-02 18:55:27,748 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185527_747870): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:55:27,748 - __main__ - DEBUG - Available materials (Request ID: 20250502_185527_747870): []
+2025-05-02 18:55:27,748 - __main__ - DEBUG - Generating dress (Request ID: 20250502_185527_747870)...
+2025-05-02 18:55:27,748 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185527_747870): list index out of range
+2025-05-02 18:55:27,748 - __main__ - INFO - Request 20250502_185527_747136 completed in 0.00s with status 500
+2025-05-02 18:55:49,244 - __main__ - INFO - Request 20250502_185549_244338 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:55:49,244 - __main__ - DEBUG - Request 20250502_185549_244338 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:55:49,245 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185549_245011)
+2025-05-02 18:55:49,245 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185549_245011): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:55:49,245 - __main__ - DEBUG - Available materials (Request ID: 20250502_185549_245011): []
+2025-05-02 18:55:49,245 - __main__ - DEBUG - Generating dress (Request ID: 20250502_185549_245011)...
+2025-05-02 18:55:49,245 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185549_245011): list index out of range
+2025-05-02 18:55:49,245 - __main__ - INFO - Request 20250502_185549_244338 completed in 0.00s with status 500
+2025-05-02 18:56:13,143 - __main__ - INFO - Request 20250502_185613_143350 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:56:13,143 - __main__ - DEBUG - Request 20250502_185613_143350 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:56:13,144 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185613_144132)
+2025-05-02 18:56:13,144 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185613_144132): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:56:13,144 - __main__ - DEBUG - Available materials (Request ID: 20250502_185613_144132): []
+2025-05-02 18:56:13,144 - __main__ - DEBUG - Generating top (Request ID: 20250502_185613_144132)...
+2025-05-02 18:56:13,144 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185613_144132): No materials available for winter season
+2025-05-02 18:56:13,144 - __main__ - INFO - Request 20250502_185613_143350 completed in 0.00s with status 500
+2025-05-02 18:57:12,625 - __main__ - INFO - Request 20250502_185712_625681 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:57:12,625 - __main__ - DEBUG - Request 20250502_185712_625681 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:57:12,626 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185712_626303)
+2025-05-02 18:57:12,626 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185712_626303): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:57:12,626 - __main__ - DEBUG - Available materials (Request ID: 20250502_185712_626303): []
+2025-05-02 18:57:12,626 - __main__ - DEBUG - Generating top (Request ID: 20250502_185712_626303)...
+2025-05-02 18:57:12,626 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185712_626303): No materials available for winter season
+2025-05-02 18:57:12,627 - __main__ - INFO - Request 20250502_185712_625681 completed in 0.00s with status 500
+2025-05-02 18:57:23,086 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-02 18:57:25,743 - __main__ - INFO - Request 20250502_185725_743807 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:57:25,743 - __main__ - DEBUG - Request 20250502_185725_743807 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:57:25,744 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185725_744454)
+2025-05-02 18:57:25,744 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185725_744454): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:57:25,744 - __main__ - DEBUG - Available materials (Request ID: 20250502_185725_744454): []
+2025-05-02 18:57:25,744 - __main__ - DEBUG - Generating top (Request ID: 20250502_185725_744454)...
+2025-05-02 18:57:25,744 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185725_744454): No materials available for winter season
+2025-05-02 18:57:25,744 - __main__ - INFO - Request 20250502_185725_743807 completed in 0.00s with status 500
+2025-05-02 18:57:56,309 - __main__ - INFO - Request 20250502_185756_309036 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:57:56,309 - __main__ - DEBUG - Request 20250502_185756_309036 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:57:56,309 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185756_309659)
+2025-05-02 18:57:56,309 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185756_309659): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:57:56,309 - __main__ - DEBUG - Available materials (Request ID: 20250502_185756_309659): []
+2025-05-02 18:57:56,309 - __main__ - DEBUG - Generating dress (Request ID: 20250502_185756_309659)...
+2025-05-02 18:57:56,309 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185756_309659): list index out of range
+2025-05-02 18:57:56,310 - __main__ - INFO - Request 20250502_185756_309036 completed in 0.00s with status 500
+2025-05-02 18:58:03,573 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-02 18:58:06,248 - __main__ - INFO - Request 20250502_185806_248370 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 18:58:06,248 - __main__ - DEBUG - Request 20250502_185806_248370 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 18:58:06,249 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_185806_249154)
+2025-05-02 18:58:06,249 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_185806_249154): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 18:58:06,249 - __main__ - DEBUG - Available materials (Request ID: 20250502_185806_249154): []
+2025-05-02 18:58:06,249 - __main__ - DEBUG - Generating top (Request ID: 20250502_185806_249154)...
+2025-05-02 18:58:06,249 - __main__ - ERROR - Unexpected error in generate_complete_outfit (Request ID: 20250502_185806_249154): No materials available for winter season
+2025-05-02 18:58:06,249 - __main__ - INFO - Request 20250502_185806_248370 completed in 0.00s with status 500
+2025-05-02 19:44:59,787 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-02 20:10:09,707 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-02 20:10:29,215 - __main__ - INFO - Request 20250502_201029_215078 started: POST http://localhost:5001/api/generate/complete-outfit
+2025-05-02 20:10:29,215 - __main__ - DEBUG - Request 20250502_201029_215078 body: {
+  "user_profile": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "inseam": 80,
+    "shoe_size": 38,
+    "comfort_level": 8,
+    "style_preferences": [
+      "casual",
+      "comfortable"
+    ],
+    "color_preferences": [
+      "blue",
+      "gray",
+      "black"
+    ],
+    "fit_preferences": [
+      "relaxed",
+      "comfortable"
+    ]
+  },
+  "event_context": {
+    "event_type": "casual",
+    "formality_level": 2,
+    "weather_conditions": [
+      "cold"
+    ],
+    "time_of_day": "day",
+    "season": "winter",
+    "location": "outdoor",
+    "duration": 2,
+    "activity_level": 3
+  }
+}
+2025-05-02 20:10:29,215 - __main__ - INFO - Starting complete outfit generation (Request ID: 20250502_201029_215717)
+2025-05-02 20:10:29,215 - __main__ - DEBUG - Created OutfitRequest (Request ID: 20250502_201029_215717): {'user_profile': {'height': 170.0, 'weight': 65.0, 'bust': 90.0, 'underbust': None, 'cup_size': None, 'waist': 70.0, 'hips': 95.0, 'shoulder_width': None, 'arm_length': None, 'inseam': 80.0, 'shoe_size': 38.0, 'age': None, 'body_type': None, 'special_requirement': None, 'measurement_system': 'metric', 'comfort_level': 8, 'style_preferences': ['casual', 'comfortable'], 'color_preferences': ['blue', 'gray', 'black'], 'fit_preferences': ['relaxed', 'comfortable']}, 'event_context': {'event_type': 'casual', 'formality_level': 2, 'weather_conditions': ['cold'], 'time_of_day': 'day', 'season': 'winter', 'location': 'outdoor', 'duration': 2, 'activity_level': 3}}
+2025-05-02 20:10:29,215 - __main__ - DEBUG - Available materials (Request ID: 20250502_201029_215717): ['cashmere', 'velvet', 'leather', 'fleece', 'suede', 'wool']
+2025-05-02 20:10:29,215 - __main__ - DEBUG - Generating top (Request ID: 20250502_201029_215717)...
+2025-05-02 20:10:29,216 - __main__ - DEBUG - Generated top (Request ID: 20250502_201029_215717): {'type': 'top', 'color': 'gray', 'material': 'fleece', 'fit': 'comfortable', 'style': 'oversized shirt'}
+2025-05-02 20:10:29,216 - __main__ - DEBUG - Generating bottom (Request ID: 20250502_201029_215717)...
+2025-05-02 20:10:29,216 - __main__ - DEBUG - Generated bottom (Request ID: 20250502_201029_215717): {'type': 'bottom', 'color': 'gray', 'material': 'cashmere', 'fit': 'comfortable', 'style': 'flowy shorts'}
+2025-05-02 20:10:29,216 - __main__ - DEBUG - Generating shoes (Request ID: 20250502_201029_215717)...
+2025-05-02 20:10:29,216 - __main__ - DEBUG - Generated shoes (Request ID: 20250502_201029_215717): {'type': 'knee-high boots', 'heel_height': 'flat', 'closure': 'lace-up', 'toe': 'closed', 'style': 'semi-formal', 'material': 'leather'}
+2025-05-02 20:10:29,216 - __main__ - INFO - Successfully generated complete outfit (Request ID: 20250502_201029_215717)
+2025-05-02 20:10:29,216 - __main__ - INFO - Request 20250502_201029_215078 completed in 0.00s with status 200

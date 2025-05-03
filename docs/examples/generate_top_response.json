@@ -1,0 +1,14 @@
+{
+  "top": {
+    "type": "sweater",
+    "color": "blue",
+    "material": "wool",
+    "fit": "relaxed",
+    "style": "casual",
+    "sleeve_length": "long",
+    "neckline": "crew",
+    "pattern": "solid",
+    "layering": "single",
+    "warmth_level": "high"
+  }
+} 

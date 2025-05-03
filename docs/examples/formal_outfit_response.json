@@ -1,0 +1,44 @@
+{
+  "outfit": {
+    "top": {
+      "type": "blazer",
+      "color": "navy",
+      "material": "wool",
+      "fit": "tailored",
+      "style": "formal",
+      "closure": "button",
+      "lapel": "notch",
+      "features": {
+        "lining": "silk",
+        "pockets": "flap",
+        "buttons": "horn"
+      }
+    },
+    "bottom": {
+      "type": "pants",
+      "color": "black",
+      "material": "wool",
+      "fit": "tailored",
+      "style": "formal",
+      "waist_style": "high",
+      "leg_style": "straight",
+      "features": {
+        "pleats": "single",
+        "cuffs": true,
+        "lining": "silk"
+      }
+    },
+    "shoes": {
+      "type": "oxfords",
+      "color": "black",
+      "material": "leather",
+      "style": "formal",
+      "closure": "lace-up",
+      "features": {
+        "sole": "leather",
+        "heel": "low",
+        "toe": "cap"
+      }
+    }
+  }
+} 

@@ -1,0 +1,25 @@
+{
+  "estimated_measurements": {
+    "hips": 95,
+    "inseam": 80,
+    "shoulder_width": 38,
+    "arm_length": 60,
+    "thigh": 55,
+    "calf": 35
+  },
+  "confidence_scores": {
+    "hips": 0.92,
+    "inseam": 0.88,
+    "shoulder_width": 0.85,
+    "arm_length": 0.82,
+    "thigh": 0.80,
+    "calf": 0.78
+  },
+  "method_used": "statistical_estimation",
+  "recommendations": [
+    "Consider measuring actual inseam for better fit",
+    "Consider measuring actual shoulder width for better fit",
+    "Consider measuring actual arm length for better sleeve fit"
+  ],
+  "notes": "Estimations are based on statistical analysis of similar body types and may not be 100% accurate. Actual measurements are recommended for best fit."
+} 

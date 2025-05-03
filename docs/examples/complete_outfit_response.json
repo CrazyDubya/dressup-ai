@@ -1,0 +1,34 @@
+{
+  "outfit": {
+    "style_preferences": ["casual", "comfortable"],
+    "color_preferences": ["blue", "gray", "black"],
+    "materials": ["wool", "cashmere", "fleece"],
+    "suitability": "appropriate",
+    "occasion": "casual",
+    "season": "winter",
+    "formality_level": 2,
+    "comfort_level": 8,
+    "top": {
+      "type": "sweater",
+      "color": "blue",
+      "material": "wool",
+      "fit": "relaxed",
+      "style": "casual"
+    },
+    "bottom": {
+      "type": "pants",
+      "color": "gray",
+      "material": "wool",
+      "fit": "comfortable",
+      "style": "casual"
+    },
+    "shoes": {
+      "type": "boots",
+      "heel_height": "low",
+      "closure": "lace-up",
+      "toe": "closed",
+      "style": "casual",
+      "material": "leather"
+    }
+  }
+} 

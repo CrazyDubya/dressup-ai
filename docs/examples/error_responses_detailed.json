@@ -1,0 +1,52 @@
+{
+  "errors": [
+    {
+      "code": "MATERIAL_NOT_FOUND",
+      "message": "Requested material not available for the specified season",
+      "details": {
+        "requested_material": "linen",
+        "season": "winter",
+        "suggested_materials": ["wool", "cashmere", "fleece"],
+        "reason": "Material not suitable for winter weather conditions"
+      },
+      "timestamp": "2025-05-02T19:00:07.000Z",
+      "request_id": "20250502_190007_000008"
+    },
+    {
+      "code": "INVALID_COLOR_COMBINATION",
+      "message": "Color combination not suitable for the event type",
+      "details": {
+        "event_type": "formal",
+        "provided_colors": ["neon_green", "hot_pink"],
+        "suggested_colors": ["navy", "black", "burgundy"],
+        "reason": "Colors too bright for formal event"
+      },
+      "timestamp": "2025-05-02T19:00:08.000Z",
+      "request_id": "20250502_190008_000009"
+    },
+    {
+      "code": "INCOMPATIBLE_FIT",
+      "message": "Fit preferences conflict with event requirements",
+      "details": {
+        "event_type": "formal",
+        "provided_fit": "oversized",
+        "suggested_fit": "tailored",
+        "reason": "Oversized fit not appropriate for formal events"
+      },
+      "timestamp": "2025-05-02T19:00:09.000Z",
+      "request_id": "20250502_190009_000010"
+    },
+    {
+      "code": "DATABASE_ERROR",
+      "message": "Error accessing style database",
+      "details": {
+        "error_type": "StyleDatabaseError",
+        "error_message": "Failed to retrieve style combinations",
+        "affected_components": ["style_matcher", "color_coordinator"],
+        "retry_after": 60
+      },
+      "timestamp": "2025-05-02T19:00:10.000Z",
+      "request_id": "20250502_190010_000011"
+    }
+  ]
+} 

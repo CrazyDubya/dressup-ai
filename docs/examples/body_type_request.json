@@ -1,0 +1,13 @@
+{
+  "measurements": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70,
+    "hips": 95,
+    "shoulder_width": 38
+  },
+  "measurement_system": "metric",
+  "age": 30,
+  "special_requirements": null
+} 

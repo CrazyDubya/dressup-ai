@@ -1,0 +1,51 @@
+{
+  "errors": [
+    {
+      "code": "INVALID_FORMALITY_LEVEL",
+      "message": "Formality level out of range",
+      "details": {
+        "provided_level": 7,
+        "valid_range": [1, 5],
+        "suggested_level": 5
+      },
+      "timestamp": "2025-05-02T19:00:03.000Z",
+      "request_id": "20250502_190003_000004"
+    },
+    {
+      "code": "INCOMPATIBLE_WEATHER",
+      "message": "Weather conditions incompatible with season",
+      "details": {
+        "season": "winter",
+        "weather_conditions": ["hot", "sunny"],
+        "suggested_conditions": ["cold", "snowy", "windy"]
+      },
+      "timestamp": "2025-05-02T19:00:04.000Z",
+      "request_id": "20250502_190004_000005"
+    },
+    {
+      "code": "INVALID_ACTIVITY_LEVEL",
+      "message": "Activity level incompatible with formality",
+      "details": {
+        "activity_level": 5,
+        "formality_level": 5,
+        "suggested_adjustments": {
+          "activity_level": 2,
+          "formality_level": 3
+        }
+      },
+      "timestamp": "2025-05-02T19:00:05.000Z",
+      "request_id": "20250502_190005_000006"
+    },
+    {
+      "code": "SERVER_ERROR",
+      "message": "Internal server error",
+      "details": {
+        "error_type": "DatabaseConnectionError",
+        "error_message": "Failed to connect to materials database",
+        "retry_after": 30
+      },
+      "timestamp": "2025-05-02T19:00:06.000Z",
+      "request_id": "20250502_190006_000007"
+    }
+  ]
+} 

@@ -1,0 +1,39 @@
+{
+  "is_valid": true,
+  "validation_results": {
+    "height": {
+      "is_valid": true,
+      "message": "Height is within normal range"
+    },
+    "weight": {
+      "is_valid": true,
+      "message": "Weight is within normal range"
+    },
+    "bust": {
+      "is_valid": true,
+      "message": "Bust measurement is within normal range"
+    },
+    "waist": {
+      "is_valid": true,
+      "message": "Waist measurement is within normal range"
+    },
+    "hips": {
+      "is_valid": true,
+      "message": "Hip measurement is within normal range"
+    },
+    "inseam": {
+      "is_valid": true,
+      "message": "Inseam measurement is within normal range"
+    },
+    "shoe_size": {
+      "is_valid": true,
+      "message": "Shoe size is within normal range"
+    }
+  },
+  "body_type": "hourglass",
+  "confidence_score": 0.95,
+  "recommendations": [
+    "Consider adding shoulder width measurement for better fit",
+    "Consider adding arm length measurement for better sleeve fit"
+  ]
+} 

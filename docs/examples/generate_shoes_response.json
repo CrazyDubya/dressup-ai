@@ -1,0 +1,22 @@
+{
+  "shoes": {
+    "type": "boots",
+    "color": "black",
+    "material": "leather",
+    "style": "casual",
+    "heel_height": "low",
+    "closure": "lace-up",
+    "toe": "closed",
+    "sole": "rubber",
+    "features": {
+      "waterproof": true,
+      "insulated": true,
+      "traction": "high"
+    },
+    "comfort": {
+      "cushioning": "medium",
+      "arch_support": "medium",
+      "width": "regular"
+    }
+  }
+} 

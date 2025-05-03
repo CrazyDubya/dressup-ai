@@ -1,0 +1,44 @@
+{
+  "outfit": {
+    "top": {
+      "type": "sweater",
+      "color": "pastel_blue",
+      "material": "cotton_blend",
+      "fit": "relaxed",
+      "style": "casual",
+      "sleeve_length": "long",
+      "neckline": "crew",
+      "features": {
+        "breathability": "medium",
+        "water_resistant": true,
+        "layering": "light"
+      }
+    },
+    "bottom": {
+      "type": "jeans",
+      "color": "light_blue",
+      "material": "denim",
+      "fit": "comfortable",
+      "style": "casual",
+      "waist_style": "mid-rise",
+      "leg_style": "straight",
+      "features": {
+        "water_resistant": true,
+        "stretch": "medium",
+        "durability": "high"
+      }
+    },
+    "shoes": {
+      "type": "sneakers",
+      "color": "white",
+      "material": "canvas",
+      "style": "casual",
+      "closure": "lace-up",
+      "features": {
+        "water_resistant": true,
+        "traction": "medium",
+        "cushioning": "high"
+      }
+    }
+  }
+} 

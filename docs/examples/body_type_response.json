@@ -1,0 +1,25 @@
+{
+  "body_type": "hourglass",
+  "confidence_score": 0.92,
+  "measurements_analysis": {
+    "bust_waist_ratio": 1.29,
+    "waist_hip_ratio": 0.74,
+    "shoulder_hip_ratio": 0.40
+  },
+  "characteristics": {
+    "bust": "proportional",
+    "waist": "defined",
+    "hips": "proportional",
+    "shoulders": "balanced"
+  },
+  "style_recommendations": [
+    "Emphasize waist definition",
+    "Balance proportions with structured pieces",
+    "Consider wrap styles and belted items"
+  ],
+  "fit_guidelines": {
+    "tops": "fitted at waist, balanced at shoulders",
+    "bottoms": "fitted at waist, balanced at hips",
+    "dresses": "fitted at waist, balanced at bust and hips"
+  }
+} 

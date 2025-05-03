@@ -1,0 +1,62 @@
+{
+  "textures": {
+    "winter": [
+      {
+        "name": "cable_knit",
+        "properties": {
+          "thickness": "medium",
+          "pattern": "raised",
+          "warmth": "high",
+          "drape": "medium"
+        },
+        "common_uses": ["sweaters", "cardigans"],
+        "materials": ["wool", "cashmere"]
+      },
+      {
+        "name": "tweed",
+        "properties": {
+          "thickness": "medium",
+          "pattern": "woven",
+          "warmth": "high",
+          "drape": "stiff"
+        },
+        "common_uses": ["jackets", "skirts", "pants"],
+        "materials": ["wool", "wool_blend"]
+      }
+    ],
+    "summer": [
+      {
+        "name": "seersucker",
+        "properties": {
+          "thickness": "light",
+          "pattern": "striped",
+          "warmth": "low",
+          "drape": "crisp"
+        },
+        "common_uses": ["shirts", "dresses", "suits"],
+        "materials": ["cotton", "cotton_blend"]
+      },
+      {
+        "name": "linen_weave",
+        "properties": {
+          "thickness": "light",
+          "pattern": "plain",
+          "warmth": "very_low",
+          "drape": "fluid"
+        },
+        "common_uses": ["shirts", "dresses", "pants"],
+        "materials": ["linen", "linen_blend"]
+      }
+    ]
+  },
+  "texture_combinations": {
+    "winter": [
+      ["cable_knit", "tweed"],
+      ["cable_knit", "herringbone"]
+    ],
+    "summer": [
+      ["seersucker", "linen_weave"],
+      ["seersucker", "poplin"]
+    ]
+  }
+} 

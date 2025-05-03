@@ -1,0 +1,45 @@
+{
+  "outfit": {
+    "top": {
+      "type": "dress",
+      "color": "black",
+      "material": "silk",
+      "fit": "tailored",
+      "style": "cocktail",
+      "length": "knee_length",
+      "neckline": "v_neck",
+      "sleeve_length": "short",
+      "features": {
+        "lining": "silk",
+        "closure": "hidden_zipper",
+        "details": ["beading", "sequins"]
+      }
+    },
+    "shoes": {
+      "type": "pumps",
+      "color": "black",
+      "material": "leather",
+      "style": "cocktail",
+      "heel_height": "medium",
+      "closure": "slip_on",
+      "features": {
+        "sole": "leather",
+        "toe": "pointed",
+        "details": ["metallic_trim"]
+      }
+    },
+    "accessories": {
+      "jewelry": {
+        "type": "statement_necklace",
+        "material": "crystal",
+        "color": "silver"
+      },
+      "bag": {
+        "type": "clutch",
+        "material": "silk",
+        "color": "black",
+        "features": ["metallic_trim"]
+      }
+    }
+  }
+} 

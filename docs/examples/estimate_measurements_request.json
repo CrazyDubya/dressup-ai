@@ -1,0 +1,12 @@
+{
+  "known_measurements": {
+    "height": 170,
+    "weight": 65,
+    "bust": 90,
+    "waist": 70
+  },
+  "measurement_system": "metric",
+  "body_type": "hourglass",
+  "age": 30,
+  "special_requirements": null
+} 
