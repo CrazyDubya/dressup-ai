@@ -3,7 +3,8 @@ Material and Texture Specifications for Fashion Outfit Generator.
 Provides detailed specifications for materials and textures used in outfit generation.
 """
 
-from typing import Dict, List, Set
+from typing import Dict, List, Set, Any
+from material_models import MaterialDetail, TextureDetail, FabricCombination
 
 class MaterialSpecifications:
     """Detailed specifications for different materials."""
@@ -251,53 +252,57 @@ class MaterialSpecifications:
             }
         }
 
+    def get_material_detail(self, material: str) -> MaterialDetail:
+        """Get material details as a Pydantic model."""
+        if material not in self.material_properties:
+            raise ValueError(f"Material {material} not found")
+        props = self.material_properties[material]
+        return MaterialDetail(**props)
+
+    def get_texture_detail(self, texture: str) -> TextureDetail:
+        """Get texture details as a Pydantic model."""
+        if texture not in self.texture_properties:
+            raise ValueError(f"Texture {texture} not found")
+        props = self.texture_properties[texture]
+        return TextureDetail(**props)
+
     def get_material_properties(self, material: str) -> Dict:
-        """Get detailed properties for a specific material."""
+        """Get raw material properties dictionary."""
         return self.material_properties.get(material, {})
 
     def get_texture_properties(self, texture: str) -> Dict:
-        """Get detailed properties for a specific texture."""
+        """Get raw texture properties dictionary."""
         return self.texture_properties.get(texture, {})
-
-    def get_material_combination(self, combination: str) -> Dict:
-        """Get detailed properties for a specific material combination."""
-        return self.material_combinations.get(combination, {})
 
     def get_light_behavior(self, material: str) -> str:
         """Get light behavior description for a material."""
-        props = self.get_material_properties(material)
-        return props.get('light_behavior', 'standard light interaction')
+        return self.material_properties.get(material, {}).get('light_behavior', '')
 
     def get_draping_behavior(self, material: str) -> str:
         """Get draping behavior description for a material."""
-        props = self.get_material_properties(material)
-        return props.get('draping', 'standard drape')
+        return self.material_properties.get(material, {}).get('draping', '')
 
     def get_surface_characteristics(self, material: str) -> List[str]:
         """Get surface characteristics for a material."""
-        props = self.get_material_properties(material)
-        return props.get('surface_characteristics', [])
+        return self.material_properties.get(material, {}).get('surface_characteristics', [])
 
     def get_construction_notes(self, material: str) -> str:
         """Get construction notes for a material."""
-        props = self.get_material_properties(material)
-        return props.get('construction_notes', 'standard construction')
+        return self.material_properties.get(material, {}).get('construction_notes', '')
 
     def get_care_instructions(self, material: str) -> str:
         """Get care instructions for a material."""
-        props = self.get_material_properties(material)
-        return props.get('care_instructions', 'standard care')
+        return self.material_properties.get(material, {}).get('care_instructions', '')
 
     def get_materials_for_season(self, season: str) -> List[str]:
-        """Return materials suitable for a given season."""
-        season = season.lower()
-        season_map = {
-            'summer': ['cotton', 'linen', 'silk', 'bamboo', 'modal', 'mesh'],
-            'winter': ['wool', 'cashmere', 'fleece', 'velvet', 'leather', 'suede'],
-            'spring': ['cotton', 'linen', 'silk', 'bamboo', 'modal', 'denim'],
-            'fall': ['wool', 'cotton', 'denim', 'leather', 'suede', 'velvet']
+        """Get suitable materials for a given season."""
+        season_materials = {
+            'summer': ['cotton', 'linen', 'silk', 'synthetic'],
+            'winter': ['wool', 'cashmere', 'velvet', 'leather'],
+            'spring': ['cotton', 'silk', 'linen', 'lace'],
+            'fall': ['wool', 'leather', 'denim', 'velvet']
         }
-        return [m for m in season_map.get(season, []) if m in self.material_properties]
+        return season_materials.get(season.lower(), [])
 
     def get_materials_for_formality(self, formality: str) -> List[str]:
         """Return materials suitable for a given formality level."""
@@ -360,4 +365,238 @@ class MaterialSpecifications:
             else:
                 recommended = ['cotton', 'synthetic']
         
-        return recommended 
+        return recommended
+
+# Material specifications with enhanced properties
+HAUTE_COUTURE_MATERIALS: Dict[str, Dict[str, Any]] = {
+    'luxury_fabrics': {
+        'silk': {
+            'types': ['charmeuse', 'crepe', 'duchesse', 'georgette', 'organza', 'satin', 'taffeta'],
+            'properties': [
+                'natural fiber',
+                'breathable',
+                'temperature regulating',
+                'elegant drape',
+                'subtle sheen'
+            ],
+            'usage': 'dresses, blouses, linings',
+            'color': {
+                'primary': '#FFFFFF',
+                'secondary': None,
+                'accent': None,
+                'metallic': False,
+                'iridescent': True,
+                'opacity': 0.9,
+                'light_reflection': 'subtle sheen'
+            },
+            'texture': {
+                'type': 'smooth',
+                'pattern': None,
+                'pattern_scale': None,
+                'embossed': False,
+                'quilted': False,
+                'surface_finish': 'lustrous'
+            },
+            'physical': {
+                'weight': 45.0,  # g/m²
+                'thickness': 0.1,  # mm
+                'stretch': 2.0,  # percentage
+                'drape': 'fluid',
+                'breathability': 8,
+                'thermal_properties': 'temperature regulating',
+                'sound': 'soft rustle'
+            },
+            'sustainability': {
+                'origin': 'China',
+                'certifications': ['OEKO-TEX', 'GOTS'],
+                'recycled_content': 0.0,
+                'organic': False,
+                'vegan': False,
+                'cruelty_free': False,
+                'supplier': 'Luxury Silk Mills'
+            },
+            'care': {
+                'washing': 'Dry clean only',
+                'drying': 'Lay flat',
+                'ironing': 'Low heat, steam',
+                'dry_cleaning': 'Recommended',
+                'special_instructions': [
+                    'Avoid direct sunlight',
+                    'Store in breathable container'
+                ],
+                'aging_characteristics': 'Develops patina over time'
+            },
+            'digital': {
+                'pbr_params': {
+                    'roughness': 0.2,
+                    'metallic': 0.0,
+                    'specular': 0.5
+                },
+                'texture_maps': {
+                    'albedo': 'silk_albedo.png',
+                    'normal': 'silk_normal.png',
+                    'roughness': 'silk_roughness.png'
+                },
+                'swatch_url': 'https://example.com/silk_swatch',
+                'preview_url': 'https://example.com/silk_preview'
+            },
+            'finish': 'natural',
+            'construction_notes': 'Requires French seams for durability',
+            'quality_grade': 'A+',
+            'seasonal_suitability': ['spring', 'summer', 'fall'],
+            'durability': 7
+        },
+        'lace': {
+            'types': ['chantilly', 'guipure', 'alengon', 'venise', 'point'],
+            'properties': [
+                'delicate',
+                'intricate patterns',
+                'sheer',
+                'elegant',
+                'feminine'
+            ],
+            'usage': 'overlays, trims, veils',
+            'color': {
+                'primary': '#FFFFFF',
+                'secondary': None,
+                'accent': None,
+                'metallic': False,
+                'iridescent': False,
+                'opacity': 0.7,
+                'light_reflection': 'matte'
+            },
+            'texture': {
+                'type': 'patterned',
+                'pattern': 'floral',
+                'pattern_scale': 'medium',
+                'embossed': False,
+                'quilted': False,
+                'surface_finish': 'textured'
+            },
+            'physical': {
+                'weight': 35.0,
+                'thickness': 0.2,
+                'stretch': 0.0,
+                'drape': 'structured',
+                'breathability': 9,
+                'thermal_properties': 'light',
+                'sound': 'crisp'
+            },
+            'sustainability': {
+                'origin': 'France',
+                'certifications': ['OEKO-TEX'],
+                'recycled_content': 0.0,
+                'organic': False,
+                'vegan': True,
+                'cruelty_free': True,
+                'supplier': 'French Lace House'
+            },
+            'care': {
+                'washing': 'Hand wash',
+                'drying': 'Lay flat',
+                'ironing': 'Low heat, no steam',
+                'dry_cleaning': 'Not recommended',
+                'special_instructions': [
+                    'Store flat',
+                    'Avoid snags'
+                ],
+                'aging_characteristics': 'Maintains structure'
+            },
+            'digital': {
+                'pbr_params': {
+                    'roughness': 0.4,
+                    'metallic': 0.0,
+                    'specular': 0.3
+                },
+                'texture_maps': {
+                    'albedo': 'lace_albedo.png',
+                    'normal': 'lace_normal.png',
+                    'roughness': 'lace_roughness.png'
+                },
+                'swatch_url': 'https://example.com/lace_swatch',
+                'preview_url': 'https://example.com/lace_preview'
+            },
+            'finish': 'natural',
+            'construction_notes': 'Requires careful handling and specialized needles',
+            'quality_grade': 'A',
+            'seasonal_suitability': ['spring', 'summer'],
+            'durability': 6
+        },
+        'velvet': {
+            'types': ['silk', 'cotton', 'synthetic', 'crushed', 'panne'],
+            'properties': [
+                'plush',
+                'rich texture',
+                'dramatic drape',
+                'luxurious',
+                'dense pile'
+            ],
+            'usage': 'evening wear, upholstery, accessories',
+            'color': {
+                'primary': '#000000',
+                'secondary': None,
+                'accent': None,
+                'metallic': False,
+                'iridescent': True,
+                'opacity': 1.0,
+                'light_reflection': 'directional'
+            },
+            'texture': {
+                'type': 'plush',
+                'pattern': None,
+                'pattern_scale': None,
+                'embossed': False,
+                'quilted': False,
+                'surface_finish': 'pile'
+            },
+            'physical': {
+                'weight': 280.0,
+                'thickness': 1.5,
+                'stretch': 1.0,
+                'drape': 'structured',
+                'breathability': 5,
+                'thermal_properties': 'insulating',
+                'sound': 'muted'
+            },
+            'sustainability': {
+                'origin': 'Italy',
+                'certifications': ['OEKO-TEX'],
+                'recycled_content': 0.0,
+                'organic': False,
+                'vegan': False,
+                'cruelty_free': True,
+                'supplier': 'Italian Velvet Mills'
+            },
+            'care': {
+                'washing': 'Dry clean only',
+                'drying': 'Hang',
+                'ironing': 'Steam only',
+                'dry_cleaning': 'Recommended',
+                'special_instructions': [
+                    'Brush with velvet brush',
+                    'Store hanging'
+                ],
+                'aging_characteristics': 'Develops patina'
+            },
+            'digital': {
+                'pbr_params': {
+                    'roughness': 0.8,
+                    'metallic': 0.0,
+                    'specular': 0.2
+                },
+                'texture_maps': {
+                    'albedo': 'velvet_albedo.png',
+                    'normal': 'velvet_normal.png',
+                    'roughness': 'velvet_roughness.png'
+                },
+                'swatch_url': 'https://example.com/velvet_swatch',
+                'preview_url': 'https://example.com/velvet_preview'
+            },
+            'finish': 'natural',
+            'construction_notes': 'Requires careful pressing and handling',
+            'quality_grade': 'A+',
+            'seasonal_suitability': ['fall', 'winter'],
+            'durability': 8
+        }
+    }
+} 

@@ -1,0 +1,89 @@
+{
+    "formal": {
+        "characteristics": {
+            "silhouette": "structured",
+            "details": ["tailored", "precise", "refined"],
+            "suitable_occasions": ["gala", "wedding", "business formal"],
+            "formality_level": 8,
+            "complexity_level": "high"
+        },
+        "component_rules": {
+            "top": {
+                "preferred_materials": ["silk", "wool", "leather"],
+                "preferred_colors": ["black", "navy", "white", "emerald"],
+                "fit": "fitted",
+                "details": ["structured shoulders", "precise tailoring"]
+            },
+            "bottom": {
+                "preferred_materials": ["wool", "silk", "leather"],
+                "preferred_colors": ["black", "navy", "emerald"],
+                "fit": "fitted",
+                "details": ["clean lines", "precise hem"]
+            },
+            "shoes": {
+                "preferred_materials": ["leather"],
+                "preferred_colors": ["black", "nude"],
+                "fit": "fitted",
+                "details": ["polished", "minimal"]
+            }
+        }
+    },
+    "casual": {
+        "characteristics": {
+            "silhouette": "relaxed",
+            "details": ["comfortable", "practical", "easy"],
+            "suitable_occasions": ["garden party", "brunch", "weekend"],
+            "formality_level": 4,
+            "complexity_level": "low"
+        },
+        "component_rules": {
+            "top": {
+                "preferred_materials": ["cotton", "linen"],
+                "preferred_colors": ["mint green", "coral", "white", "navy"],
+                "fit": "relaxed",
+                "details": ["easy care", "comfortable"]
+            },
+            "bottom": {
+                "preferred_materials": ["cotton", "linen"],
+                "preferred_colors": ["navy", "mint green", "white"],
+                "fit": "relaxed",
+                "details": ["easy movement", "practical"]
+            },
+            "shoes": {
+                "preferred_materials": ["canvas", "leather"],
+                "preferred_colors": ["white", "black", "navy"],
+                "fit": "comfortable",
+                "details": ["practical", "easy to wear"]
+            }
+        }
+    },
+    "business": {
+        "characteristics": {
+            "silhouette": "tailored",
+            "details": ["professional", "polished", "refined"],
+            "suitable_occasions": ["office", "meetings", "business casual"],
+            "formality_level": 6,
+            "complexity_level": "medium"
+        },
+        "component_rules": {
+            "top": {
+                "preferred_materials": ["cotton", "silk", "wool"],
+                "preferred_colors": ["white", "navy", "black"],
+                "fit": "tailored",
+                "details": ["clean lines", "professional"]
+            },
+            "bottom": {
+                "preferred_materials": ["wool", "cotton"],
+                "preferred_colors": ["navy", "black", "gray"],
+                "fit": "tailored",
+                "details": ["professional", "practical"]
+            },
+            "shoes": {
+                "preferred_materials": ["leather"],
+                "preferred_colors": ["black", "navy", "brown"],
+                "fit": "comfortable",
+                "details": ["professional", "practical"]
+            }
+        }
+    }
+} 

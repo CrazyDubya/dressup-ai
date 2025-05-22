@@ -1,0 +1,42 @@
+{
+  "user_id": "test_user_001",
+  "name": "Test User",
+  "body_shape": "pear",
+  "favorite_colors": [
+    "emerald",
+    "navy",
+    "black"
+  ],
+  "preferred_materials": [
+    "silk",
+    "wool"
+  ],
+  "style_preferences": [
+    "elegant",
+    "structured"
+  ],
+  "budget_range": {
+    "min": 500.0,
+    "max": 2000.0
+  },
+  "feedback_history": [
+    {
+      "outfit_id": "gala_20250504_233306",
+      "user_id": "test_user_001",
+      "rating": 5,
+      "comments": "Perfect for the occasion!",
+      "created_at": "2025-05-04 23:33:06.106239"
+    },
+    {
+      "outfit_id": "business_20250504_233306",
+      "user_id": "test_user_001",
+      "rating": 5,
+      "comments": "Perfect for the occasion!",
+      "created_at": "2025-05-04 23:33:06.106814"
+    }
+  ],
+  "outfit_history": [],
+  "wishlist": [],
+  "created_at": "2025-05-04 23:33:06.105368",
+  "updated_at": "2025-05-04 23:33:06.106849"
+}

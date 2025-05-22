@@ -112,7 +112,7 @@ class PromptManager:
             
             Style Preferences:
             - Favorite Colors: {favorite_colors}
-            - Preferred Materials: {preferred_materials}
+            - Preferred Materials: {preferred_materials} (e.g., silk, lace, chiffon, satin, organza, velvet)
             - Style Adaptability: {style_adaptability}/10
             - Comfort Priority: {comfort_priority}/10
             - Modesty Level: {modesty_level}/10
@@ -188,6 +188,9 @@ class PromptManager:
                - Secondary colors
                - Pattern type
                - Color combinations
+
+            2A. Fabric & Materials:
+               - List all relevant fabric/materials: silk, lace, cotton, wool, denim, linen, chiffon, satin, velvet, leather, spandex, polyester, organza.
             
             3. Fit and Silhouette:
                - Overall fit
@@ -200,14 +203,24 @@ class PromptManager:
                - Functional details
                - Decorative elements
                - Technical features
+
+            5. Bottoms Specifics:
+               - Type: skirt (mini, midi, maxi, skort), shorts, pants (leggings, 3/4, bell-bottom, straight-leg, wide-leg)
+               - Length and Coverage: ending at waist; flared to 3" below waist; thigh-length; knee-length; calf-length; ankle-length; full-length
+               - Fit and Flow: structured; flowing; pleated; with slits (placement and length)
+               - Waist Rise: high-rise; mid-rise; low-rise
+               - Closure and Details: zipper, drawstring, elastic waistband, belt loops
+
+            6. Coverage Interplay:
+               - Describe how the top’s hem interacts with the bottom: cropped waist; top flares over hips; hem landing 3" below waist; tucked-in; asymmetrical overlap.
             
-            5. Body Type Considerations:
+            7. Body Type Considerations:
                - How it flatters the wearer
                - Fit adjustments
                - Proportions
                - Comfort features
             
-            6. Event Appropriateness:
+            8. Event Appropriateness:
                - Style alignment
                - Formality level
                - Practical considerations

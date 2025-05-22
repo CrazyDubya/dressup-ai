@@ -1,5 +1,7 @@
 import unittest
-from dress_maker import DressMaker
+from dress_maker import DressMaker, OutfitData, OutfitComponent
+import json
+from datetime import datetime
 
 class TestDressMaker(unittest.TestCase):
     def setUp(self):
@@ -113,5 +115,77 @@ class TestDressMaker(unittest.TestCase):
         }
         self.assertFalse(self.dress_maker._validate_outfit_data(invalid_outfit))
 
-if __name__ == '__main__':
-    unittest.main() 
+def test_outfit_generation():
+    # Initialize DressMaker
+    maker = DressMaker()
+    
+    # Test cases with different scenarios
+    test_cases = [
+        {
+            "name": "Formal Evening Gala",
+            "event": "gala",
+            "num_outfits": 1,
+            "variations": 1,
+            "real_world_context": {
+                "user_profile": {
+                    "preferred_materials": ["silk", "lace"],
+                    "favorite_colors": ["black", "emerald"],
+                    "style_preferences": ["elegant", "dramatic"]
+                },
+                "season": "winter",
+                "formality": 9
+            }
+        },
+        {
+            "name": "Casual Garden Party",
+            "event": "garden party",
+            "num_outfits": 1,
+            "variations": 1,
+            "real_world_context": {
+                "user_profile": {
+                    "preferred_materials": ["cotton", "linen"],
+                    "favorite_colors": ["pastel pink", "mint green"],
+                    "style_preferences": ["feminine", "delicate"]
+                },
+                "season": "spring",
+                "formality": 4
+            }
+        }
+    ]
+    
+    results = {}
+    
+    for test_case in test_cases:
+        print(f"\nGenerating outfit for: {test_case['name']}")
+        try:
+            outfits = maker.generate_outfit(
+                event=test_case['event'],
+                num_outfits=test_case['num_outfits'],
+                variations_per_outfit=test_case['variations'],
+                real_world_context=test_case['real_world_context']
+            )
+            
+            # Convert outfits to dict for JSON serialization
+            outfit_dicts = []
+            for outfit in outfits:
+                outfit_dict = outfit.model_dump()
+                outfit_dicts.append(outfit_dict)
+            
+            results[test_case['name']] = outfit_dicts
+            print(f"Successfully generated outfit for {test_case['name']}")
+            
+        except Exception as e:
+            print(f"Error generating outfit for {test_case['name']}: {str(e)}")
+            results[test_case['name']] = {"error": str(e)}
+    
+    # Save results to file
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"dress_maker_test_results_{timestamp}.json"
+    with open(filename, 'w') as f:
+        json.dump(results, f, indent=2)
+    
+    print(f"\nTest results saved to {filename}")
+    return results
+
+if __name__ == "__main__":
+    test_outfit_generation() 

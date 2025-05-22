@@ -1,0 +1,72 @@
+{
+    "black": {
+        "formality_level": 9,
+        "suitable_seasons": ["all"],
+        "complements": ["white", "red", "gold", "silver"],
+        "properties": {
+            "versatility": 0.9,
+            "slimming_effect": 0.8,
+            "stain_hiding": 0.7
+        }
+    },
+    "white": {
+        "formality_level": 8,
+        "suitable_seasons": ["spring", "summer"],
+        "complements": ["black", "navy", "red", "pastels"],
+        "properties": {
+            "versatility": 0.8,
+            "brightening_effect": 0.9,
+            "stain_hiding": 0.3
+        }
+    },
+    "navy": {
+        "formality_level": 8,
+        "suitable_seasons": ["all"],
+        "complements": ["white", "red", "pink", "yellow"],
+        "properties": {
+            "versatility": 0.85,
+            "slimming_effect": 0.7,
+            "stain_hiding": 0.6
+        }
+    },
+    "emerald": {
+        "formality_level": 7,
+        "suitable_seasons": ["fall", "winter"],
+        "complements": ["gold", "black", "white", "navy"],
+        "properties": {
+            "versatility": 0.7,
+            "richness": 0.9,
+            "stain_hiding": 0.5
+        }
+    },
+    "mint green": {
+        "formality_level": 5,
+        "suitable_seasons": ["spring", "summer"],
+        "complements": ["white", "pink", "navy", "coral"],
+        "properties": {
+            "versatility": 0.6,
+            "freshness": 0.9,
+            "stain_hiding": 0.4
+        }
+    },
+    "coral": {
+        "formality_level": 6,
+        "suitable_seasons": ["spring", "summer"],
+        "complements": ["white", "navy", "mint green", "gold"],
+        "properties": {
+            "versatility": 0.65,
+            "warmth": 0.8,
+            "stain_hiding": 0.5
+        }
+    },
+    "nude": {
+        "formality_level": 7,
+        "suitable_seasons": ["all"],
+        "complements": ["black", "white", "navy", "pastels"],
+        "properties": {
+            "versatility": 0.8,
+            "neutrality": 0.9,
+            "stain_hiding": 0.4
+        }
+    }
+} 

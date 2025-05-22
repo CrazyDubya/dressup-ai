@@ -1,0 +1,72 @@
+{
+    "silk": {
+        "base_cost": 1000.0,
+        "quality_multiplier": 1.5,
+        "complexity_multiplier": 1.3,
+        "sustainability_score": 0.7,
+        "properties": {
+            "draping": "elegant natural drape with fluid movement",
+            "surface_characteristics": ["smooth", "shiny", "delicate"],
+            "care_instructions": "dry clean only, avoid direct sunlight",
+            "suitable_seasons": ["spring", "summer", "fall"],
+            "formality_level": 8,
+            "comfort_level": 7
+        }
+    },
+    "wool": {
+        "base_cost": 800.0,
+        "quality_multiplier": 1.4,
+        "complexity_multiplier": 1.2,
+        "sustainability_score": 0.8,
+        "properties": {
+            "draping": "structured with good body",
+            "surface_characteristics": ["textured", "warm", "durable"],
+            "care_instructions": "dry clean recommended, store with cedar",
+            "suitable_seasons": ["fall", "winter"],
+            "formality_level": 7,
+            "comfort_level": 8
+        }
+    },
+    "cotton": {
+        "base_cost": 300.0,
+        "quality_multiplier": 1.2,
+        "complexity_multiplier": 1.1,
+        "sustainability_score": 0.9,
+        "properties": {
+            "draping": "casual drape with good structure",
+            "surface_characteristics": ["soft", "natural", "breathable"],
+            "care_instructions": "machine washable, can be ironed",
+            "suitable_seasons": ["spring", "summer"],
+            "formality_level": 4,
+            "comfort_level": 9
+        }
+    },
+    "linen": {
+        "base_cost": 400.0,
+        "quality_multiplier": 1.3,
+        "complexity_multiplier": 1.2,
+        "sustainability_score": 0.9,
+        "properties": {
+            "draping": "natural drape with texture",
+            "surface_characteristics": ["textured", "breathable", "wrinkles naturally"],
+            "care_instructions": "hand wash or dry clean, steam to remove wrinkles",
+            "suitable_seasons": ["spring", "summer"],
+            "formality_level": 5,
+            "comfort_level": 8
+        }
+    },
+    "leather": {
+        "base_cost": 1200.0,
+        "quality_multiplier": 1.5,
+        "complexity_multiplier": 1.3,
+        "sustainability_score": 0.6,
+        "properties": {
+            "draping": "structured with minimal drape",
+            "surface_characteristics": ["smooth", "rich", "durable"],
+            "care_instructions": "professional cleaning recommended",
+            "suitable_seasons": ["fall", "winter"],
+            "formality_level": 8,
+            "comfort_level": 7
+        }
+    }
+} 

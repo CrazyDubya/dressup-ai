@@ -7,6 +7,9 @@ from api import (
 from measurement_utils import BodyType, SpecialRequirement
 import json
 import random
+import requests
+from datetime import datetime
+from haute_couture_api import HauteCoutureProfile
 
 client = TestClient(app)
 
@@ -588,5 +591,89 @@ def test_generate_1000_outfits():
             assert abs(count - expected_event_count) <= 1, \
                 f"Uneven distribution for {event_type} in {season}: {count} (expected {expected_event_count})"
 
+def test_haute_couture_api():
+    """Test the Haute Couture API endpoints."""
+    base_url = "http://127.0.0.1:5002"
+    
+    # Test profile
+    test_profile = {
+        "client_name": "Test Client",
+        "measurements": {
+            "height": 170,
+            "bust": 85,
+            "waist": 65,
+            "hips": 90,
+            "shoulder_width": 38
+        },
+        "style_preferences": ["elegant", "modern"],
+        "color_preferences": ["navy", "silver"],
+        "fabric_preferences": ["silk", "lace"],
+        "special_requirements": ["hand-sewn", "custom fit"],
+        "event_details": {
+            "type": "gala",
+            "time": "evening",
+            "venue": "grand ballroom",
+            "season": "winter"
+        },
+        "budget_range": "luxury",
+        "timeline": "3 months"
+    }
+    
+    try:
+        # Test 1: Get available materials
+        print("\nTesting GET /api/haute-couture/materials")
+        response = requests.get(f"{base_url}/api/haute-couture/materials")
+        print(f"Status: {response.status_code}")
+        if response.status_code == 200:
+            print(f"Response: {json.dumps(response.json(), indent=2)[:200]}...")
+        else:
+            print(f"Error: {response.text}")
+        
+        # Test 2: Get available silhouettes
+        print("\nTesting GET /api/haute-couture/silhouettes")
+        response = requests.get(f"{base_url}/api/haute-couture/silhouettes")
+        print(f"Status: {response.status_code}")
+        if response.status_code == 200:
+            print(f"Response: {json.dumps(response.json(), indent=2)[:200]}...")
+        else:
+            print(f"Error: {response.text}")
+        
+        # Test 3: Create a design
+        print("\nTesting POST /api/haute-couture/design")
+        response = requests.post(f"{base_url}/api/haute-couture/design", json=test_profile)
+        print(f"Status: {response.status_code}")
+        if response.status_code == 200:
+            print(f"Response: {json.dumps(response.json(), indent=2)[:200]}...")
+        else:
+            print(f"Error: {response.text}")
+        
+        # Test 4: Generate an outfit
+        print("\nTesting POST /api/haute-couture/outfit")
+        response = requests.post(f"{base_url}/api/haute-couture/outfit", json=test_profile)
+        print(f"Status: {response.status_code}")
+        if response.status_code == 200:
+            print(f"Response: {json.dumps(response.json(), indent=2)[:200]}...")
+        else:
+            print(f"Error: {response.text}")
+        
+        # Save the test results
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        with open(f"test_results_{timestamp}.json", "w") as f:
+            json.dump({
+                "test_profile": test_profile,
+                "materials": requests.get(f"{base_url}/api/haute-couture/materials").json(),
+                "silhouettes": requests.get(f"{base_url}/api/haute-couture/silhouettes").json(),
+                "design": requests.post(f"{base_url}/api/haute-couture/design", json=test_profile).json(),
+                "outfit": requests.post(f"{base_url}/api/haute-couture/outfit", json=test_profile).json()
+            }, f, indent=2)
+            
+        print(f"\nTest results saved to test_results_{timestamp}.json")
+        
+    except requests.exceptions.ConnectionError:
+        print("Error: Could not connect to the API server. Make sure it's running on http://127.0.0.1:5002")
+    except Exception as e:
+        print(f"Error during testing: {str(e)}")
+
 if __name__ == "__main__":
-    pytest.main([__file__, "-v"]) 
+    pytest.main([__file__, "-v"])
+    test_haute_couture_api() 
