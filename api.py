@@ -38,8 +38,58 @@ app.add_middleware(
     expose_headers=["*"]
 )
 
+
+class UserProfile(BaseModel):
+    """User measurements and preferences."""
+    height: Optional[float] = None
+    weight: Optional[float] = None
+    bust: Optional[float] = None
+    waist: Optional[float] = None
+    hips: Optional[float] = None
+    inseam: Optional[float] = None
+    shoe_size: Optional[float] = None
+    comfort_level: Optional[int] = None
+    style_preferences: Optional[List[str]] = None
+    color_preferences: Optional[List[str]] = None
+    fit_preferences: Optional[List[str]] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict) -> "UserProfile":
+        return cls(**data)
+
+
+class EventContext(BaseModel):
+    """Event details and conditions."""
+    event_type: Optional[str] = None
+    formality_level: Optional[int] = None
+    weather_conditions: Optional[List[str]] = None
+    time_of_day: Optional[str] = None
+    season: Optional[str] = None
+    location: Optional[str] = None
+    duration: Optional[int] = None
+    activity_level: Optional[int] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict) -> "EventContext":
+        return cls(**data)
+
+
 # Initialize material specifications
 material_specs = MaterialSpecifications()
+
+# Basic material and legwear mappings for tests
+MATERIAL_COMBINATIONS = {
+    'summer': ['cotton', 'linen', 'silk'],
+    'winter': ['wool', 'cashmere', 'velvet'],
+    'spring': ['denim', 'cotton', 'linen'],
+    'fall': ['leather', 'suede', 'wool'],
+}
+
+LEGWEAR_TYPES = {
+    'stockings': {'seasons': ['winter', 'fall', 'spring']},
+    'tights': {'seasons': ['winter', 'fall']},
+    'leggings': {'seasons': ['winter', 'fall', 'spring']},
+}
 
 class OutfitRequest(BaseModel):
     profile_name: str
@@ -48,6 +98,10 @@ class OutfitRequest(BaseModel):
     material_preferences: Optional[List[str]] = None
     texture_preferences: Optional[List[str]] = None
     style_preferences: Optional[List[str]] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict) -> "OutfitRequest":
+        return cls(**data)
 
 class OutfitResponse(BaseModel):
     design: HauteCoutureDesign
