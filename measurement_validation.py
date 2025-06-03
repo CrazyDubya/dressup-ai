@@ -2,6 +2,24 @@ from typing import Dict, List, Tuple, Optional
 from datetime import datetime, timedelta
 from enum import Enum
 import math
+class BodyType(Enum):
+    HOURGLASS = "hourglass"
+    PEAR = "pear"
+    APPLE = "apple"
+    RECTANGLE = "rectangle"
+    INVERTED_TRIANGLE = "inverted_triangle"
+
+class MeasurementEstimator:
+    CUP_SIZE_MAPPING = {
+        'AA': 2.5,
+        'A': 5,
+        'B': 7.5,
+        'C': 10,
+        'D': 12.5,
+        'DD': 15,
+        'E': 17.5,
+        'F': 20,
+    }
 
 class MeasurementConfidence:
     def __init__(self):
@@ -140,7 +158,9 @@ class MeasurementValidation:
             'waist': lambda x: 50 <= x <= 100,
             'hips': lambda x: 70 <= x <= 130,
             'shoulder_width': lambda x: 30 <= x <= 50,
-            'arm_length': lambda x: 50 <= x <= 70
+            'arm_length': lambda x: 50 <= x <= 70,
+            'cup_size': lambda x: x in MeasurementEstimator.CUP_SIZE_MAPPING,
+            'body_type': lambda x: x in [bt.value for bt in BodyType]
         }
         
         # Define relationship rules between measurements

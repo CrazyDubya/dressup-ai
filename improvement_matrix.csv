@@ -1,0 +1,11 @@
+Task,Severity,Priority,Status
+Convert measurement endpoints to FastAPI,High,High,Completed
+Include measurement router in API app,High,High,Completed
+Add validation for cup size and body type,Medium,Medium,Completed
+Prevent adjustment of provided measurements,Medium,Medium,Completed
+Expose class methods for estimator utils,Medium,Medium,Completed
+Add measurement guide function,Low,Low,Completed
+Update tests for FastAPI measurement endpoints,High,High,Completed
+Remaining API features to align with tests,High,High,Pending
+Database integration,Medium,Low,Pending
+Advanced style mixing feature,Low,Low,Pending

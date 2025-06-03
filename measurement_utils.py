@@ -43,6 +43,7 @@ class MeasurementEstimator:
         'cup_size': 'B',
         'waist': 70,    # cm
         'hips': 90,     # cm
+        'inseam': 75,   # cm
         'shoulder_width': 38,  # cm
         'arm_length': 58,      # cm
         'age': 30,      # years
@@ -158,6 +159,19 @@ class MeasurementEstimator:
         self.historical_data = []
 
     @classmethod
+    def validate_measurements(cls, measurements: Dict) -> Tuple[bool, List[str]]:
+        if not measurements:
+            return False, ["No measurements provided"]
+        validator = MeasurementValidation()
+        return validator.validate_measurements(measurements)
+
+    @classmethod
+    def get_measurement_guide(cls) -> Dict[str, Dict]:
+        validator = MeasurementValidation()
+        guide = validator.get_validation_rules()
+        return {k: {'description': v, 'tips': []} for k, v in guide.items()}
+
+    @classmethod
     def _get_current_season(cls) -> str:
         """Determine the current season based on the date."""
         month = datetime.now().month
@@ -171,21 +185,21 @@ class MeasurementEstimator:
             return 'fall'
 
     @classmethod
-    def _apply_seasonal_adjustments(cls, measurements: Dict) -> Dict:
+    def _apply_seasonal_adjustments(cls, measurements: Dict, provided: set) -> Dict:
         """Apply seasonal adjustments to measurements."""
         season = cls._get_current_season()
         adjustment_factor = cls.SEASONAL_ADJUSTMENTS[season]
         
         # Apply seasonal adjustment to relevant measurements
         for key in ['bust', 'waist', 'hips', 'weight']:
-            if key in measurements:
+            if key in measurements and key not in provided:
                 measurements[key] *= adjustment_factor
         
         measurements['seasonal_adjustment'] = (adjustment_factor - 1) * 100
         return measurements
 
     @classmethod
-    def _apply_special_requirement_adjustments(cls, measurements: Dict) -> Dict:
+    def _apply_special_requirement_adjustments(cls, measurements: Dict, provided: set) -> Dict:
         """Apply adjustments based on special requirements."""
         if 'special_requirement' not in measurements:
             return measurements
@@ -196,13 +210,13 @@ class MeasurementEstimator:
 
         adjustments = cls.SPECIAL_REQUIREMENT_ADJUSTMENTS.get(requirement, {})
         for key, factor in adjustments.items():
-            if key in measurements:
+            if key in measurements and key not in provided:
                 measurements[key] *= factor
 
         return measurements
 
     @classmethod
-    def _apply_cultural_adjustments(cls, measurements: Dict) -> Dict:
+    def _apply_cultural_adjustments(cls, measurements: Dict, provided: set) -> Dict:
         """Apply cultural measurement adjustments."""
         if 'measurement_system' not in measurements:
             return measurements
@@ -213,26 +227,22 @@ class MeasurementEstimator:
 
         adjustments = cls.CULTURAL_ADJUSTMENTS.get(system, {})
         for key, factor in adjustments.items():
-            if key in measurements:
+            if key in measurements and key not in provided:
                 measurements[key] *= factor
 
         return measurements
 
-    def estimate_missing_measurements(self, profile: Dict) -> Dict:
+    @classmethod
+    def estimate_missing_measurements(cls, profile: Dict) -> Dict:
         """Estimate missing measurements based on provided ones."""
+        if not profile:
+            return cls.DEFAULT_MEASUREMENTS.copy()
+
         estimated = profile.copy()
+        provided = set(profile.keys())
         
         # Ensure all required fields are present
-        required_fields = {
-            'height': 165,  # cm
-            'weight': 60,   # kg
-            'bust': 85,     # cm
-            'waist': 70,    # cm
-            'hips': 90,     # cm
-            'inseam': 75,   # cm
-            'shoulder_width': 38,  # cm
-            'arm_length': 58,      # cm
-        }
+        required_fields = cls.DEFAULT_MEASUREMENTS
         
         for field, default_value in required_fields.items():
             if field not in estimated:
@@ -240,7 +250,7 @@ class MeasurementEstimator:
         
         # Calculate body type if not provided
         if 'body_type' not in estimated:
-            estimated['body_type'] = self._determine_body_type(estimated)
+            estimated['body_type'] = cls._determine_body_type(estimated)
         
         # Add special requirement if not provided
         if 'special_requirement' not in estimated:
@@ -251,9 +261,9 @@ class MeasurementEstimator:
             estimated['measurement_system'] = MeasurementSystem.METRIC.value
         
         # Apply any necessary adjustments
-        estimated = self._apply_seasonal_adjustments(estimated)
-        estimated = self._apply_special_requirement_adjustments(estimated)
-        estimated = self._apply_cultural_adjustments(estimated)
+        estimated = cls._apply_seasonal_adjustments(estimated, provided)
+        estimated = cls._apply_special_requirement_adjustments(estimated, provided)
+        estimated = cls._apply_cultural_adjustments(estimated, provided)
         
         return estimated
 
@@ -384,17 +394,6 @@ class MeasurementEstimator:
         """Convert measurements to the target system."""
         return self.converter.convert_measurements(measurements, target_system)
 
-    def get_measurement_guide(self) -> Dict:
-        """Get a guide for taking measurements."""
-        guide = super().get_measurement_guide()
-        
-        # Add validation rules
-        guide['validation_rules'] = self.validation.get_validation_rules()
-        
-        # Add unit labels
-        guide['unit_labels'] = self.converter.get_unit_labels(MeasurementSystem.METRIC)
-        
-        return guide
 
     def format_measurement(self, value: float, unit: str) -> str:
         """Format a measurement value with its unit."""

@@ -14,8 +14,10 @@ from haute_couture_profiles import get_profile, list_profiles, get_profile_detai
 import logging
 import time
 from datetime import datetime
+from measurement_endpoints import measurement_router
 
 app = FastAPI()
+app.include_router(measurement_router)
 
 # Configure logging
 logging.basicConfig(
