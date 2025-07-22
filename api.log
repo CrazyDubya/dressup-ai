@@ -550,3 +550,8 @@
 2025-05-02 20:10:29,216 - __main__ - INFO - Successfully generated complete outfit (Request ID: 20250502_201029_215717)
 2025-05-02 20:10:29,216 - __main__ - INFO - Request 20250502_201029_215078 completed in 0.00s with status 200
 2025-07-22 13:42:06,027 - api - INFO - Request GET /api/profiles completed in 0.00s
+2025-07-22 13:43:37,498 - api - ERROR - Error getting materials: 1 validation error for MaterialDetail
+properties
+  Input should be a valid string [type=string_type, input_value=['lustrous', 'smooth', 'flowing'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+2025-07-22 13:43:37,498 - api - INFO - Request GET /api/materials completed in 0.00s
