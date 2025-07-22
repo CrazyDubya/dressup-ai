@@ -555,3 +555,12 @@ properties
   Input should be a valid string [type=string_type, input_value=['lustrous', 'smooth', 'flowing'], input_type=list]
     For further information visit https://errors.pydantic.dev/2.5/v/string_type
 2025-07-22 13:43:37,498 - api - INFO - Request GET /api/materials completed in 0.00s
+2025-07-22 14:20:10,140 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-22 14:20:10,142 - api - INFO - Request GET /api/health completed in 0.00s
+2025-07-22 14:20:10,144 - httpx - INFO - HTTP Request: GET http://testserver/api/health "HTTP/1.1 200 OK"
+2025-07-22 14:20:10,144 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-22 14:20:10,146 - api - INFO - Request GET /api/measurements/guide completed in 0.00s
+2025-07-22 14:20:10,147 - httpx - INFO - HTTP Request: GET http://testserver/api/measurements/guide "HTTP/1.1 200 OK"
+2025-07-22 14:20:10,148 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-22 14:20:10,149 - api - INFO - Request GET /api/metrics completed in 0.00s
+2025-07-22 14:20:10,151 - httpx - INFO - HTTP Request: GET http://testserver/api/metrics "HTTP/1.1 200 OK"

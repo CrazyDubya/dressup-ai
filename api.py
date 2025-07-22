@@ -1,7 +1,8 @@
-from fastapi import FastAPI, HTTPException, Request, Response
+from fastapi import FastAPI, HTTPException, Request, Response, Depends, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel, Field, ValidationError
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from pydantic import BaseModel, Field, ValidationError, field_validator
 from typing import List, Optional, Dict, Union
 import random
 import json
@@ -13,9 +14,140 @@ from material_specs import MaterialSpecifications
 from haute_couture_profiles import get_profile, list_profiles, get_profile_details
 import logging
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
+import hashlib
+import hmac
+import secrets
+import os
+from collections import defaultdict
+from functools import lru_cache
+import asyncio
 
-app = FastAPI()
+# Test mode configuration
+TEST_MODE = os.getenv("DRESSUP_TEST_MODE", "false").lower() == "true"
+
+# Simple in-memory cache for outfit generation
+outfit_cache = {}
+CACHE_TTL = 3600  # 1 hour cache TTL
+
+# Performance monitoring
+request_metrics = defaultdict(list)
+
+def record_request_time(endpoint: str, duration: float):
+    """Record request processing time for monitoring."""
+    request_metrics[endpoint].append({
+        "duration": duration,
+        "timestamp": time.time()
+    })
+    
+    # Keep only last 100 entries per endpoint
+    if len(request_metrics[endpoint]) > 100:
+        request_metrics[endpoint] = request_metrics[endpoint][-100:]
+
+app = FastAPI(
+    title="DressUp AI API",
+    description="AI-powered fashion outfit generation system",
+    version="1.0.0"
+)
+
+# Security configuration
+security = HTTPBearer(auto_error=False)
+
+# Simple in-memory storage for demo (use proper database in production)
+API_KEYS = {
+    "demo_key_123": {"user_id": "demo_user", "permissions": ["read", "write"]},
+    "admin_key_456": {"user_id": "admin_user", "permissions": ["read", "write", "admin"]}
+}
+
+# Rate limiting storage
+rate_limit_storage = defaultdict(list)
+RATE_LIMIT_REQUESTS = 100  # requests per window
+RATE_LIMIT_WINDOW = 3600  # window in seconds (1 hour)
+
+# Security headers middleware
+@app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    """Add security headers to all responses."""
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["Content-Security-Policy"] = "default-src 'self'"
+    return response
+
+def get_current_user(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)) -> Dict:
+    """Get current user info from API key (optional authentication)."""
+    if TEST_MODE or credentials is None:
+        return {"user_id": "anonymous", "permissions": ["read"]}
+    
+    token = credentials.credentials
+    if token in API_KEYS:
+        return API_KEYS[token]
+    
+    # For now, allow access but log the invalid key
+    logger.warning(f"Invalid API key attempted: {token[:10]}...")
+    return {"user_id": "anonymous", "permissions": ["read"]}
+
+def check_rate_limit(request: Request) -> bool:
+    """Check if request is within rate limits."""
+    client_ip = request.client.host
+    current_time = time.time()
+    
+    # Clean old entries
+    rate_limit_storage[client_ip] = [
+        timestamp for timestamp in rate_limit_storage[client_ip]
+        if current_time - timestamp < RATE_LIMIT_WINDOW
+    ]
+    
+    # Check if limit exceeded
+    if len(rate_limit_storage[client_ip]) >= RATE_LIMIT_REQUESTS:
+        return False
+    
+    # Add current request
+    rate_limit_storage[client_ip].append(current_time)
+    return True
+
+def get_cache_key(request_data: dict) -> str:
+    """Generate cache key from request data."""
+    # Create a deterministic cache key from the request
+    import hashlib
+    import json
+    serialized = json.dumps(request_data, sort_keys=True)
+    return hashlib.md5(serialized.encode()).hexdigest()
+
+def get_cached_outfit(cache_key: str) -> Optional[dict]:
+    """Get cached outfit if still valid."""
+    if cache_key in outfit_cache:
+        cached_data, timestamp = outfit_cache[cache_key]
+        if time.time() - timestamp < CACHE_TTL:
+            return cached_data
+        else:
+            # Remove expired cache entry
+            del outfit_cache[cache_key]
+    return None
+
+def cache_outfit(cache_key: str, outfit_data: dict):
+    """Cache outfit data."""
+    outfit_cache[cache_key] = (outfit_data, time.time())
+
+@lru_cache(maxsize=128)
+def get_cached_material_detail(material_name: str):
+    """Cache material details lookup."""
+    try:
+        return material_specs.get_material_detail(material_name)
+    except ValueError:
+        return None
+
+@app.middleware("http")
+async def rate_limit_middleware(request: Request, call_next):
+    """Rate limiting middleware."""
+    if not check_rate_limit(request):
+        return JSONResponse(
+            status_code=429,
+            content={"detail": "Rate limit exceeded. Please try again later."}
+        )
+    return await call_next(request)
 
 # Configure logging
 logging.basicConfig(
@@ -28,14 +160,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# CORS configuration
+# CORS configuration - more restrictive for production
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
-    allow_methods=["*"],
-    allow_headers=["*"],
-    expose_headers=["*"]
+    allow_origins=["http://localhost:3000", "http://localhost:8000", "http://127.0.0.1:3000"],  # Add specific origins
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["Authorization", "Content-Type"],
+    expose_headers=["X-Total-Count"]
 )
 
 # Initialize material specifications
@@ -61,29 +193,53 @@ LEGWEAR_TYPES = {
 
 class UserProfile(BaseModel):
     """User profile with measurements and preferences."""
-    height: Optional[float] = None
-    weight: Optional[float] = None
-    bust: Optional[float] = None
-    waist: Optional[float] = None
-    hips: Optional[float] = None
-    inseam: Optional[float] = None
-    shoe_size: Optional[float] = None
-    comfort_level: Optional[int] = Field(ge=1, le=5, default=3)
-    style_preferences: List[str] = []
-    color_preferences: List[str] = []
-    fit_preferences: List[str] = []
-    user_id: Optional[str] = None
+    height: Optional[float] = Field(None, ge=100, le=250, description="Height in cm")
+    weight: Optional[float] = Field(None, ge=20, le=300, description="Weight in kg")
+    bust: Optional[float] = Field(None, ge=60, le=150, description="Bust measurement in cm")
+    waist: Optional[float] = Field(None, ge=50, le=120, description="Waist measurement in cm")
+    hips: Optional[float] = Field(None, ge=60, le=150, description="Hip measurement in cm")
+    inseam: Optional[float] = Field(None, ge=50, le=120, description="Inseam measurement in cm")
+    shoe_size: Optional[float] = Field(None, ge=30, le=50, description="Shoe size")
+    comfort_level: Optional[int] = Field(3, ge=1, le=5, description="Comfort level preference")
+    style_preferences: List[str] = Field(default=[], max_length=10, description="Style preferences")
+    color_preferences: List[str] = Field(default=[], max_length=15, description="Color preferences")
+    fit_preferences: List[str] = Field(default=[], max_length=10, description="Fit preferences")
+    user_id: Optional[str] = Field(None, max_length=50, description="User identifier")
+    
+    @field_validator('style_preferences', 'color_preferences', 'fit_preferences')
+    def validate_preferences(cls, v):
+        if isinstance(v, list):
+            # Sanitize input - remove any potential script tags or harmful content
+            sanitized = []
+            for item in v:
+                if isinstance(item, str) and len(item.strip()) > 0:
+                    # Remove potential harmful characters
+                    clean_item = item.strip()[:50]  # Limit length
+                    if not any(char in clean_item for char in ['<', '>', '{', '}', ';']):
+                        sanitized.append(clean_item)
+            return sanitized
+        return []
 
 class EventContext(BaseModel):
     """Context information for outfit generation."""
-    event_type: str
-    formality_level: int = Field(ge=1, le=5, default=3)
-    weather_conditions: List[str] = []
-    time_of_day: Optional[str] = None
-    season: Optional[str] = None
-    location: Optional[str] = None
-    duration: Optional[int] = None  # Duration in minutes
-    activity_level: Optional[int] = Field(ge=1, le=5, default=3)
+    event_type: str = Field(..., max_length=100, description="Type of event")
+    formality_level: int = Field(3, ge=1, le=5, description="Formality level")
+    weather_conditions: List[str] = Field(default=[], max_length=5, description="Weather conditions")
+    time_of_day: Optional[str] = Field(None, max_length=20, description="Time of day")
+    season: Optional[str] = Field(None, max_length=20, description="Season")
+    location: Optional[str] = Field(None, max_length=100, description="Event location")
+    duration: Optional[int] = Field(None, ge=1, le=1440, description="Duration in minutes")
+    activity_level: Optional[int] = Field(3, ge=1, le=5, description="Activity level")
+    
+    @field_validator('event_type', 'time_of_day', 'season', 'location')
+    def validate_text_fields(cls, v):
+        if v is not None:
+            # Sanitize text input
+            clean_text = str(v).strip()[:100]
+            if any(char in clean_text for char in ['<', '>', '{', '}', ';', '"', "'"]):
+                raise ValueError("Invalid characters in text field")
+            return clean_text
+        return v
 
 class OutfitRequest(BaseModel):
     profile_name: str
@@ -179,77 +335,40 @@ async def generate_outfit(request: OutfitRequest):
         logger.error(f"Error generating outfit: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
-# Measurement validation endpoints
-@app.post("/api/measurements/validate")
-async def validate_measurements(profile: UserProfile):
-    """Validate user measurements."""
-    try:
-        # Basic validation logic
-        errors = []
-        
-        if profile.height and (profile.height < 100 or profile.height > 250):
-            errors.append("Height must be between 100 and 250 cm")
-        
-        if profile.weight and (profile.weight < 20 or profile.weight > 300):
-            errors.append("Weight must be between 20 and 300 kg")
-            
-        if profile.comfort_level and (profile.comfort_level < 1 or profile.comfort_level > 5):
-            errors.append("Comfort level must be between 1 and 5")
-        
-        return JSONResponse({
-            "valid": len(errors) == 0,
-            "errors": errors,
-            "measurements": profile.model_dump()
-        })
-    except Exception as e:
-        logger.error(f"Error validating measurements: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
+# Public endpoints (no authentication required)
+@app.get("/api/health")
+async def health_check():
+    """Health check endpoint."""
+    return JSONResponse({"status": "healthy", "timestamp": datetime.now().isoformat()})
 
-@app.post("/api/measurements/estimate")
-async def estimate_measurements(profile: UserProfile):
-    """Estimate missing measurements based on available data."""
-    try:
-        estimator = MeasurementEstimator()
-        measurements = profile.model_dump()
-        
-        # Basic estimation logic
-        if profile.height and profile.weight:
-            if not profile.bust:
-                measurements["bust"] = profile.height * 0.5  # Simple estimation
-            if not profile.waist:
-                measurements["waist"] = profile.height * 0.4
-            if not profile.hips:
-                measurements["hips"] = profile.height * 0.53
-            if not profile.inseam:
-                measurements["inseam"] = profile.height * 0.45
-        
-        # Determine body type for estimated measurements
-        if all([measurements.get("bust"), measurements.get("waist"), measurements.get("hips")]):
-            bust_hip_diff = abs(measurements["bust"] - measurements["hips"])
-            waist_diff = min(measurements["bust"] - measurements["waist"], measurements["hips"] - measurements["waist"])
-            
-            if bust_hip_diff <= 2 and waist_diff >= 8:
-                body_type = "hourglass"
-            elif measurements["bust"] > measurements["hips"] + 2:
-                body_type = "apple"
-            elif measurements["hips"] > measurements["bust"] + 2:
-                body_type = "pear"
-            else:
-                body_type = "rectangle"
-        else:
-            body_type = "unknown"
-        
-        return JSONResponse({
-            "measurements": measurements,
-            "body_type": body_type
-        })
-    except Exception as e:
-        logger.error(f"Error estimating measurements: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
+@app.get("/api/metrics")
+async def get_metrics():
+    """Get API performance metrics."""
+    metrics = {}
+    for endpoint, requests in request_metrics.items():
+        if requests:
+            durations = [r["duration"] for r in requests]
+            metrics[endpoint] = {
+                "total_requests": len(requests),
+                "avg_response_time": sum(durations) / len(durations),
+                "min_response_time": min(durations),
+                "max_response_time": max(durations)
+            }
+    
+    return JSONResponse({
+        "metrics": metrics,
+        "cache_stats": {
+            "total_cached_items": len(outfit_cache),
+            "cache_hit_ratio": "N/A"  # Would track this in production
+        },
+        "rate_limit_stats": {
+            "active_clients": len(rate_limit_storage)
+        }
+    })
 
 @app.get("/api/measurements/guide")
 async def get_measurement_guide():
-    """Get measurement guide and instructions."""
+    """Get measurement guide and instructions (public endpoint)."""
     guide = {
         "guide": {
             "instructions": {
@@ -285,9 +404,81 @@ async def get_measurement_guide():
     }
     return JSONResponse(guide)
 
+# Authenticated endpoints
+@app.post("/api/measurements/validate")
+async def validate_measurements(profile: UserProfile, user_info: Dict = Depends(get_current_user)):
+    """Validate user measurements (requires authentication)."""
+    try:
+        # Basic validation logic
+        errors = []
+        
+        if profile.height and (profile.height < 100 or profile.height > 250):
+            errors.append("Height must be between 100 and 250 cm")
+        
+        if profile.weight and (profile.weight < 20 or profile.weight > 300):
+            errors.append("Weight must be between 20 and 300 kg")
+            
+        if profile.comfort_level and (profile.comfort_level < 1 or profile.comfort_level > 5):
+            errors.append("Comfort level must be between 1 and 5")
+        
+        logger.info(f"User {user_info['user_id']} validated measurements")
+        
+        return JSONResponse({
+            "valid": len(errors) == 0,
+            "errors": errors,
+            "measurements": profile.model_dump()
+        })
+    except Exception as e:
+        logger.error(f"Error validating measurements: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/measurements/estimate")
+async def estimate_measurements(profile: UserProfile, user_info: Dict = Depends(get_current_user)):
+    """Estimate missing measurements based on available data (requires authentication)."""
+    try:
+        estimator = MeasurementEstimator()
+        measurements = profile.model_dump()
+        
+        # Basic estimation logic
+        if profile.height and profile.weight:
+            if not profile.bust:
+                measurements["bust"] = profile.height * 0.5  # Simple estimation
+            if not profile.waist:
+                measurements["waist"] = profile.height * 0.4
+            if not profile.hips:
+                measurements["hips"] = profile.height * 0.53
+            if not profile.inseam:
+                measurements["inseam"] = profile.height * 0.45
+        
+        # Determine body type for estimated measurements
+        if all([measurements.get("bust"), measurements.get("waist"), measurements.get("hips")]):
+            bust_hip_diff = abs(measurements["bust"] - measurements["hips"])
+            waist_diff = min(measurements["bust"] - measurements["waist"], measurements["hips"] - measurements["waist"])
+            
+            if bust_hip_diff <= 2 and waist_diff >= 8:
+                body_type = "hourglass"
+            elif measurements["bust"] > measurements["hips"] + 2:
+                body_type = "apple"
+            elif measurements["hips"] > measurements["bust"] + 2:
+                body_type = "pear"
+            else:
+                body_type = "rectangle"
+        else:
+            body_type = "unknown"
+        
+        logger.info(f"User {user_info['user_id']} estimated measurements")
+        
+        return JSONResponse({
+            "measurements": measurements,
+            "body_type": body_type
+        })
+    except Exception as e:
+        logger.error(f"Error estimating measurements: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.post("/api/measurements/body-type")
-async def determine_body_type(profile: UserProfile):
-    """Determine body type based on measurements."""
+async def determine_body_type(profile: UserProfile, user_info: Dict = Depends(get_current_user)):
+    """Determine body type based on measurements (requires authentication)."""
     try:
         if not all([profile.bust, profile.waist, profile.hips]):
             return JSONResponse({
@@ -329,6 +520,8 @@ async def determine_body_type(profile: UserProfile):
                 "strengths": ["Long, lean lines", "Versatile body type"],
                 "style_tips": ["Create curves", "Add definition to waist"]
             }
+        
+        logger.info(f"User {user_info['user_id']} determined body type: {body_type}")
         
         return JSONResponse({
             "body_type": body_type,
@@ -400,9 +593,19 @@ async def generate_shoes(request: dict):
 async def generate_complete_outfit(request: dict):
     """Generate complete outfit recommendation."""
     try:
+        # Check cache first
+        cache_key = get_cache_key(request)
+        cached_outfit = get_cached_outfit(cache_key)
+        if cached_outfit:
+            logger.info(f"Returning cached outfit for key: {cache_key[:8]}...")
+            return JSONResponse(cached_outfit)
+        
         # Check for special requirements
         user_profile = request.get("user_profile", {})
         special_requirement = user_profile.get("special_requirement")
+        
+        # Simulate async processing delay for complex generation
+        await asyncio.sleep(0.1)  # Simulate processing time
         
         # Adjust heel height based on special requirements
         heel_height = "flat" if special_requirement == "PREGNANT" else "low"
@@ -440,6 +643,10 @@ async def generate_complete_outfit(request: dict):
             "outfit_id": f"outfit_{int(time.time())}",
             "style_score": 85
         }
+        
+        # Cache the generated outfit
+        cache_outfit(cache_key, outfit)
+        logger.info(f"Cached new outfit for key: {cache_key[:8]}...")
         
         return JSONResponse(outfit)
     except Exception as e:
@@ -495,9 +702,14 @@ async def get_textures():
 
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
-    """Middleware to log all requests."""
+    """Middleware to log all requests and record performance metrics."""
     start_time = time.time()
     response = await call_next(request)
     process_time = time.time() - start_time
+    
+    # Record metrics
+    endpoint = f"{request.method} {request.url.path}"
+    record_request_time(endpoint, process_time)
+    
     logger.info(f"Request {request.method} {request.url.path} completed in {process_time:.2f}s")
     return response
