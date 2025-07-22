@@ -139,6 +139,104 @@ def get_cached_material_detail(material_name: str):
     except ValueError:
         return None
 
+# Advanced AI features for outfit generation
+def analyze_color_harmony(color_preferences: List[str]) -> Dict:
+    """Analyze color harmony and suggest complementary colors."""
+    color_harmony_map = {
+        "red": {"complementary": ["green"], "analogous": ["orange", "pink"], "triadic": ["blue", "yellow"]},
+        "blue": {"complementary": ["orange"], "analogous": ["purple", "teal"], "triadic": ["red", "yellow"]},
+        "green": {"complementary": ["red"], "analogous": ["blue", "yellow"], "triadic": ["purple", "orange"]},
+        "yellow": {"complementary": ["purple"], "analogous": ["orange", "green"], "triadic": ["red", "blue"]},
+        "purple": {"complementary": ["yellow"], "analogous": ["blue", "red"], "triadic": ["green", "orange"]},
+        "orange": {"complementary": ["blue"], "analogous": ["red", "yellow"], "triadic": ["green", "purple"]},
+        "black": {"complementary": ["white"], "analogous": ["gray"], "triadic": ["white", "gray"]},
+        "white": {"complementary": ["black"], "analogous": ["gray"], "triadic": ["black", "gray"]},
+        "navy": {"complementary": ["cream"], "analogous": ["blue", "teal"], "triadic": ["burgundy", "gold"]},
+        "brown": {"complementary": ["blue"], "analogous": ["orange", "red"], "triadic": ["green", "purple"]}
+    }
+    
+    analysis = {
+        "primary_colors": color_preferences[:3],
+        "suggested_combinations": [],
+        "harmony_score": 0.8  # Default harmony score
+    }
+    
+    for color in color_preferences[:2]:  # Analyze top 2 colors
+        if color.lower() in color_harmony_map:
+            harmony_data = color_harmony_map[color.lower()]
+            analysis["suggested_combinations"].extend(harmony_data.get("complementary", []))
+    
+    return analysis
+
+def calculate_style_compatibility(style_preferences: List[str], event_type: str) -> Dict:
+    """Calculate style compatibility for the given event."""
+    
+    style_event_map = {
+        "casual": {"compatible": ["casual", "relaxed", "comfortable", "everyday"], "score_multiplier": 1.0},
+        "business": {"compatible": ["formal", "professional", "classic", "structured"], "score_multiplier": 0.9},
+        "formal": {"compatible": ["formal", "elegant", "sophisticated", "classic"], "score_multiplier": 0.8},
+        "party": {"compatible": ["trendy", "bold", "fashionable", "statement"], "score_multiplier": 0.9},
+        "athletic": {"compatible": ["sporty", "comfortable", "functional", "active"], "score_multiplier": 1.0},
+        "date": {"compatible": ["romantic", "elegant", "attractive", "stylish"], "score_multiplier": 0.9}
+    }
+    
+    event_lower = event_type.lower()
+    compatibility = style_event_map.get(event_lower, style_event_map["casual"])
+    
+    # Calculate compatibility score
+    score = 0.5  # Base score
+    for style in style_preferences:
+        if style.lower() in compatibility["compatible"]:
+            score += 0.2
+    
+    score = min(score * compatibility["score_multiplier"], 1.0)
+    
+    return {
+        "compatibility_score": score,
+        "recommended_styles": compatibility["compatible"][:3],
+        "event_appropriateness": "high" if score > 0.7 else "medium" if score > 0.5 else "low"
+    }
+
+def generate_pattern_recommendations(style_preferences: List[str], season: str) -> Dict:
+    """Generate pattern recommendations based on style and season."""
+    
+    seasonal_patterns = {
+        "spring": ["floral", "stripes", "polka dots", "geometric"],
+        "summer": ["tropical", "nautical", "abstract", "bright geometrics"],
+        "fall": ["plaid", "houndstooth", "paisley", "earth tones"],
+        "winter": ["solid colors", "subtle textures", "minimal patterns", "classic stripes"]
+    }
+    
+    style_patterns = {
+        "classic": ["stripes", "solid colors", "subtle textures"],
+        "trendy": ["geometric", "abstract", "bold patterns"],
+        "romantic": ["floral", "lace textures", "soft patterns"],
+        "edgy": ["animal print", "geometric", "bold contrasts"],
+        "minimalist": ["solid colors", "subtle textures", "monochrome"]
+    }
+    
+    recommendations = []
+    
+    # Season-based recommendations
+    season_lower = season.lower() if season else "spring"
+    if season_lower in seasonal_patterns:
+        recommendations.extend(seasonal_patterns[season_lower][:2])
+    
+    # Style-based recommendations
+    for style in style_preferences[:2]:
+        style_lower = style.lower()
+        if style_lower in style_patterns:
+            recommendations.extend(style_patterns[style_lower][:2])
+    
+    # Remove duplicates and limit
+    recommendations = list(dict.fromkeys(recommendations))[:4]
+    
+    return {
+        "recommended_patterns": recommendations,
+        "pattern_confidence": 0.8,
+        "seasonal_appropriateness": "high"
+    }
+
 @app.middleware("http")
 async def rate_limit_middleware(request: Request, call_next):
     """Rate limiting middleware."""
@@ -602,46 +700,69 @@ async def generate_complete_outfit(request: dict):
         
         # Check for special requirements
         user_profile = request.get("user_profile", {})
+        event_context = request.get("event_context", {})
         special_requirement = user_profile.get("special_requirement")
         
         # Simulate async processing delay for complex generation
         await asyncio.sleep(0.1)  # Simulate processing time
         
+        # Advanced AI features
+        color_analysis = analyze_color_harmony(user_profile.get("color_preferences", []))
+        style_match = calculate_style_compatibility(
+            user_profile.get("style_preferences", []), 
+            event_context.get("event_type", "casual")
+        )
+        pattern_analysis = generate_pattern_recommendations(
+            user_profile.get("style_preferences", []),
+            event_context.get("season", "spring")
+        )
+        
         # Adjust heel height based on special requirements
         heel_height = "flat" if special_requirement == "PREGNANT" else "low"
         
+        # Use AI analysis to enhance outfit
+        primary_colors = color_analysis.get("primary_colors", ["white", "navy", "brown"])
+        recommended_styles = style_match.get("recommended_styles", ["casual", "classic"])
+        
         outfit = {
             "outfit": {
-                "style_preferences": ["casual", "classic"],
-                "color_preferences": ["white", "navy", "brown"],
+                "style_preferences": recommended_styles[:2],
+                "color_preferences": primary_colors[:3],
                 "materials": ["cotton", "denim", "leather"],
-                "suitability": "high",
-                "occasion": "casual gathering",
-                "season": "summer",
-                "formality_level": 3,
-                "comfort_level": 4,
+                "suitability": style_match.get("event_appropriateness", "high"),
+                "occasion": event_context.get("event_type", "casual gathering"),
+                "season": event_context.get("season", "summer"),
+                "formality_level": event_context.get("formality_level", 3),
+                "comfort_level": user_profile.get("comfort_level", 4),
                 "top": {
                     "item": "Button-down shirt",
-                    "color": "white",
-                    "material": "cotton"
+                    "color": primary_colors[0] if primary_colors else "white",
+                    "material": "cotton",
+                    "pattern": pattern_analysis.get("recommended_patterns", ["solid"])[0]
                 },
                 "bottom": {
                     "item": "Chinos",
-                    "color": "navy",
-                    "material": "cotton"
+                    "color": primary_colors[1] if len(primary_colors) > 1 else "navy",
+                    "material": "cotton",
+                    "pattern": "solid"
                 },
                 "shoes": {
                     "item": "Loafers",
-                    "color": "brown",
+                    "color": primary_colors[2] if len(primary_colors) > 2 else "brown",
                     "material": "leather",
                     "heel_height": heel_height
                 },
                 "accessories": [
-                    {"item": "belt", "color": "brown", "material": "leather"}
+                    {"item": "belt", "color": primary_colors[2] if len(primary_colors) > 2 else "brown", "material": "leather"}
                 ]
             },
             "outfit_id": f"outfit_{int(time.time())}",
-            "style_score": 85
+            "style_score": int(style_match.get("compatibility_score", 0.85) * 100),
+            "ai_analysis": {
+                "color_harmony": color_analysis,
+                "style_compatibility": style_match,
+                "pattern_recommendations": pattern_analysis
+            }
         }
         
         # Cache the generated outfit
@@ -651,6 +772,79 @@ async def generate_complete_outfit(request: dict):
         return JSONResponse(outfit)
     except Exception as e:
         logger.error(f"Error generating complete outfit: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Advanced AI endpoints
+@app.post("/api/ai/color-analysis")
+async def analyze_colors(request: dict):
+    """Analyze color combinations and provide recommendations."""
+    try:
+        colors = request.get("colors", [])
+        style_context = request.get("style_context", "casual")
+        
+        if not colors:
+            raise HTTPException(status_code=400, detail="Colors list cannot be empty")
+        
+        analysis = analyze_color_harmony(colors)
+        
+        return JSONResponse({
+            "analysis": analysis,
+            "recommendations": {
+                "primary_palette": analysis["primary_colors"],
+                "suggested_combinations": analysis["suggested_combinations"],
+                "harmony_score": analysis["harmony_score"],
+                "style_context": style_context
+            },
+            "tips": [
+                "Use the 60-30-10 rule: 60% dominant color, 30% secondary, 10% accent",
+                "Consider your skin tone when choosing colors",
+                "Neutral colors can balance bold choices"
+            ]
+        })
+    except Exception as e:
+        logger.error(f"Error in color analysis: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/ai/style-match")
+async def analyze_style_compatibility(request: dict):
+    """Analyze style compatibility for events and occasions."""
+    try:
+        styles = request.get("style_preferences", [])
+        event_type = request.get("event_type", "casual")
+        
+        compatibility = calculate_style_compatibility(styles, event_type)
+        
+        return JSONResponse({
+            "compatibility": compatibility,
+            "recommendations": {
+                "suggested_adjustments": [],
+                "alternative_styles": compatibility["recommended_styles"],
+                "confidence_level": compatibility["compatibility_score"]
+            }
+        })
+    except Exception as e:
+        logger.error(f"Error in style compatibility analysis: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/ai/pattern-recommendations")
+async def get_pattern_recommendations(request: dict):
+    """Get pattern recommendations based on style and season."""
+    try:
+        styles = request.get("style_preferences", [])
+        season = request.get("season", "spring")
+        
+        recommendations = generate_pattern_recommendations(styles, season)
+        
+        return JSONResponse({
+            "recommendations": recommendations,
+            "styling_tips": [
+                "Mix patterns of different scales for visual interest",
+                "Keep one pattern dominant and others subtle",
+                "Solid colors can break up busy patterns"
+            ]
+        })
+    except Exception as e:
+        logger.error(f"Error generating pattern recommendations: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/profiles")

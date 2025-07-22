@@ -564,3 +564,9 @@ properties
 2025-07-22 14:20:10,148 - asyncio - DEBUG - Using selector: EpollSelector
 2025-07-22 14:20:10,149 - api - INFO - Request GET /api/metrics completed in 0.00s
 2025-07-22 14:20:10,151 - httpx - INFO - HTTP Request: GET http://testserver/api/metrics "HTTP/1.1 200 OK"
+2025-07-22 14:26:00,867 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-22 14:26:00,870 - api - INFO - Request POST /api/ai/color-analysis completed in 0.00s
+2025-07-22 14:26:00,871 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/color-analysis "HTTP/1.1 200 OK"
+2025-07-22 14:26:00,872 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-22 14:26:00,874 - api - INFO - Request POST /api/ai/style-match completed in 0.00s
+2025-07-22 14:26:00,875 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/style-match "HTTP/1.1 200 OK"
