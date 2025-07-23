@@ -302,6 +302,144 @@ class UserInterface:
             if outfit['outfit_data'].get('extras'):
                 print(f"Extras: {outfit['outfit_data']['extras']}")
     
+    def search_outfits(self) -> None:
+        """Search through saved outfits."""
+        if not self.current_user:
+            print("Please login first.")
+            return
+        
+        search_term = input("Enter search term (color, material, style): ").strip().lower()
+        if not search_term:
+            print("Search term cannot be empty.")
+            return
+        
+        style_history = self.user_profile.get_style_history(self.current_user)
+        if not style_history:
+            print("No outfit history found.")
+            return
+        
+        matches = []
+        for outfit in style_history:
+            outfit_str = str(outfit).lower()
+            if search_term in outfit_str:
+                matches.append(outfit)
+        
+        if matches:
+            print(f"\n=== Found {len(matches)} matching outfits ===")
+            for outfit in matches:
+                print(f"\nEvent: {outfit['event']}")
+                print(f"Created: {outfit['created_at']}")
+                print(f"Top: {outfit['outfit_data']['top']}")
+                print(f"Bottom: {outfit['outfit_data']['bottom']}")
+        else:
+            print(f"No outfits found matching '{search_term}'")
+    
+    def filter_outfits_by_season(self) -> None:
+        """Filter outfits by season."""
+        if not self.current_user:
+            print("Please login first.")
+            return
+        
+        print("Available seasons: spring, summer, fall, winter")
+        season = input("Enter season to filter by: ").strip().lower()
+        
+        style_history = self.user_profile.get_style_history(self.current_user)
+        if not style_history:
+            print("No outfit history found.")
+            return
+        
+        matches = []
+        for outfit in style_history:
+            if outfit.get('season', '').lower() == season:
+                matches.append(outfit)
+        
+        if matches:
+            print(f"\n=== {len(matches)} outfits for {season.title()} ===")
+            for outfit in matches:
+                print(f"\nEvent: {outfit['event']}")
+                print(f"Created: {outfit['created_at']}")
+                print(f"Top: {outfit['outfit_data']['top']}")
+                print(f"Bottom: {outfit['outfit_data']['bottom']}")
+        else:
+            print(f"No outfits found for {season}")
+    
+    def view_favorites(self) -> None:
+        """View user's favorite outfits."""
+        if not self.current_user:
+            print("Please login first.")
+            return
+        
+        style_history = self.user_profile.get_style_history(self.current_user)
+        if not style_history:
+            print("No outfit history found.")
+            return
+        
+        favorites = [outfit for outfit in style_history if outfit.get('is_favorite', False)]
+        
+        if favorites:
+            print(f"\n=== Your {len(favorites)} Favorite Outfits ===")
+            for outfit in favorites:
+                print(f"\nEvent: {outfit['event']}")
+                print(f"Created: {outfit['created_at']}")
+                print(f"Top: {outfit['outfit_data']['top']}")
+                print(f"Bottom: {outfit['outfit_data']['bottom']}")
+        else:
+            print("No favorite outfits found.")
+    
+    def get_style_recommendations(self) -> None:
+        """Get personalized style recommendations based on history."""
+        if not self.current_user:
+            print("Please login first.")
+            return
+        
+        style_history = self.user_profile.get_style_history(self.current_user)
+        if not style_history:
+            print("No style history available for recommendations.")
+            return
+        
+        # Analyze user's style preferences
+        colors = {}
+        materials = {}
+        styles = {}
+        
+        for outfit in style_history:
+            outfit_data = outfit.get('outfit_data', {})
+            
+            # Count colors
+            for item in ['top', 'bottom', 'shoes']:
+                if item in outfit_data and 'color' in outfit_data[item]:
+                    color = outfit_data[item]['color']
+                    colors[color] = colors.get(color, 0) + 1
+            
+            # Count materials and styles similarly
+            for item in ['top', 'bottom', 'shoes']:
+                if item in outfit_data:
+                    material = outfit_data[item].get('material', '')
+                    style = outfit_data[item].get('style', '')
+                    if material:
+                        materials[material] = materials.get(material, 0) + 1
+                    if style:
+                        styles[style] = styles.get(style, 0) + 1
+        
+        print("\n=== Your Style Analysis ===")
+        if colors:
+            top_colors = sorted(colors.items(), key=lambda x: x[1], reverse=True)[:3]
+            print(f"Favorite colors: {', '.join([c[0] for c in top_colors])}")
+        
+        if materials:
+            top_materials = sorted(materials.items(), key=lambda x: x[1], reverse=True)[:3]
+            print(f"Preferred materials: {', '.join([m[0] for m in top_materials])}")
+        
+        if styles:
+            top_styles = sorted(styles.items(), key=lambda x: x[1], reverse=True)[:3]
+            print(f"Preferred styles: {', '.join([s[0] for s in top_styles])}")
+        
+        print("\n=== Recommendations ===")
+        print("Based on your history, you might like:")
+        print("- Try mixing your favorite colors with new materials")
+        print("- Experiment with similar styles in different seasons")
+        print("- Consider accessories to complement your preferred color palette")
+    
     def run(self) -> None:
         """Run the main interface loop."""
         if not self.login():
@@ -311,20 +449,32 @@ class UserInterface:
             print("\n=== Fashion Outfit Generator ===")
             print("1. Generate Personalized Outfit")
             print("2. View Style History")
-            print("3. Logout")
-            print("4. Exit")
+            print("3. Search Outfits")
+            print("4. Filter by Season")
+            print("5. View Favorites")
+            print("6. Get Style Recommendations")
+            print("7. Logout")
+            print("8. Exit")
             
-            choice = input("\nEnter your choice (1-4): ")
+            choice = input("\nEnter your choice (1-8): ")
             
             if choice == "1":
                 self.generate_personalized_outfit()
             elif choice == "2":
                 self.view_style_history()
             elif choice == "3":
+                self.search_outfits()
+            elif choice == "4":
+                self.filter_outfits_by_season()
+            elif choice == "5":
+                self.view_favorites()
+            elif choice == "6":
+                self.get_style_recommendations()
+            elif choice == "7":
                 self.current_user = None
                 if not self.login():
                     break
-            elif choice == "4":
+            elif choice == "8":
                 print("Goodbye!")
                 break
             else:
