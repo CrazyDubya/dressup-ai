@@ -54,6 +54,7 @@ class UserProfile(BaseModel):
     style_preferences: Optional[List[str]] = None
     color_preferences: Optional[List[str]] = None
     fit_preferences: Optional[List[str]] = None
+    special_requirement: Optional[str] = None
 
     @classmethod
     def from_dict(cls, data: Dict) -> "UserProfile":
@@ -81,10 +82,10 @@ material_specs = MaterialSpecifications()
 
 # Basic material and legwear mappings for tests
 MATERIAL_COMBINATIONS = {
-    'summer': ['cotton', 'linen', 'silk'],
-    'winter': ['wool', 'cashmere', 'velvet'],
-    'spring': ['denim', 'cotton', 'linen'],
-    'fall': ['leather', 'suede', 'wool'],
+    'summer': ['cotton', 'linen', 'silk', 'light', 'bamboo', 'modal', 'synthetic'],
+    'winter': ['wool', 'cashmere', 'fleece', 'velvet', 'cotton', 'silk', 'synthetic'],
+    'spring': ['cotton', 'linen', 'silk', 'light', 'synthetic', 'bamboo', 'modal'],
+    'fall': ['wool', 'cotton', 'silk', 'synthetic', 'linen', 'light', 'bamboo', 'modal'],
 }
 
 LEGWEAR_TYPES = {
@@ -105,7 +106,60 @@ class OutfitRequest(BaseModel):
     def from_dict(cls, data: Dict) -> "OutfitRequest":
         return cls(**data)
 
+class SimpleOutfitRequest(BaseModel):
+    """Simple outfit request for individual item generation."""
+    user_profile: UserProfile
+    event_context: EventContext
+
+class OutfitItem(BaseModel):
+    """Individual clothing item."""
+    type: str
+    color: str
+    material: str
+    fit: str
+    style: str
+
+class ShoeDetails(BaseModel):
+    """Shoe-specific details."""
+    type: str
+    heel_height: str
+    closure: str
+    toe: str
+    style: str
+    material: str
+
 class OutfitResponse(BaseModel):
+    """Complete outfit response."""
+    style_preferences: List[str]
+    color_preferences: List[str]
+    materials: List[str]
+    suitability: str
+    occasion: str
+    season: str
+    formality_level: int
+    comfort_level: int
+    top: OutfitItem
+    bottom: OutfitItem
+    shoes: ShoeDetails
+
+class CompleteOutfitResponse(BaseModel):
+    """Wrapper for outfit response."""
+    outfit: OutfitResponse
+
+class SingleItemResponse(BaseModel):
+    """Response for single item generation."""
+    pass
+
+class TopResponse(SingleItemResponse):
+    top: OutfitItem
+
+class BottomResponse(SingleItemResponse):
+    bottom: OutfitItem
+
+class ShoesResponse(SingleItemResponse):
+    shoes: ShoeDetails
+
+class HauteCoutureOutfitResponse(BaseModel):
     design: HauteCoutureDesign
     materials: List[MaterialDetail]
     textures: List[TextureDetail]
@@ -113,7 +167,104 @@ class OutfitResponse(BaseModel):
     timeline: Dict
     cost_breakdown: Dict
 
-@app.post("/api/generate/outfit", response_model=OutfitResponse)
+# Helper functions for outfit generation
+def get_style_context(event_context: EventContext) -> str:
+    """Determines style based on formality level."""
+    if event_context.formality_level and event_context.formality_level >= 4:
+        return 'formal'
+    return 'casual'
+
+def validate_material_for_season(material: str, season: str) -> bool:
+    """Checks if material is appropriate for season."""
+    if not season:
+        return True
+    return material in MATERIAL_COMBINATIONS.get(season, [])
+
+def get_material_context(event_context: EventContext) -> List[str]:
+    """Gets appropriate materials based on event context."""
+    season = event_context.season or 'summer'
+    return MATERIAL_COMBINATIONS.get(season, ['cotton', 'polyester'])
+
+def get_appropriate_material(item_type: str, available_materials: List[str], season: str) -> str:
+    """Selects appropriate material with seasonal validation."""
+    for material in available_materials:
+        if validate_material_for_season(material, season):
+            return material
+    return available_materials[0] if available_materials else 'cotton'
+
+def get_appropriate_shoe_type(event_context: EventContext, user_profile: UserProfile) -> ShoeDetails:
+    """Determines appropriate shoe type based on context."""
+    formality = event_context.formality_level or 2
+    season = event_context.season or 'summer'
+    
+    # Handle special requirements
+    special_requirement = user_profile.model_dump().get('special_requirement')
+    if special_requirement == 'pregnant':
+        heel_height = 'flat'
+    elif formality >= 4:
+        heel_height = 'high'
+    elif formality >= 3:
+        heel_height = 'medium'
+    else:
+        heel_height = 'low'
+    
+    # Select shoe type based on formality and season
+    if formality >= 4:
+        shoe_type = 'heels'
+        closure = 'slip-on'
+    elif formality >= 3:
+        shoe_type = 'flats'
+        closure = 'slip-on'
+    else:
+        shoe_type = 'sneakers'
+        closure = 'lace-up'
+    
+    return ShoeDetails(
+        type=shoe_type,
+        heel_height=heel_height,
+        closure=closure,
+        toe='closed',
+        style=get_style_context(event_context),
+        material='leather'
+    )
+
+def generate_outfit_item(item_type: str, request: SimpleOutfitRequest, available_materials: List[str]) -> OutfitItem:
+    """Generates single outfit item with material restrictions."""
+    season = request.event_context.season or 'summer'
+    style = get_style_context(request.event_context)
+    material = get_appropriate_material(item_type, available_materials, season)
+    
+    # Select appropriate colors
+    color_prefs = request.user_profile.color_preferences or ['black', 'blue', 'gray']
+    color = random.choice(color_prefs)
+    
+    # Select appropriate fit
+    fit_prefs = request.user_profile.fit_preferences or ['regular']
+    fit = random.choice(fit_prefs)
+    
+    # Select appropriate type based on item and context
+    if item_type == 'top':
+        if style == 'formal':
+            top_type = random.choice(['blouse', 'shirt', 'sweater'])
+        else:
+            top_type = random.choice(['t-shirt', 'sweater', 'tank-top'])
+    elif item_type == 'bottom':
+        if style == 'formal':
+            top_type = random.choice(['trousers', 'skirt'])
+        else:
+            top_type = random.choice(['jeans', 'pants', 'shorts'])
+    else:
+        top_type = item_type
+    
+    return OutfitItem(
+        type=top_type,
+        color=color,
+        material=material,
+        fit=fit,
+        style=style
+    )
+
+@app.post("/api/generate/outfit", response_model=HauteCoutureOutfitResponse)
 async def generate_outfit(request: OutfitRequest):
     try:
         # Get the requested profile
@@ -172,7 +323,7 @@ async def generate_outfit(request: OutfitRequest):
             }
         )
 
-        return OutfitResponse(
+        return HauteCoutureOutfitResponse(
             design=design,
             materials=materials,
             textures=textures,
@@ -189,6 +340,69 @@ async def generate_outfit(request: OutfitRequest):
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         logger.error(f"Error generating outfit: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.post("/api/generate/top", response_model=TopResponse)
+async def generate_top(request: SimpleOutfitRequest):
+    """Generate top only."""
+    try:
+        available_materials = get_material_context(request.event_context)
+        top = generate_outfit_item('top', request, available_materials)
+        return TopResponse(top=top)
+    except Exception as e:
+        logger.error(f"Error generating top: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.post("/api/generate/bottom", response_model=BottomResponse)
+async def generate_bottom(request: SimpleOutfitRequest):
+    """Generate bottom only."""
+    try:
+        available_materials = get_material_context(request.event_context)
+        bottom = generate_outfit_item('bottom', request, available_materials)
+        return BottomResponse(bottom=bottom)
+    except Exception as e:
+        logger.error(f"Error generating bottom: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.post("/api/generate/shoes", response_model=ShoesResponse)
+async def generate_shoes(request: SimpleOutfitRequest):
+    """Generate shoes only."""
+    try:
+        shoes = get_appropriate_shoe_type(request.event_context, request.user_profile)
+        return ShoesResponse(shoes=shoes)
+    except Exception as e:
+        logger.error(f"Error generating shoes: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.post("/api/generate/complete-outfit", response_model=CompleteOutfitResponse)
+async def generate_complete_outfit(request: SimpleOutfitRequest):
+    """Generate complete outfit."""
+    try:
+        available_materials = get_material_context(request.event_context)
+        
+        # Generate individual items
+        top = generate_outfit_item('top', request, available_materials)
+        bottom = generate_outfit_item('bottom', request, available_materials)
+        shoes = get_appropriate_shoe_type(request.event_context, request.user_profile)
+        
+        # Create complete outfit response
+        outfit = OutfitResponse(
+            style_preferences=request.user_profile.style_preferences or ['casual'],
+            color_preferences=request.user_profile.color_preferences or ['black', 'blue'],
+            materials=available_materials,
+            suitability='appropriate',
+            occasion=request.event_context.event_type or 'casual',
+            season=request.event_context.season or 'summer',
+            formality_level=request.event_context.formality_level or 2,
+            comfort_level=request.user_profile.comfort_level or 5,
+            top=top,
+            bottom=bottom,
+            shoes=shoes
+        )
+        
+        return CompleteOutfitResponse(outfit=outfit)
+    except Exception as e:
+        logger.error(f"Error generating complete outfit: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 @app.get("/api/profiles")
