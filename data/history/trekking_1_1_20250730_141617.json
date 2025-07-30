@@ -1,0 +1,137 @@
+{
+  "outfit_id": "trekking_1_1_20250730_141617",
+  "user_id": "test_user_004",
+  "outfit_data": {
+    "top": {
+      "type": "top",
+      "color": "blue and white",
+      "material": "cotton",
+      "fit": "relaxed",
+      "style": "fitted",
+      "hem": null,
+      "bust_fit": "comfortable",
+      "shoulder_fit": "perfect",
+      "arm_fit": "relaxed",
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [
+        "button-up",
+        "long sleeves",
+        "soft",
+        "natural",
+        "breathable"
+      ],
+      "draping": "casual drape with good structure",
+      "care_instructions": "machine washable, can be ironed"
+    },
+    "bottom": {
+      "type": "bottom",
+      "color": "black",
+      "material": "cotton blend",
+      "fit": "relaxed",
+      "style": "a-line",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": "fitted",
+      "hip_fit": "comfortable",
+      "length": "knee",
+      "surface_characteristics": [
+        "elastic waist",
+        "cuffed ankles"
+      ],
+      "draping": "",
+      "care_instructions": ""
+    },
+    "shoes": {
+      "type": "shoes",
+      "color": "black",
+      "material": "canvas",
+      "fit": "comfortable",
+      "style": "casual",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [],
+      "draping": "",
+      "care_instructions": ""
+    },
+    "extras": [
+      {
+        "type": "bracelet",
+        "description": "Leather bracelet",
+        "material": "leather",
+        "color": "brown",
+        "features": [
+          "adjustable"
+        ],
+        "placement": "wrist",
+        "size": "one size",
+        "style": "casual"
+      }
+    ],
+    "style": {
+      "formal": 3,
+      "classic": 7,
+      "elegant": 4
+    },
+    "colors": [
+      "blue and white",
+      "black",
+      "black"
+    ],
+    "materials": [
+      "cotton"
+    ],
+    "suitable_for": [
+      "trekking"
+    ],
+    "occasion": "trekking",
+    "season": "summer",
+    "formality_level": 1,
+    "comfort_level": 8,
+    "complexity_level": "high",
+    "estimated_hours": 155,
+    "quality_control": [
+      "Precise pattern matching",
+      "Perfect seam alignment",
+      "Impeccable hand-finishing",
+      "Fabric grain alignment",
+      "Drape verification",
+      "Fit assessment"
+    ],
+    "digital_rendering": {
+      "available_views": [
+        "front",
+        "back",
+        "side",
+        "detail"
+      ],
+      "material_swatches": []
+    },
+    "design_notes": "Generated for trekking with default preferences",
+    "inspiration": "Outfit variation 1 for trekking",
+    "material_costs": [
+      {
+        "fabric_type": "cotton",
+        "base_cost": 500.0,
+        "quality_multiplier": 1.2,
+        "complexity_multiplier": 1.3,
+        "total_cost": 780.0
+      }
+    ],
+    "sustainability_impact": {
+      "materials": [],
+      "certifications": []
+    }
+  },
+  "generated_at": "2025-07-30 14:16:17.144659",
+  "feedback": null,
+  "is_favorite": false
+}

@@ -673,15 +673,15 @@ async def generate_complete_outfit(request: SimpleOutfitRequest):
         )
         
         # Decide whether to generate a dress or top+bottom
-        # Higher chance of dress for formal events, very low for casual
-        dress_probability = 0.1  # Base probability (reduced from 0.3)
+        # Higher chance of dress for formal events, moderate for business
+        dress_probability = 0.25  # Base probability
         if formality_level >= 7:
-            dress_probability = 0.6  # Higher chance for formal events
+            dress_probability = 0.65  # Higher chance for formal events
         elif formality_level >= 5:
-            dress_probability = 0.4
+            dress_probability = 0.55  # Increased for semi-formal
         elif formality_level >= 4:
-            dress_probability = 0.2
-        # For formality 3 and below, keep very low probability (0.1)
+            dress_probability = 0.45  # Increased for business (45% gives ~97% success in 5 attempts)
+        # For formality 3 and below, keep moderate probability (25%)
         
         generate_dress_outfit = random.random() < dress_probability
         

@@ -1,6 +1,6 @@
 {
   "user_id": "test_user_001",
-  "name": "Test User",
+  "name": "Emma Smith",
   "body_shape": "pear",
   "favorite_colors": [
     "emerald",
@@ -21,22 +21,22 @@
   },
   "feedback_history": [
     {
-      "outfit_id": "gala_20250504_233306",
+      "outfit_id": "gala_1_20250730_141617",
       "user_id": "test_user_001",
       "rating": 5,
-      "comments": "Perfect for the occasion!",
-      "created_at": "2025-05-04 23:33:06.106239"
+      "comments": "Perfect for Winter Gala in London!",
+      "created_at": "2025-07-30 14:16:17.136558"
     },
     {
-      "outfit_id": "business_20250504_233306",
+      "outfit_id": "gala_2_20250730_141617",
       "user_id": "test_user_001",
       "rating": 5,
-      "comments": "Perfect for the occasion!",
-      "created_at": "2025-05-04 23:33:06.106814"
+      "comments": "Perfect for Winter Gala in London!",
+      "created_at": "2025-07-30 14:16:17.136879"
     }
   ],
   "outfit_history": [],
   "wishlist": [],
-  "created_at": "2025-05-04 23:33:06.105368",
-  "updated_at": "2025-05-04 23:33:06.106849"
+  "created_at": "2025-07-30 14:16:17.134483",
+  "updated_at": "2025-07-30 14:16:17.136960"
 }

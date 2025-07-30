@@ -1,0 +1,157 @@
+{
+  "outfit_id": "gala_1_2_20250730_141617",
+  "user_id": "test_user_001",
+  "outfit_data": {
+    "top": {
+      "type": "top",
+      "color": "black",
+      "material": "cotton",
+      "fit": "slim",
+      "style": "structured",
+      "hem": null,
+      "bust_fit": "comfortable",
+      "shoulder_fit": "perfect",
+      "arm_fit": "relaxed",
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [
+        "button-up",
+        "long sleeves",
+        "soft",
+        "natural",
+        "breathable"
+      ],
+      "draping": "casual drape with good structure",
+      "care_instructions": "machine washable, can be ironed"
+    },
+    "bottom": {
+      "type": "bottom",
+      "color": "gray",
+      "material": "wool",
+      "fit": "slim",
+      "style": "a-line",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": "fitted",
+      "hip_fit": "comfortable",
+      "length": "knee",
+      "surface_characteristics": [
+        "flat front",
+        "straight leg",
+        "soft",
+        "textured",
+        "warm"
+      ],
+      "draping": "structured drape with natural body",
+      "care_instructions": "dry clean or hand wash in cold water"
+    },
+    "shoes": {
+      "type": "shoes",
+      "color": "black",
+      "material": "suede",
+      "fit": "comfortable",
+      "style": "formal",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [
+        "napped",
+        "soft",
+        "rich"
+      ],
+      "draping": "structured, soft hand",
+      "care_instructions": "brush clean, avoid water"
+    },
+    "extras": [
+      {
+        "type": "necklace",
+        "description": "Pearl necklace",
+        "material": "pearl",
+        "color": "white",
+        "features": [
+          "single strand"
+        ],
+        "placement": "neck",
+        "size": "medium",
+        "style": "classic"
+      },
+      {
+        "type": "umbrella",
+        "description": "Stylish umbrella",
+        "material": "waterproof fabric",
+        "color": "black",
+        "features": [
+          "waterproof",
+          "windproof"
+        ],
+        "placement": "hand",
+        "size": "medium",
+        "style": "formal"
+      }
+    ],
+    "style": {
+      "formal": 8,
+      "classic": 7,
+      "elegant": 9
+    },
+    "colors": [
+      "black",
+      "gray",
+      "black"
+    ],
+    "materials": [
+      "wool"
+    ],
+    "suitable_for": [
+      "gala"
+    ],
+    "occasion": "gala",
+    "season": "winter",
+    "formality_level": 9,
+    "comfort_level": 8,
+    "complexity_level": "very high",
+    "estimated_hours": 225,
+    "quality_control": [
+      "Precise pattern matching",
+      "Perfect seam alignment",
+      "Impeccable hand-finishing",
+      "Fabric grain alignment",
+      "Drape verification",
+      "Fit assessment"
+    ],
+    "digital_rendering": {
+      "available_views": [
+        "front",
+        "back",
+        "side",
+        "detail"
+      ],
+      "material_swatches": []
+    },
+    "design_notes": "Generated for gala with default preferences",
+    "inspiration": "Outfit variation 2 for gala",
+    "material_costs": [
+      {
+        "fabric_type": "wool",
+        "base_cost": 800.0,
+        "quality_multiplier": 1.5,
+        "complexity_multiplier": 1.3,
+        "total_cost": 1560.0
+      }
+    ],
+    "sustainability_impact": {
+      "materials": [],
+      "certifications": []
+    }
+  },
+  "generated_at": "2025-07-30 14:16:17.136243",
+  "feedback": null,
+  "is_favorite": false
+}

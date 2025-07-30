@@ -553,3 +553,27 @@
 2025-07-30 14:14:05,305 - api - INFO - Generating complete outfit with request_id: c03bb20d-13ba-440a-9370-b39b54bc4ee5
 2025-07-30 14:14:05,305 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
 2025-07-30 14:14:05,306 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"
+2025-07-30 14:19:52,503 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-30 14:19:52,504 - api - INFO - Generating complete outfit with request_id: b6599f56-79a5-49ff-acaa-d91751b2f59a
+2025-07-30 14:19:52,505 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
+2025-07-30 14:19:52,506 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"
+2025-07-30 14:19:52,506 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-30 14:19:52,507 - api - INFO - Generating complete outfit with request_id: b4feecbe-aad3-4024-b226-4329634322e7
+2025-07-30 14:19:52,508 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
+2025-07-30 14:19:52,508 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"
+2025-07-30 14:19:52,509 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-30 14:19:52,510 - api - INFO - Generating complete outfit with request_id: 1427ddc9-69b2-443b-8be2-7fe477a97a69
+2025-07-30 14:19:52,510 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
+2025-07-30 14:19:52,511 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"
+2025-07-30 14:19:52,511 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-30 14:19:52,513 - api - INFO - Generating complete outfit with request_id: d329776a-a6cf-4a34-8493-e08782eb39ae
+2025-07-30 14:19:52,513 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
+2025-07-30 14:19:52,514 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"
+2025-07-30 14:19:52,515 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-30 14:19:52,516 - api - INFO - Generating complete outfit with request_id: 466dfb7d-186b-44fd-98dd-63a3374c13d4
+2025-07-30 14:19:52,516 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
+2025-07-30 14:19:52,517 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"
+2025-07-30 14:20:59,416 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-30 14:20:59,417 - api - INFO - Generating complete outfit with request_id: 38bf610c-2f0f-4437-aaec-dfb06ffbb190
+2025-07-30 14:20:59,418 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
+2025-07-30 14:20:59,419 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"

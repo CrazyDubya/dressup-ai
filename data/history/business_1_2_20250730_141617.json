@@ -1,0 +1,157 @@
+{
+  "outfit_id": "business_1_2_20250730_141617",
+  "user_id": "test_user_003",
+  "outfit_data": {
+    "top": {
+      "type": "top",
+      "color": "cream",
+      "material": "silk",
+      "fit": "slim",
+      "style": "fitted",
+      "hem": null,
+      "bust_fit": "comfortable",
+      "shoulder_fit": "perfect",
+      "arm_fit": "relaxed",
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [
+        "strappy",
+        "sleeveless",
+        "smooth",
+        "shiny",
+        "delicate"
+      ],
+      "draping": "elegant natural drape with fluid movement",
+      "care_instructions": "dry clean only, avoid direct sunlight"
+    },
+    "bottom": {
+      "type": "bottom",
+      "color": "navy",
+      "material": "wool blend",
+      "fit": "a-line",
+      "style": "straight",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": "fitted",
+      "hip_fit": "comfortable",
+      "length": "knee",
+      "surface_characteristics": [
+        "pleated",
+        "knee length"
+      ],
+      "draping": "",
+      "care_instructions": ""
+    },
+    "shoes": {
+      "type": "shoes",
+      "color": "black",
+      "material": "leather",
+      "fit": "comfortable",
+      "style": "formal",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [
+        "smooth",
+        "rich",
+        "durable"
+      ],
+      "draping": "structured with minimal drape",
+      "care_instructions": "professional cleaning recommended"
+    },
+    "extras": [
+      {
+        "type": "necklace",
+        "description": "Pearl necklace",
+        "material": "pearl",
+        "color": "white",
+        "features": [
+          "single strand"
+        ],
+        "placement": "neck",
+        "size": "medium",
+        "style": "classic"
+      }
+    ],
+    "style": {
+      "formal": 8,
+      "classic": 7,
+      "elegant": 9
+    },
+    "colors": [
+      "cream",
+      "navy",
+      "black"
+    ],
+    "materials": [
+      "silk",
+      "wool blend",
+      "leather"
+    ],
+    "suitable_for": [
+      "business"
+    ],
+    "occasion": "business",
+    "season": "spring",
+    "formality_level": 7,
+    "comfort_level": 8,
+    "complexity_level": "very high",
+    "estimated_hours": 210,
+    "quality_control": [
+      "Precise pattern matching",
+      "Perfect seam alignment",
+      "Impeccable hand-finishing",
+      "Fabric grain alignment",
+      "Drape verification",
+      "Fit assessment"
+    ],
+    "digital_rendering": {
+      "available_views": [
+        "front",
+        "back",
+        "side",
+        "detail"
+      ],
+      "material_swatches": []
+    },
+    "design_notes": "Generated for business with default preferences",
+    "inspiration": "Outfit variation 2 for business",
+    "material_costs": [
+      {
+        "fabric_type": "silk",
+        "base_cost": 1000.0,
+        "quality_multiplier": 1.5,
+        "complexity_multiplier": 1.3,
+        "total_cost": 1950.0
+      },
+      {
+        "fabric_type": "leather",
+        "base_cost": 1200.0,
+        "quality_multiplier": 1.5,
+        "complexity_multiplier": 1.3,
+        "total_cost": 2340.0
+      },
+      {
+        "fabric_type": "wool blend",
+        "base_cost": 500.0,
+        "quality_multiplier": 1.5,
+        "complexity_multiplier": 1.3,
+        "total_cost": 975.0
+      }
+    ],
+    "sustainability_impact": {
+      "materials": [],
+      "certifications": []
+    }
+  },
+  "generated_at": "2025-07-30 14:16:17.139908",
+  "feedback": null,
+  "is_favorite": false
+}

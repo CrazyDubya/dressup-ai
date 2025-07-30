@@ -1,0 +1,66 @@
+{
+  "user_id": "test_user_004",
+  "name": "Alex Frost",
+  "body_shape": "rectangle",
+  "favorite_colors": [
+    "silver"
+  ],
+  "preferred_materials": [
+    "wool"
+  ],
+  "style_preferences": [
+    "sporty"
+  ],
+  "budget_range": {
+    "min": 50.0,
+    "max": 100.0
+  },
+  "feedback_history": [
+    {
+      "outfit_id": "expedition_1_20250730_141617",
+      "user_id": "test_user_004",
+      "rating": 5,
+      "comments": "Perfect for Arctic Blizzard Expedition!",
+      "created_at": "2025-07-30 14:16:17.143644"
+    },
+    {
+      "outfit_id": "expedition_2_20250730_141617",
+      "user_id": "test_user_004",
+      "rating": 5,
+      "comments": "Perfect for Arctic Blizzard Expedition!",
+      "created_at": "2025-07-30 14:16:17.143934"
+    },
+    {
+      "outfit_id": "trekking_1_20250730_141617",
+      "user_id": "test_user_004",
+      "rating": 5,
+      "comments": "Perfect for Desert Heatwave Trek!",
+      "created_at": "2025-07-30 14:16:17.145425"
+    },
+    {
+      "outfit_id": "trekking_2_20250730_141617",
+      "user_id": "test_user_004",
+      "rating": 5,
+      "comments": "Perfect for Desert Heatwave Trek!",
+      "created_at": "2025-07-30 14:16:17.146544"
+    },
+    {
+      "outfit_id": "emergency_1_20250730_141617",
+      "user_id": "test_user_004",
+      "rating": 5,
+      "comments": "Perfect for Hurricane Emergency Response!",
+      "created_at": "2025-07-30 14:16:17.148060"
+    },
+    {
+      "outfit_id": "emergency_2_20250730_141617",
+      "user_id": "test_user_004",
+      "rating": 5,
+      "comments": "Perfect for Hurricane Emergency Response!",
+      "created_at": "2025-07-30 14:16:17.148406"
+    }
+  ],
+  "outfit_history": [],
+  "wishlist": [],
+  "created_at": "2025-07-30 14:16:17.134527",
+  "updated_at": "2025-07-30 14:16:17.148497"
+}

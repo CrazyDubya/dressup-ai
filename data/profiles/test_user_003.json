@@ -1,0 +1,42 @@
+{
+  "user_id": "test_user_003",
+  "name": "Maria Garcia",
+  "body_shape": "apple",
+  "favorite_colors": [
+    "black",
+    "navy",
+    "nude"
+  ],
+  "preferred_materials": [
+    "wool",
+    "leather"
+  ],
+  "style_preferences": [
+    "professional",
+    "polished"
+  ],
+  "budget_range": {
+    "min": 1000.0,
+    "max": 3000.0
+  },
+  "feedback_history": [
+    {
+      "outfit_id": "business_1_20250730_141617",
+      "user_id": "test_user_003",
+      "rating": 5,
+      "comments": "Perfect for Spring Business Conference in Paris!",
+      "created_at": "2025-07-30 14:16:17.140231"
+    },
+    {
+      "outfit_id": "business_2_20250730_141617",
+      "user_id": "test_user_003",
+      "rating": 5,
+      "comments": "Perfect for Spring Business Conference in Paris!",
+      "created_at": "2025-07-30 14:16:17.140531"
+    }
+  ],
+  "outfit_history": [],
+  "wishlist": [],
+  "created_at": "2025-07-30 14:16:17.134518",
+  "updated_at": "2025-07-30 14:16:17.140611"
+}
