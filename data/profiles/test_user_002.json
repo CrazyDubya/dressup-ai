@@ -1,0 +1,56 @@
+{
+  "user_id": "test_user_002",
+  "name": "Sophie Chen",
+  "body_shape": "hourglass",
+  "favorite_colors": [
+    "coral",
+    "mint green",
+    "white"
+  ],
+  "preferred_materials": [
+    "cotton",
+    "linen"
+  ],
+  "style_preferences": [
+    "comfortable",
+    "feminine"
+  ],
+  "budget_range": {
+    "min": 200.0,
+    "max": 800.0
+  },
+  "feedback_history": [
+    {
+      "outfit_id": "garden party_1_20250730_141617",
+      "user_id": "test_user_002",
+      "rating": 5,
+      "comments": "Perfect for Summer Garden Party in Miami!",
+      "created_at": "2025-07-30 14:16:17.138362"
+    },
+    {
+      "outfit_id": "garden party_2_20250730_141617",
+      "user_id": "test_user_002",
+      "rating": 5,
+      "comments": "Perfect for Summer Garden Party in Miami!",
+      "created_at": "2025-07-30 14:16:17.138656"
+    },
+    {
+      "outfit_id": "wedding_1_20250730_141617",
+      "user_id": "test_user_002",
+      "rating": 5,
+      "comments": "Perfect for Winter Wedding Guest in London!",
+      "created_at": "2025-07-30 14:16:17.141978"
+    },
+    {
+      "outfit_id": "wedding_2_20250730_141617",
+      "user_id": "test_user_002",
+      "rating": 5,
+      "comments": "Perfect for Winter Wedding Guest in London!",
+      "created_at": "2025-07-30 14:16:17.142314"
+    }
+  ],
+  "outfit_history": [],
+  "wishlist": [],
+  "created_at": "2025-07-30 14:16:17.134507",
+  "updated_at": "2025-07-30 14:16:17.142393"
+}

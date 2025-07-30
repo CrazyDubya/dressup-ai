@@ -1,0 +1,191 @@
+{
+  "outfit_id": "emergency_1_1_20250730_141617",
+  "user_id": "test_user_004",
+  "outfit_data": {
+    "top": {
+      "type": "top",
+      "color": "neon yellow",
+      "material": "goretex",
+      "fit": "relaxed",
+      "style": "fitted",
+      "hem": null,
+      "bust_fit": "comfortable",
+      "shoulder_fit": "perfect",
+      "arm_fit": "relaxed",
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [
+        "button-up",
+        "long sleeves",
+        "soft",
+        "natural",
+        "breathable",
+        "waterproof",
+        "reflective"
+      ],
+      "draping": "casual drape with good structure",
+      "care_instructions": "machine washable, can be ironed"
+    },
+    "bottom": {
+      "type": "bottom",
+      "color": "neon yellow",
+      "material": "polyester",
+      "fit": "regular",
+      "style": "a-line",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": "fitted",
+      "hip_fit": "comfortable",
+      "length": "knee",
+      "surface_characteristics": [
+        "five pocket",
+        "straight leg",
+        "textured",
+        "sturdy",
+        "casual",
+        "waterproof",
+        "reflective"
+      ],
+      "draping": "structured, holds shape",
+      "care_instructions": "machine wash cold, tumble dry low"
+    },
+    "shoes": {
+      "type": "shoes",
+      "color": "brown",
+      "material": "leather",
+      "fit": "comfortable",
+      "style": "casual",
+      "hem": null,
+      "bust_fit": null,
+      "shoulder_fit": null,
+      "arm_fit": null,
+      "waist_fit": null,
+      "hip_fit": null,
+      "length": null,
+      "surface_characteristics": [
+        "smooth",
+        "rich",
+        "durable"
+      ],
+      "draping": "structured with minimal drape",
+      "care_instructions": "professional cleaning recommended"
+    },
+    "extras": [
+      {
+        "type": "bracelet",
+        "description": "Leather bracelet",
+        "material": "leather",
+        "color": "brown",
+        "features": [
+          "adjustable"
+        ],
+        "placement": "wrist",
+        "size": "one size",
+        "style": "casual"
+      },
+      {
+        "type": "outerwear",
+        "description": "Waterproof jacket",
+        "material": "goretex",
+        "color": "black",
+        "features": [
+          "waterproof",
+          "windproof",
+          "hooded"
+        ],
+        "placement": "outer",
+        "size": "regular",
+        "style": "functional"
+      },
+      {
+        "type": "accessory",
+        "description": "Reflective vest",
+        "material": "reflective fabric",
+        "color": "neon yellow",
+        "features": [
+          "reflective",
+          "high visibility"
+        ],
+        "placement": "outer",
+        "size": "regular",
+        "style": "safety"
+      }
+    ],
+    "style": {
+      "formal": 3,
+      "classic": 7,
+      "elegant": 4
+    },
+    "colors": [
+      "blue and white",
+      "blue",
+      "brown"
+    ],
+    "materials": [
+      "cotton",
+      "denim",
+      "leather"
+    ],
+    "suitable_for": [
+      "emergency"
+    ],
+    "occasion": "emergency",
+    "season": "summer",
+    "formality_level": 1,
+    "comfort_level": 8,
+    "complexity_level": "very high",
+    "estimated_hours": 245,
+    "quality_control": [
+      "Precise pattern matching",
+      "Perfect seam alignment",
+      "Impeccable hand-finishing",
+      "Fabric grain alignment",
+      "Drape verification",
+      "Fit assessment"
+    ],
+    "digital_rendering": {
+      "available_views": [
+        "front",
+        "back",
+        "side",
+        "detail"
+      ],
+      "material_swatches": []
+    },
+    "design_notes": "Generated for emergency with default preferences",
+    "inspiration": "Outfit variation 1 for emergency",
+    "material_costs": [
+      {
+        "fabric_type": "cotton",
+        "base_cost": 500.0,
+        "quality_multiplier": 1.2,
+        "complexity_multiplier": 1.3,
+        "total_cost": 780.0
+      },
+      {
+        "fabric_type": "denim",
+        "base_cost": 600.0,
+        "quality_multiplier": 1.2,
+        "complexity_multiplier": 1.3,
+        "total_cost": 936.0
+      },
+      {
+        "fabric_type": "leather",
+        "base_cost": 1200.0,
+        "quality_multiplier": 1.2,
+        "complexity_multiplier": 1.3,
+        "total_cost": 1872.0
+      }
+    ],
+    "sustainability_impact": {
+      "materials": [],
+      "certifications": []
+    }
+  },
+  "generated_at": "2025-07-30 14:16:17.147202",
+  "feedback": null,
+  "is_favorite": false
+}
