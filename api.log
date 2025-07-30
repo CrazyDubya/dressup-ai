@@ -549,3 +549,7 @@
 2025-05-02 20:10:29,216 - __main__ - DEBUG - Generated shoes (Request ID: 20250502_201029_215717): {'type': 'knee-high boots', 'heel_height': 'flat', 'closure': 'lace-up', 'toe': 'closed', 'style': 'semi-formal', 'material': 'leather'}
 2025-05-02 20:10:29,216 - __main__ - INFO - Successfully generated complete outfit (Request ID: 20250502_201029_215717)
 2025-05-02 20:10:29,216 - __main__ - INFO - Request 20250502_201029_215078 completed in 0.00s with status 200
+2025-07-30 14:14:05,303 - asyncio - DEBUG - Using selector: EpollSelector
+2025-07-30 14:14:05,305 - api - INFO - Generating complete outfit with request_id: c03bb20d-13ba-440a-9370-b39b54bc4ee5
+2025-07-30 14:14:05,305 - api - INFO - Request POST /api/generate/complete-outfit completed in 0.00s
+2025-07-30 14:14:05,306 - httpx - INFO - HTTP Request: POST http://testserver/api/generate/complete-outfit "HTTP/1.1 200 OK"
