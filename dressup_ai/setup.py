@@ -25,5 +25,5 @@ setup(
     description="An AI-powered fashion outfit generator with personalization and A/B testing",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    python_requires=">=3.8",
+    python_requires=">=3.11",
 ) 

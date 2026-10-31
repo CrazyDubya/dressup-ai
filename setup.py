@@ -26,7 +26,7 @@ setup(
             "flake8>=6.0.0",
         ]
     },
-    python_requires=">=3.9",
+    python_requires=">=3.11",
     entry_points={
         "console_scripts": [
             "dressup=dressup_ai.cli:main",
