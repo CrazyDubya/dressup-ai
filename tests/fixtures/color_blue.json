@@ -1,0 +1,26 @@
+{
+  "analysis": {
+    "primary_colors": [
+      "blue"
+    ],
+    "suggested_combinations": [
+      "orange"
+    ],
+    "harmony_score": 0.8
+  },
+  "recommendations": {
+    "primary_palette": [
+      "blue"
+    ],
+    "suggested_combinations": [
+      "orange"
+    ],
+    "harmony_score": 0.8,
+    "style_context": "casual"
+  },
+  "tips": [
+    "Use the 60-30-10 rule: 60% dominant color, 30% secondary, 10% accent",
+    "Consider your skin tone when choosing colors",
+    "Neutral colors can balance bold choices"
+  ]
+}
