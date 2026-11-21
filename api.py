@@ -801,6 +801,8 @@ async def analyze_colors(request: dict):
                 "Neutral colors can balance bold choices"
             ]
         })
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"Error in color analysis: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
